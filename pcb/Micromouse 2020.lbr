@@ -396,6 +396,24 @@
 <smd name="2" x="1.8" y="0" dx="4" dy="1.5" layer="1" rot="R90"/>
 <text x="0" y="3.5067" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
+<package name="SOT95P230X110-3" urn="urn:adsk.eagle:footprint:12395734/1">
+<description>3-SOT23, 0.95 mm pitch, 2.30 mm span, 2.90 X 1.30 X 1.10 mm body
+&lt;p&gt;3-pin SOT23 package with 0.95 mm pitch, 2.30 mm span with body size 2.90 X 1.30 X 1.10 mm&lt;/p&gt;</description>
+<circle x="-1.204" y="1.749" radius="0.25" width="0" layer="21"/>
+<wire x1="-0.7" y1="1.559" x2="0.7" y2="1.559" width="0.12" layer="21"/>
+<wire x1="0.7" y1="1.559" x2="0.7" y2="0.549" width="0.12" layer="21"/>
+<wire x1="-0.7" y1="-1.559" x2="0.7" y2="-1.559" width="0.12" layer="21"/>
+<wire x1="0.7" y1="-1.559" x2="0.7" y2="-0.549" width="0.12" layer="21"/>
+<wire x1="0.7" y1="-1.5" x2="-0.7" y2="-1.5" width="0.12" layer="51"/>
+<wire x1="-0.7" y1="-1.5" x2="-0.7" y2="1.5" width="0.12" layer="51"/>
+<wire x1="-0.7" y1="1.5" x2="0.7" y2="1.5" width="0.12" layer="51"/>
+<wire x1="0.7" y1="1.5" x2="0.7" y2="-1.5" width="0.12" layer="51"/>
+<smd name="1" x="-1.0783" y="0.95" dx="1.0588" dy="0.59" layer="1"/>
+<smd name="2" x="-1.0783" y="-0.95" dx="1.0588" dy="0.59" layer="1"/>
+<smd name="3" x="1.0783" y="0" dx="1.0588" dy="0.59" layer="1"/>
+<text x="0" y="2.634" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.194" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOT95P285X120-3N" urn="urn:adsk.eagle:package:14494850/1" locally_modified="yes" type="model">
@@ -473,6 +491,13 @@
 &lt;p&gt;Chip package with body size 3.60 X 4.90 X 4.10 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="NRS5040"/>
+</packageinstances>
+</package3d>
+<package3d name="SOT95P230X110-3" urn="urn:adsk.eagle:package:12395711/1" type="model">
+<description>3-SOT23, 0.95 mm pitch, 2.30 mm span, 2.90 X 1.30 X 1.10 mm body
+&lt;p&gt;3-pin SOT23 package with 0.95 mm pitch, 2.30 mm span with body size 2.90 X 1.30 X 1.10 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="SOT95P230X110-3"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -805,6 +830,48 @@
 <wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
 <text x="0" y="2.54" size="1.778" layer="96" rot="R180" align="bottom-center">&gt;VALUE</text>
 <pin name="+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="LED">
+<pin name="IN" x="0" y="0" visible="off" length="short" direction="pas"/>
+<pin name="OUT" x="7.62" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="3.81" y="5.08" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="2.54" y="-2.54"/>
+<vertex x="5.08" y="0"/>
+<vertex x="2.54" y="2.54"/>
+</polygon>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="3.4925" y1="2.8575" x2="4.7625" y2="4.1275" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="4.7625" y="4.1275"/>
+<vertex x="4.7625" y="3.81"/>
+<vertex x="4.445" y="4.1275"/>
+</polygon>
+<wire x1="4.445" y1="2.8575" x2="5.715" y2="4.1275" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="5.715" y="4.1275"/>
+<vertex x="5.715" y="3.81"/>
+<vertex x="5.3975" y="4.1275"/>
+</polygon>
+</symbol>
+<symbol name="NPN">
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1245,6 +1312,43 @@
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LED" prefix="D">
+<gates>
+<gate name="G$1" symbol="LED" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="0805">
+<connects>
+<connect gate="G$1" pin="IN" pad="P$1"/>
+<connect gate="G$1" pin="OUT" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MMBT3904,215" prefix="Q">
+<description>Trans GP BJT NPN 40V 0.2A 250mW Automotive 3-Pin TO-236AB T/R</description>
+<gates>
+<gate name="G$1" symbol="NPN" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="MMBT3904,215" package="SOT95P230X110-3">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:12395711/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
