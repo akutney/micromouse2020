@@ -1,0 +1,25 @@
+/*
+ * micromouse_main.cpp
+ *
+ * Created: 11/12/2019 5:12:01 PM
+ * Author : Dylan Staatz
+ */ 
+
+
+#include "sam.h"
+
+
+int main(void)
+{
+    /* Initialize the SAM system */
+    SystemInit();
+
+    /* Replace with your application code */
+    while (1) 
+    {
+		int total = 0;
+		for (int i = 0; i < 100; i++) {
+			total += i;
+		}
+    }
+}
