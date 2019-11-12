@@ -17,6 +17,7 @@ int main(void)
     /* Replace with your application code */
     while (1) 
     {
+		// Calculate the total from 0-99
 		int total = 0;
 		for (int i = 0; i < 100; i++) {
 			total += i;
