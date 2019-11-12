@@ -23,4 +23,10 @@ int main(void)
 			total += i;
 		}
     }
+	
+	int Add5 (int x)
+	{
+		int y = x + 5;
+		return y;	
+	}
 }
