@@ -29,6 +29,12 @@ int main(void)
 		
 		
     }
+	
+	int Add5 (int x)
+	{
+		int y = x + 5;
+		return y;	
+	}
 }
 
 int five(int x){
