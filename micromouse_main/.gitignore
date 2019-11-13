@@ -27,4 +27,5 @@
 
 # End of https://www.gitignore.io/api/atmelstudio
 
-.vs/*
+# Other files
+jlink.log

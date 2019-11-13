@@ -5,38 +5,38 @@
  * Author : Dylan Staatz
  */ 
 
-
+// System
 #include "sam.h"
+
+// General
+#include "General/RobotConfig.h"
+#include "General/Robot.h"
 
 
 int main(void)
 {
-    /* Initialize the SAM system */
+    // Initialize the SAM system
     SystemInit();
 
-    /* Replace with your application code */
-    while (1) 
+    // Dummy code to test that you can debug with
+    
+#if 0 // change to 1 if you want to run this
+    while (1)
     {
-		
-		// Calculate the total from 0-99
-		int total = 0;
-		for (int i = 0; i < 100; i++) {
-			total += i;
-		}
-		
-		int x = 0;
-		x = five(x);
-		
+        // Calculate the total from 0-99
+        int total = 0;
+        for (int i = 0; i < 100; i++) {
+            total += i;
+        }
     }
-	
-}
-
-int Add5 (int x)
-{
-	int y = x + 5;
-	return y;
-}
-
-int five(int x){
-	return x + 5;
+#endif
+    
+    // Actual Start of code
+    Robot r;
+    
+    r.Setup();
+    
+    for (;;) {
+        r.Loop();
+    }
 }
