@@ -20,8 +20,6 @@ public:
 
     GuidanceAlgorithm();
 
-    bool setup();
-
     void nextState(RobotState * currentState, MazeState * currentMaze, RobotState * nextState);
 
 private:
