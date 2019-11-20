@@ -2,7 +2,6 @@
 #define TESTING_H
 #ifdef ARDUINO
 #error Do not do tests on the Arduino!
-#else 
 #endif
 #include <stdio.h>
 #include <stdlib.h>

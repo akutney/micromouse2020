@@ -1,9 +1,8 @@
 /* 
-* RobotState.h
-*
-* Created: 11/12/2019 6:58:11 PM
-* Author: Dylan Staatz
-*/
+ * RobotState.h
+ *
+ * Author: Dylan Staatz
+ */
 
 
 #ifndef __ROBOT_STATE_H__

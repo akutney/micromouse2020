@@ -1,4 +1,9 @@
-/* MazeState.cpp */
+/* 
+ * MazeState.cpp
+ *
+ * Author: Zach
+ */
+
 
 #include "MazeState.h"
 
@@ -13,14 +18,14 @@ void initializeMaze(MazeState* maze) {
     for (int x = 0; x < MAX_MAZE_WIDTH; ++x) {
         for (int y = 0; y < MAX_MAZE_HEIGHT; ++y) {
             maze->cells[x][y] = {
-                .north = &maze->wall_buffer[x * (MAX_MAZE_WIDTH + 1) + y],
+                .north = &maze->wall_buffer[x * (MAX_MAZE_WIDTH + 1) + (y + 1)],
                 .east = &maze->wall_buffer[MAX_MAZE_HEIGHT * (MAX_MAZE_WIDTH + 1) + (x + 1) * MAX_MAZE_WIDTH + y],
-                .south = &maze->wall_buffer[x * (MAX_MAZE_WIDTH + 1) + (y + 1)],
+                .south = &maze->wall_buffer[x * (MAX_MAZE_WIDTH + 1) + y],
                 .west = &maze->wall_buffer[MAX_MAZE_HEIGHT * (MAX_MAZE_WIDTH + 1) + x * MAX_MAZE_WIDTH + y]
             };
-            if (y == 0) {
+            if (y == MAX_MAZE_HEIGHT - 1) {
                 maze->cells[x][y].north->exists = 1;
-            } else if (y == MAX_MAZE_HEIGHT - 1) {
+            } else if (y == 0) {
                 maze->cells[x][y].south->exists = 1;
             }
             if (x == 0) {

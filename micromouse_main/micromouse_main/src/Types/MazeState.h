@@ -1,5 +1,10 @@
-/* MazeState.h
- *  
+/* 
+ * MazeState.h
+ *
+ * Author: Dylan Staatz
+ * 
+ * Notes:
+ * 
  *  This file defines a probabilistic maze where each
  *  wall holds the probability of that wall exists.
  * 

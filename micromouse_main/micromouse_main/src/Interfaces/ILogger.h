@@ -1,9 +1,8 @@
 /* 
-* ILogger.h
-*
-* Created: 11/12/2019 6:58:11 PM
-* Author: Dylan Staatz
-*/
+ * ILogger.h
+ *
+ * Author: Dylan Staatz
+ */
 
 
 #ifndef __I_LOGGER_H__

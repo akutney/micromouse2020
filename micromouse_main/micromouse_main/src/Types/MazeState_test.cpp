@@ -1,3 +1,9 @@
+/* 
+ * MazeState_test.cpp
+ *
+ * Author: Zach
+ */
+
 #ifndef ARDUINO
 #include "MazeState.h"
 #include "../testing.h"
@@ -21,7 +27,7 @@ TEST_FUNC_BEGIN {
     TEST_PASS("initializeMaze called");
 
     for (int x = 0; x < MAX_MAZE_WIDTH; ++x) {
-        if (maze.cells[x][0].north->exists != 1) {
+        if (maze.cells[x][MAX_MAZE_HEIGHT - 1].north->exists != 1) {
             TEST_FAIL("north border is 1");
             goto after_north_border;
         }
@@ -39,7 +45,7 @@ TEST_FUNC_BEGIN {
     after_east_border:
 
     for (int x = 0; x < MAX_MAZE_WIDTH; ++x) {
-        if (maze.cells[x][MAX_MAZE_HEIGHT - 1].south->exists != 1) {
+        if (maze.cells[x][0].south->exists != 1) {
             TEST_FAIL("south border is 1");
             goto after_south_border;
         }
@@ -65,11 +71,11 @@ TEST_FUNC_BEGIN {
         }
     }
     for (int x = 1; x < MAX_MAZE_WIDTH - 1; ++x) {
-        if (maze.cells[x][0].south->exists != 0.5 || maze.cells[x][0].east->exists != 0.5 || maze.cells[x][0].west->exists != 0.5) {
+        if (maze.cells[x][0].north->exists != 0.5 || maze.cells[x][0].east->exists != 0.5 || maze.cells[x][0].west->exists != 0.5) {
             TEST_FAIL("interior borders are 0.5");
             goto after_interior_borders;
         }
-        if (maze.cells[x][MAX_MAZE_HEIGHT - 1].north->exists != 0.5 || maze.cells[x][MAX_MAZE_HEIGHT - 1].east->exists != 0.5 || maze.cells[x][MAX_MAZE_HEIGHT - 1].west->exists != 0.5) {
+        if (maze.cells[x][MAX_MAZE_HEIGHT - 1].south->exists != 0.5 || maze.cells[x][MAX_MAZE_HEIGHT - 1].east->exists != 0.5 || maze.cells[x][MAX_MAZE_HEIGHT - 1].west->exists != 0.5) {
             TEST_FAIL("interior borders are 0.5");
             goto after_interior_borders;
         }
@@ -84,19 +90,19 @@ TEST_FUNC_BEGIN {
             goto after_interior_borders;
         }
     }
-    if (maze.cells[0][0].south->exists != 0.5 || maze.cells[0][0].east->exists != 0.5) {
+    if (maze.cells[0][0].north->exists != 0.5 || maze.cells[0][0].east->exists != 0.5) {
         TEST_FAIL("interior borders are 0.5");
         goto after_interior_borders;
     }
-    if (maze.cells[0][MAX_MAZE_HEIGHT - 1].north->exists != 0.5 || maze.cells[0][MAX_MAZE_HEIGHT - 1].east->exists != 0.5) {
+    if (maze.cells[0][MAX_MAZE_HEIGHT - 1].south->exists != 0.5 || maze.cells[0][MAX_MAZE_HEIGHT - 1].east->exists != 0.5) {
         TEST_FAIL("interior borders are 0.5");
         goto after_interior_borders;
     }
-    if (maze.cells[MAX_MAZE_WIDTH - 1][0].south->exists != 0.5 || maze.cells[MAX_MAZE_WIDTH - 1][0].west->exists != 0.5) {
+    if (maze.cells[MAX_MAZE_WIDTH - 1][0].north->exists != 0.5 || maze.cells[MAX_MAZE_WIDTH - 1][0].west->exists != 0.5) {
         TEST_FAIL("interior borders are 0.5");
         goto after_interior_borders;
     }
-    if (maze.cells[MAX_MAZE_WIDTH - 1][MAX_MAZE_HEIGHT - 1].north->exists != 0.5 || maze.cells[MAX_MAZE_WIDTH - 1][MAX_MAZE_HEIGHT - 1].west->exists != 0.5) {
+    if (maze.cells[MAX_MAZE_WIDTH - 1][MAX_MAZE_HEIGHT - 1].south->exists != 0.5 || maze.cells[MAX_MAZE_WIDTH - 1][MAX_MAZE_HEIGHT - 1].west->exists != 0.5) {
         TEST_FAIL("interior borders are 0.5");
         goto after_interior_borders;
     }
@@ -114,9 +120,9 @@ TEST_FUNC_BEGIN {
 
     for (int x = 1; x < MAX_MAZE_WIDTH - 1; ++x) {
         for (int y = 1; y < MAX_MAZE_HEIGHT - 1; ++y) {
-            if (maze.cells[x][y].north != maze.cells[x][y - 1].south ||
+            if (maze.cells[x][y].north != maze.cells[x][y + 1].south ||
                 maze.cells[x][y].east != maze.cells[x + 1][y].west ||
-                maze.cells[x][y].south != maze.cells[x][y + 1].north ||
+                maze.cells[x][y].south != maze.cells[x][y - 1].north ||
                 maze.cells[x][y].west != maze.cells[x - 1][y].east) {
                     TEST_FAIL("invalid wall references");
                     goto after_valid_walls;
@@ -126,13 +132,13 @@ TEST_FUNC_BEGIN {
     TEST_PASS("invalid wall references");
     after_valid_walls:
     for (int x = 0; x < MAX_MAZE_WIDTH; ++x) {
-        if (count_cell_references(&maze, maze.cells[x][0].north) != 1) {
+        if (count_cell_references(&maze, maze.cells[x][MAX_MAZE_HEIGHT - 1].north) != 1) {
             puts("---");
-            printf("%d, %d\n", x, count_cell_references(&maze, maze.cells[x][0].north));
+            printf("%d, %d\n", x, count_cell_references(&maze, maze.cells[x][MAX_MAZE_HEIGHT - 1].north));
             TEST_FAIL("invalid outer wall references");
             goto after_valid_outer_walls;
         }
-        if (count_cell_references(&maze, maze.cells[x][MAX_MAZE_HEIGHT - 1].south) != 1) {
+        if (count_cell_references(&maze, maze.cells[x][0].south) != 1) {
             TEST_FAIL("invalid outer wall references");
             goto after_valid_outer_walls;
         }

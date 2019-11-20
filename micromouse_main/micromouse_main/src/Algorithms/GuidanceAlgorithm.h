@@ -1,9 +1,8 @@
 /* 
-* GuidanceAlgorithm.h
-*
-* Created: 11/12/2019 6:58:11 PM
-* Author: 
-*/
+ * GuidanceAlgorithm.h
+ *
+ * Author: Dan
+ */
 
 
 #ifndef __GUIDANCE_ALGORITHM__H__
