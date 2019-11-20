@@ -9,6 +9,7 @@ AutoSaveProject=1
 UsedLibrary="C:/Users/zachd/Code/github.com/zachdeibert/control-cluster-rocket/Electronics/Control Cluster Rocket.lbr"
 UsedLibrary="C:/Users/zachd/Code/github.com/zachdeibert/bulkhead-flight-computer/Bulkhead Flight Computer.lbr"
 UsedLibrary="C:/Users/zachd/Code/github.com/panatmospheric-voyage/filament-winder/Electronics/fillament-winder.lbr"
+UsedLibrary="Micromouse 2020.lbr"
 
 [Win_1]
 Type="Control Panel"
