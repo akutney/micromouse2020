@@ -9,8 +9,15 @@
 #include "sam.h"
 
 // General
-#include "General/RobotConfig.h"
-#include "General/Robot.h"
+#include "src/General/RobotConfig.h"
+#include "src/General/NGCRobot.h"
+
+// Types
+#include "src/Types/ButtonData.h"
+#include "src/Types/SensorData.h"
+#include "src/Types/RobotState.h"
+#include "src/Types/MazeState.h"
+#include "src/Types/MotorOutputs.h"
 
 
 int main(void)
@@ -32,11 +39,10 @@ int main(void)
 #endif
     
     // Actual Start of code
-    Robot r;
+    ButtonData bd;
+    SensorData sd;
+    MazeState ms;
+    RobotState rs;
+    MotorOutputs mo;
     
-    r.Setup();
-    
-    for (;;) {
-        r.Loop();
-    }
 }

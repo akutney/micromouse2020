@@ -9,6 +9,9 @@
 #define __I_CONSUME_SENSOR_DATA_H__
 
 
+#include "../Types/SensorData.h"
+
+
 class IConsumeSensorData
 {
 public:

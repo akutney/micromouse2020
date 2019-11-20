@@ -137,6 +137,7 @@
     <ListValues>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
       <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.331\samd21a\include</Value>
+      <Value>../src</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -152,6 +153,7 @@
     <ListValues>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
       <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.331\samd21a\include</Value>
+      <Value>../src</Value>
     </ListValues>
   </armgcccpp.compiler.directories.IncludePaths>
   <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
@@ -194,41 +196,90 @@
     <Compile Include="Device_Startup\system_samd21.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\TimingDriver.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\TimingDriver.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="General\Constants.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="General\Robot.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="General\Robot.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="General\RobotConfig.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="General\RobotConfig.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Algorithms\ControlAlgorithm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Algorithms\GuidanceAlgorithm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Algorithms\NavigationAlgorithm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Drivers\TimingDriver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Drivers\TimingDriver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\General\Constants.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\General\NGCRobot.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\General\NGCRobot.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\General\RobotConfig.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\General\RobotConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Interfaces\IConsumeButtonData.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Interfaces\IConsumeSensorData.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Interfaces\ILogger.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Interfaces\ISetMotorOutput.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Types\ButtonData.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Types\MazeState.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Types\MazeState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Types\MotorOutputs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Types\RobotState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Types\SensorData.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Device_Startup" />
-    <Folder Include="Drivers\" />
-    <Folder Include="General" />
+    <Folder Include="src\" />
+    <Folder Include="src\Algorithms\" />
+    <Folder Include="src\Drivers\" />
+    <Folder Include="src\General\" />
+    <Folder Include="src\Interfaces\" />
+    <Folder Include="src\Types\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Device_Startup\samd21g18a_flash.ld">
       <SubType>compile</SubType>
     </None>
     <None Include="Device_Startup\samd21g18a_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\General\Makefile">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>

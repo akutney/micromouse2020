@@ -11,9 +11,7 @@
 
 typedef struct SensorData
 {
-
-
-
+    // TODO
 } SensorData;
 
 #endif //__SENSOR_DATA_H__

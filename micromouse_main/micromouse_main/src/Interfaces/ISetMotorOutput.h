@@ -9,11 +9,14 @@
 #define __I_SET_MOTOR_OUTPUT_H__
 
 
+#include "../Types/MotorOutputs.h"
+
+
 class ISetMotorOutput
 {
 public:
 
-    virtual void setMotorOutput();
+    virtual void setMotorOutput(MotorOutputs * outputs);
 
 protected:
 

@@ -9,6 +9,9 @@
 #define __I_CONSUME_BUTTON_DATA_H__
 
 
+#include "../Types/ButtonData.h"
+
+
 class IConsumeButtonData
 {
 public:
