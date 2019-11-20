@@ -613,19 +613,13 @@
 <smd name="-" x="3.625" y="0" dx="4.1618" dy="1.9987" layer="1"/>
 <text x="0" y="4.885" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
-<package name="ENCODER">
+<package name="ENCODER-TAB">
 <pad name="3" x="-1.27" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
 <pad name="2" x="-3.81" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
 <pad name="1" x="-6.35" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
 <pad name="4" x="1.27" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
 <pad name="5" x="3.81" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
 <pad name="6" x="6.35" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
-<polygon width="0" layer="46">
-<vertex x="-7.8" y="0.325" curve="180"/>
-<vertex x="-7.8" y="-0.325"/>
-<vertex x="7.8" y="-0.325" curve="180"/>
-<vertex x="7.8" y="0.325"/>
-</polygon>
 <text x="0" y="2.54" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="210-10MS">
@@ -667,6 +661,21 @@
 <wire x1="7.62" y1="1.27" x2="7.62" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="7.62" y1="-1.27" x2="-7.62" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="-7.62" y1="-1.27" x2="-7.62" y2="1.27" width="0.127" layer="21"/>
+</package>
+<package name="ENCODER-SLOT">
+<pad name="3" x="-1.27" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="2" x="-3.81" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="1" x="-6.35" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="4" x="1.27" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="5" x="3.81" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="6" x="6.35" y="0" drill="0.65" diameter="1.9304" shape="long" rot="R90"/>
+<polygon width="0" layer="46">
+<vertex x="-7.8" y="0.325" curve="180"/>
+<vertex x="-7.8" y="-0.325"/>
+<vertex x="7.8" y="-0.325" curve="180"/>
+<vertex x="7.8" y="0.325"/>
+</polygon>
+<text x="0" y="2.54" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
 </packages>
 <packages3d>
@@ -1944,7 +1953,20 @@
 <gate name="G$1" symbol="ENCODER" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="ENCODER">
+<device name="SLOT" package="ENCODER-SLOT">
+<connects>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="MA" pad="1"/>
+<connect gate="G$1" pin="MB" pad="6"/>
+<connect gate="G$1" pin="OUTA" pad="3"/>
+<connect gate="G$1" pin="OUTB" pad="4"/>
+<connect gate="G$1" pin="VCC" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="ENCODER-TAB">
 <connects>
 <connect gate="G$1" pin="GND" pad="5"/>
 <connect gate="G$1" pin="MA" pad="1"/>
@@ -2361,7 +2383,7 @@
 <part name="C66" library="Micromouse 2020" deviceset="865080542006" device="" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF"/>
 <part name="P+56" library="Micromouse 2020" deviceset="+12V" device=""/>
 <part name="C62" library="Micromouse 2020" deviceset="EEE-1EA101AP" device="" package3d_urn="urn:adsk.eagle:package:15328765/1" value="100uF"/>
-<part name="A1" library="Micromouse 2020" deviceset="ENCODER" device=""/>
+<part name="A1" library="Micromouse 2020" deviceset="ENCODER" device="SLOT" value="ENCODERSLOT"/>
 <part name="GND72" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+57" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+58" library="Micromouse 2020" deviceset="+3V3" device=""/>
@@ -2375,7 +2397,7 @@
 <part name="C68" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C69" library="Micromouse 2020" deviceset="865080542006" device="" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF"/>
 <part name="P+59" library="Micromouse 2020" deviceset="+12V" device=""/>
-<part name="A2" library="Micromouse 2020" deviceset="ENCODER" device=""/>
+<part name="A2" library="Micromouse 2020" deviceset="ENCODER" device="SLOT" value="ENCODERSLOT"/>
 <part name="GND77" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+60" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+61" library="Micromouse 2020" deviceset="+3V3" device=""/>
@@ -2389,7 +2411,7 @@
 <part name="C71" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C72" library="Micromouse 2020" deviceset="865080542006" device="" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF"/>
 <part name="P+62" library="Micromouse 2020" deviceset="+12V" device=""/>
-<part name="A3" library="Micromouse 2020" deviceset="ENCODER" device=""/>
+<part name="A3" library="Micromouse 2020" deviceset="ENCODER" device="SLOT" value="ENCODERSLOT"/>
 <part name="GND82" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+63" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+64" library="Micromouse 2020" deviceset="+3V3" device=""/>
@@ -2403,7 +2425,7 @@
 <part name="C74" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C75" library="Micromouse 2020" deviceset="865080542006" device="" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF"/>
 <part name="P+65" library="Micromouse 2020" deviceset="+12V" device=""/>
-<part name="A4" library="Micromouse 2020" deviceset="ENCODER" device=""/>
+<part name="A4" library="Micromouse 2020" deviceset="ENCODER" device="SLOT" value="ENCODERSLOT"/>
 <part name="GND87" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+66" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+67" library="Micromouse 2020" deviceset="+3V3" device=""/>
