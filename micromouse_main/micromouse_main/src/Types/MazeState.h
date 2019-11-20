@@ -32,8 +32,8 @@
  *       W = MAZE_WIDTH
  */
 
-#ifndef _MAZE_STATE_H_
-#define _MAZE_STATE_H_
+#ifndef __MAZE_STATE_H__
+#define __MAZE_STATE_H__
 
 #define MAX_MAZE_WIDTH  16
 #define MAX_MAZE_HEIGHT 16
@@ -65,4 +65,4 @@ typedef struct {
 void initializeMaze(MazeState* maze);
 
 
-#endif //_MAZE_STATE_H_
+#endif //__MAZE_STATE_H__

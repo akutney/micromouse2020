@@ -21,7 +21,8 @@ int count_cell_references(MazeState *maze, Wall *check) {
     return count;
 }
 
-TEST_FUNC_BEGIN {
+TEST_FUNC_BEGIN("MazeState_test") {
+
     MazeState maze;
     initializeMaze(&maze);
     TEST_PASS("initializeMaze called");
@@ -167,6 +168,6 @@ TEST_FUNC_BEGIN {
     after_memory_waste:
 
     asm("nop;");
-} TEST_FUNC_END("MazeStateest")
+} TEST_FUNC_END("MazeState_test")
 
 #endif // ARDUINO

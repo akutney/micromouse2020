@@ -9,10 +9,10 @@
 #define __SENSOR_DATA_H__
 
 
-typedef struct {
+typedef struct SensorData
+{
 
 
-    SensorData();
 
 } SensorData;
 

@@ -6,9 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TEST_FUNC_BEGIN \
+#define TEST_FUNC_BEGIN(name) \
 int main() { \
-    int _pass = 0, _fail = 0;
+    int _pass = 0, _fail = 0; \
+    printf("\nStarting " name "\n");
 
 #define TEST_PASS(name) \
     do { \
