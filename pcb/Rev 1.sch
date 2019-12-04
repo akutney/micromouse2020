@@ -4729,7 +4729,6 @@
 <sheet>
 <description>IMU</description>
 <plain>
-<text x="-55.88" y="-45.72" size="1.778" layer="91">TODO: Calculate capacitor values</text>
 </plain>
 <instances>
 <instance part="U4" gate="G$1" x="0" y="0" smashed="yes">
