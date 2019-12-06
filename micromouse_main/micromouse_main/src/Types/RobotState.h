@@ -8,13 +8,17 @@
 #ifndef __ROBOT_STATE_H__
 #define __ROBOT_STATE_H__
 
-
-#include <Eigen/Dense>
-
-using namespace Eigen;
-
+#include "../Types/Ints.h"
 
 #define NUM_STATE_VARIABLES 6
+
+// Indexing definitions
+const uint8_t X_LOC     = 0;
+const uint8_t Y_LOC     = 1;
+const uint8_t THETA     = 2;
+const uint8_t VEL_X     = 3;
+const uint8_t VEL_y     = 4;
+const uint8_t VEL_THETA = 5;
 
 typedef float state_t; // Can switch between float and double, maybe even int?
 
@@ -28,16 +32,14 @@ typedef struct RobotState
      * [4] velocity in y     - in mm/sec
      * [5] velocity in theta - in radians/sec
      */
-    Matrix<state_t, NUM_STATE_VARIABLES, 1> x_hat;
-
-    /* Covariance Matrix coresponding to the stateVector */
-    Matrix<state_t, NUM_STATE_VARIABLES, NUM_STATE_VARIABLES> P;
-
-    // Alternatively (if Eigen doesn't work):
-    // State Variables
-    //state_t x, y, theta, deltaX, deltaY, deltaTheta;
-    // covariance matrix
-    //state_t covariance[NUM_STATE_VARIABLES][NUM_STATE_VARIABLES];
+    state_t x_hat[NUM_STATE_VARIABLES];
+    
+    /* Covariance Matrix corresponding to the stateVector */
+    state_t P[NUM_STATE_VARIABLES][NUM_STATE_VARIABLES];
+    
+    // Alternatively
+    //Matrix<state_t, NUM_STATE_VARIABLES, 1> x_hat;
+    //Matrix<state_t, NUM_STATE_VARIABLES, NUM_STATE_VARIABLES> P;
 
 } RobotState;
 
