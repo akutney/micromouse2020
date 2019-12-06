@@ -5,21 +5,33 @@
  * Author : Dylan Staatz
  */ 
 
-
+// System
 #include "sam.h"
+
+// General
+#include "src/General/RobotConfig.h"
+#include "src/General/NGCRobot.h"
+
+// Drivers
+#include "src/Drivers/GpioDriver.h"
+
+// Types
+#include "src/Types/Ints.h"
+
+// Embedded Tests
+#include "Tests.h"
+#define RUN_TESTS
 
 
 int main(void)
 {
-    /* Initialize the SAM system */
+    // Initialize the SAM system
     SystemInit();
-
-    /* Replace with your application code */
-    while (1) 
-    {
-		int total = 0;
-		for (int i = 0; i < 100; i++) {
-			total += i;
-		}
-    }
+    
+    // Uncomment to run a test
+    //test_GpioDriver();
+    
+    // Actual Start of code
+    // TODO:
 }
+
