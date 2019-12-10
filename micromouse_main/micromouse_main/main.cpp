@@ -9,8 +9,8 @@
 #include "sam.h"
 
 // General
-#include "src/General/RobotConfig.h"
-#include "src/General/NGCRobot.h"
+#include "src/Controller/RobotConfig.h"
+#include "src/Controller/NGCRobot.h"
 
 // Drivers
 #include "src/Drivers/GpioDriver.h"
