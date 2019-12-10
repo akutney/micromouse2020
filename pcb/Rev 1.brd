@@ -1352,28 +1352,28 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-142.24" y="104.14" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="D12" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="8.27" y="54.95" locked="yes" smashed="yes" rot="R60">
-<attribute name="NAME" x="5.132996875" y="56.76114375" size="1.27" layer="25" rot="R60" align="bottom-center"/>
+<attribute name="NAME" x="5.132996875" y="56.76114375" locked="yes" size="1.27" layer="25" rot="R60" align="bottom-center"/>
 </element>
 <element name="D13" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="21.88" y="68.56" locked="yes" smashed="yes" rot="R30">
-<attribute name="NAME" x="20.06885" y="71.697003125" size="1.27" layer="25" rot="R30" align="bottom-center"/>
+<attribute name="NAME" x="20.06885" y="71.697003125" locked="yes" size="1.27" layer="25" rot="R30" align="bottom-center"/>
 </element>
 <element name="D14" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="54.95" y="68.56" locked="yes" smashed="yes" rot="R330">
-<attribute name="NAME" x="56.76115" y="71.697003125" size="1.27" layer="25" rot="R330" align="bottom-center"/>
+<attribute name="NAME" x="56.76115" y="71.697003125" locked="yes" size="1.27" layer="25" rot="R330" align="bottom-center"/>
 </element>
 <element name="D15" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="68.56" y="54.95" locked="yes" smashed="yes" rot="R300">
-<attribute name="NAME" x="71.697003125" y="56.76115" size="1.27" layer="25" rot="R300" align="bottom-center"/>
+<attribute name="NAME" x="71.697003125" y="56.76115" locked="yes" size="1.27" layer="25" rot="R300" align="bottom-center"/>
 </element>
 <element name="D16" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="68.56" y="21.88" locked="yes" smashed="yes" rot="R240">
-<attribute name="NAME" x="71.697003125" y="20.068846875" size="1.27" layer="25" rot="R240" align="bottom-center"/>
+<attribute name="NAME" x="71.697003125" y="20.068846875" locked="yes" size="1.27" layer="25" rot="R240" align="bottom-center"/>
 </element>
 <element name="D17" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="54.95" y="8.27" locked="yes" smashed="yes" rot="R210">
-<attribute name="NAME" x="56.76115" y="5.132996875" size="1.27" layer="25" rot="R210" align="bottom-center"/>
+<attribute name="NAME" x="56.76115" y="5.132996875" locked="yes" size="1.27" layer="25" rot="R210" align="bottom-center"/>
 </element>
 <element name="D18" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="21.88" y="8.27" locked="yes" smashed="yes" rot="R150">
-<attribute name="NAME" x="20.06885" y="5.132996875" size="1.27" layer="25" rot="R150" align="bottom-center"/>
+<attribute name="NAME" x="20.06885" y="5.132996875" locked="yes" size="1.27" layer="25" rot="R150" align="bottom-center"/>
 </element>
 <element name="D19" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="8.27" y="21.88" locked="yes" smashed="yes" rot="R120">
-<attribute name="NAME" x="5.132996875" y="20.06885" size="1.27" layer="25" rot="R120" align="bottom-center"/>
+<attribute name="NAME" x="5.132996875" y="20.06885" locked="yes" size="1.27" layer="25" rot="R120" align="bottom-center"/>
 </element>
 <element name="D2" library="Micromouse 2020" package="1206" value="LED1206" x="-96.52" y="102.87" smashed="yes">
 <attribute name="NAME" x="-96.52" y="104.14" size="0.8128" layer="25" align="bottom-center"/>
@@ -1445,16 +1445,16 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-135.89" y="68.674" size="1.27" layer="25" align="bottom-center"/>
 </element>
 <element name="Q16" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="10.05" y="53.92" locked="yes" smashed="yes" rot="R60">
-<attribute name="NAME" x="7.4182375" y="55.43945" size="1.27" layer="25" rot="R60" align="bottom-center"/>
+<attribute name="NAME" x="7.4182375" y="55.43945" locked="yes" size="1.27" layer="25" rot="R60" align="bottom-center"/>
 </element>
 <element name="Q17" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="22.91" y="66.78" locked="yes" smashed="yes" rot="R30">
-<attribute name="NAME" x="21.39055" y="69.4117625" size="1.27" layer="25" rot="R30" align="bottom-center"/>
+<attribute name="NAME" x="21.39055" y="69.4117625" locked="yes" size="1.27" layer="25" rot="R30" align="bottom-center"/>
 </element>
 <element name="Q18" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="53.92" y="66.78" locked="yes" smashed="yes" rot="R330">
-<attribute name="NAME" x="55.43945" y="69.4117625" size="1.27" layer="25" rot="R330" align="bottom-center"/>
+<attribute name="NAME" x="55.43945" y="69.4117625" locked="yes" size="1.27" layer="25" rot="R330" align="bottom-center"/>
 </element>
 <element name="Q19" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="66.78" y="53.92" locked="yes" smashed="yes" rot="R300">
-<attribute name="NAME" x="69.4117625" y="55.43945" size="1.27" layer="25" rot="R300" align="bottom-center"/>
+<attribute name="NAME" x="69.4117625" y="55.43945" locked="yes" size="1.27" layer="25" rot="R300" align="bottom-center"/>
 </element>
 <element name="Q2" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="-107.95" y="30.48" smashed="yes">
 <attribute name="NAME" x="-107.95" y="33.114" size="1.27" layer="25" align="bottom-center"/>
@@ -1472,16 +1472,16 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-163.83" y="77.564" size="1.27" layer="25" align="bottom-center"/>
 </element>
 <element name="Q24" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="66.78" y="22.91" locked="yes" smashed="yes" rot="R240">
-<attribute name="NAME" x="69.4117625" y="21.390546875" size="1.27" layer="25" rot="R240" align="bottom-center"/>
+<attribute name="NAME" x="69.4117625" y="21.390546875" locked="yes" size="1.27" layer="25" rot="R240" align="bottom-center"/>
 </element>
 <element name="Q25" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="53.92" y="10.05" locked="yes" smashed="yes" rot="R210">
-<attribute name="NAME" x="55.43945" y="7.4182375" size="1.27" layer="25" rot="R210" align="bottom-center"/>
+<attribute name="NAME" x="55.43945" y="7.4182375" locked="yes" size="1.27" layer="25" rot="R210" align="bottom-center"/>
 </element>
 <element name="Q26" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="22.81" y="10.05" locked="yes" smashed="yes" rot="R150">
-<attribute name="NAME" x="21.29055" y="7.4182375" size="1.27" layer="25" rot="R150" align="bottom-center"/>
+<attribute name="NAME" x="21.29055" y="7.4182375" locked="yes" size="1.27" layer="25" rot="R150" align="bottom-center"/>
 </element>
 <element name="Q27" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="10.05" y="22.91" locked="yes" smashed="yes" rot="R120">
-<attribute name="NAME" x="7.4182375" y="21.39055" size="1.27" layer="25" rot="R120" align="bottom-center"/>
+<attribute name="NAME" x="7.4182375" y="21.39055" locked="yes" size="1.27" layer="25" rot="R120" align="bottom-center"/>
 </element>
 <element name="Q28" library="Micromouse 2020" package="SI7157DP" package3d_urn="urn:adsk.eagle:package:15328908/1" value="SI7157DP" x="-189.23" y="73.66" smashed="yes">
 <attribute name="NAME" x="-189.23" y="77.2249" size="0.8128" layer="25" align="bottom-center"/>
