@@ -40,6 +40,8 @@ namespace GpioDriver
 
     void SetPin(pin_t pin, VALUE val);
 
+    void TogglePin(pin_t pin);
+
 
 }; //GpioDriver
 

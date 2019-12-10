@@ -49,3 +49,9 @@ GpioDriver::SetPin(pin_t pin, VALUE val)
     }
 }
 
+void
+GpioDriver::TogglePin(pin_t pin)
+{
+    PORT->Group[pin.port].OUTTGL.reg |= 0x1 << pin.pinNum;
+}
+

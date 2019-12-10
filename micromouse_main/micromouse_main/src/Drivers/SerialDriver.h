@@ -32,6 +32,8 @@ protected:
 
 private:
 
+    uint8_t instance_;
+
 }; //SerialDriver
 
 #endif //__SERIAL_DRIVER_H__

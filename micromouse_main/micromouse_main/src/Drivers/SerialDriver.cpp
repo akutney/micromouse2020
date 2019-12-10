@@ -12,9 +12,10 @@
 
 Sercom * const SERCOM[SERCOM_INST_NUM] = SERCOM_INSTS;
 
-SerialDriver::SerialDriver(uint8_t instance)
+SerialDriver::SerialDriver(uint8_t instance) :
+instance_(instance)
 {   
-    // Configure IO
+    // Configure IO with PORT
     // TODO
     
     // Configure Initialization of SERCOM (page 443)
