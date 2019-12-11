@@ -41,10 +41,13 @@ int main (void)
     // ASF system and board initialization
 	system_init();
 
-	/* Insert application code here, after the board has been initialized. */
+	// Re-initialize clocks with settings we actually want
+    ClocksInit();
+    
+    /* Insert application code here, after the board has been initialized. */
     printf("Hello World!\r\n");
     
-    ClocksInit();
+    
 }
 
 void SysTick_Handler(void)
@@ -57,7 +60,6 @@ void SysTick_Handler(void)
         // Toggle LED pin output level.
         PORT->Group[0].OUTTGL.reg |= 0x1 << 17;
     }
-
 
 }
 

@@ -21,6 +21,7 @@
 
 #include "samd21.h"
 #include "definitions.h"
+#include "ClocksInit.h"
 
 
 /*******************************************************************************
@@ -67,7 +68,7 @@
  * Notes:
  *
  ******************************************************************************/
-void ClocksInit(void){
+void ClocksInit(void) {
 	
 	uint32_t tempDFLL48CalibrationCoarse;	/* used to retrieve DFLL48 coarse calibration value from NVM */
 
