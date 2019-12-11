@@ -19,14 +19,6 @@ void board_init(void);
 #  pragma weak board_init=system_board_init
 #endif
 
-// Generic Clock Channels - From Table 14-4 on pg. 107
-#define GCLK_CHANNEL_RTC 0x04
-#define GCLK_CHANNEL_SERCOM0_CORE 0x14
-#define GCLK_CHANNEL_SERCOM1_CORE 0x15
-#define GCLK_CHANNEL_SERCOM2_CORE 0x16
-#define GCLK_CHANNEL_SERCOM3_CORE 0x17
-#define GCLK_CHANNEL_SERCOM4_CORE 0x18
-#define GCLK_CHANNEL_SERCOM5_CORE 0x19
 
 void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator);
 
@@ -41,7 +33,9 @@ void system_board_init(void)
 	 * specific board configuration, found in conf_board.h.
 	 */
 
+    // configure_usart();
     configure_stdio_serial();
+    configure_rtc_count();
 }
 
 void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator)
@@ -66,6 +60,10 @@ void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator
 
 void configure_usart(void)
 {
+    /* SERCOM0 clock source */
+    configure_gclk_source(GCLK_CHANNEL_SERCOM0_CORE, GCLK_GENERATOR_0);
+
+    /* SERCOM0 module configuration */
     struct usart_config config_usart;
     usart_get_config_defaults(&config_usart);
     config_usart.baudrate = 38400;
@@ -119,4 +117,6 @@ void configure_rtc_count(void)
     }
     
     // use rtc_tamper_get_stamp(&rtc_instance) to read the count value
+    // use rtc_count_register_callback(...) with callback_type = RTC_COUNT_CALLBACK_OVERFLOW
+    // implement "millis()"
 }
