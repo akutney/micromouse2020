@@ -2190,7 +2190,7 @@
 <part name="P+11" library="Micromouse 2020" deviceset="+12V" device=""/>
 <part name="Q1" library="Micromouse 2020" deviceset="MMBT3904,215" device="MMBT3904,215" package3d_urn="urn:adsk.eagle:package:12395711/1"/>
 <part name="D1" library="Micromouse 2020" deviceset="LED" device="1206"/>
-<part name="R15" library="Micromouse 2020" deviceset="RESISTOR" device="0805"/>
+<part name="R15" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="30R"/>
 <part name="P+12" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="GND22" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="D2" library="Micromouse 2020" deviceset="LED" device="1206"/>
