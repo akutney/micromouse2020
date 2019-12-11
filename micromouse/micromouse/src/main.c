@@ -39,15 +39,19 @@ void SysTickInit(void);
 int main (void)
 {
     // ASF system and board initialization
-	system_init();
-
-	// Re-initialize clocks with settings we actually want
-    ClocksInit();
+	//system_init(); // broken out into system_clock_init and board_init
     
+    // Initialize clocks
+    ClocksInit();           // Old way
+    //system_clock_init();  // new way
+    
+    // Initialize board drivers
+    board_init();
+
     /* Insert application code here, after the board has been initialized. */
     printf("Hello World!\r\n");
     
-    
+    SysTickInit();
 }
 
 void SysTick_Handler(void)

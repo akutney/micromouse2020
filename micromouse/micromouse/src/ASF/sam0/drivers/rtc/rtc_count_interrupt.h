@@ -1,7 +1,7 @@
 /**
  * \file
  *
- * \brief User board configuration template
+ * \brief SAM RTC Driver (Count Interrupt Mode)
  *
  * Copyright (c) 2013-2018 Microchip Technology Inc. and its subsidiaries.
  *
@@ -34,10 +34,47 @@
  * Support and FAQ: visit <a href="https://www.microchip.com/support/">Microchip Support</a>
  */
 
-#ifndef CONF_BOARD_H
-#define CONF_BOARD_H
+#ifndef RTC_COUNT_INTERRUPT_H_INCLUDED
+#define RTC_COUNT_INTERRUPT_H_INCLUDED
 
-struct usart_module usart_instance;
-struct rtc_module rtc_instance;
+#include "rtc_count.h"
 
-#endif // CONF_BOARD_H
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+ * \addtogroup asfdoc_sam0_rtc_count_group
+ * @{
+ */
+
+ /**
+ * \name Callbacks
+ * @{
+ */
+enum status_code rtc_count_register_callback(
+		struct rtc_module *const module,
+		rtc_count_callback_t callback,
+		enum rtc_count_callback callback_type);
+
+enum status_code rtc_count_unregister_callback(
+		struct rtc_module *const module,
+		enum rtc_count_callback callback_type);
+
+void rtc_count_enable_callback(
+		struct rtc_module *const module,
+		enum rtc_count_callback callback_type);
+
+void rtc_count_disable_callback(
+		struct rtc_module *const module,
+		enum rtc_count_callback callback_type);
+
+/** @} */
+
+/** @} */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* RTC_COUNT_INTERRUPT_H_INCLUDED */

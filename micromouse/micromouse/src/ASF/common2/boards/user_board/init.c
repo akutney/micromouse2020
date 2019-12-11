@@ -21,6 +21,7 @@ void board_init(void);
 
 void configure_usart(void);
 void configure_stdio_serial(void);
+void configure_rtc_count(void);
 
 void system_board_init(void)
 {
@@ -60,4 +61,25 @@ void configure_stdio_serial(void)
     stdio_serial_init(&usart_instance, SERCOM0, &config_usart);
     
     usart_enable(&usart_instance);
+}
+
+void configure_rtc_count(void)
+{
+    // TODO: Configure what clock goes to rtc module
+    
+    enum status_code status;
+    struct rtc_count_config config_rtc_count;
+    rtc_count_get_config_defaults(&config_rtc_count);
+    config_rtc_count.clear_on_match     = false;
+    //config_rtc_count.compare_values[0]  = ;
+    //config_rtc_count.compare_values[1]  = ;
+    config_rtc_count.mode               = RTC_COUNT_MODE_32BIT;
+    config_rtc_count.prescaler          = 1;
+    status = rtc_count_init(&rtc_instance, RTC, &config_rtc_count);
+   
+    if (status == STATUS_OK) {
+        rtc_count_enable(&rtc_instance);
+    }
+    
+    // use rtc_tamper_get_stamp(&rtc_instance) to read the count value
 }
