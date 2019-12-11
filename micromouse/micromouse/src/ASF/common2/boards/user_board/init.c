@@ -19,7 +19,7 @@ void board_init(void);
 #  pragma weak board_init=system_board_init
 #endif
 
-// Generic Clock Channels
+// Generic Clock Channels - From Table 14-4 on pg. 107
 #define GCLK_CHANNEL_RTC 0x04
 #define GCLK_CHANNEL_SERCOM0_CORE 0x14
 #define GCLK_CHANNEL_SERCOM1_CORE 0x15
