@@ -713,6 +713,7 @@
     <Folder Include="src\ASF\thirdparty\CMSIS\Lib\" />
     <Folder Include="src\ASF\thirdparty\CMSIS\Lib\GCC\" />
     <Folder Include="src\config\" />
+    <Folder Include="src\clocks" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\ASF\sam0\drivers\adc\adc_sam_d_r_h\adc.c">
@@ -1409,6 +1410,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\utils\syscalls\gcc\syscalls.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\clocks\ClocksInit.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\clocks\ClocksInit.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\clocks\definitions.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\main.c">
