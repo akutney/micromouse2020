@@ -38,6 +38,6 @@
 #define CONF_BOARD_H
 
 struct usart_module usart_instance;
-struct rtc_module rtc_instance;
+struct rtc_module   rtc_instance;
 
 #endif // CONF_BOARD_H
