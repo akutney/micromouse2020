@@ -31,7 +31,6 @@
 #include "samd21.h"
 #include <asf.h>
 
-#include "clocks/ClocksInit.h"
 
 // Function Declarations
 void SysTickInit(void);
@@ -39,14 +38,14 @@ void SysTickInit(void);
 int main (void)
 {
     // ASF system and board initialization
-	//system_init(); // broken out into system_clock_init and board_init
+	system_init(); // broken out into system_clock_init and board_init
     
     // Initialize clocks
-    ClocksInit();           // Old way
+    //ClocksInit();         // Old way
     //system_clock_init();  // new way
     
     // Initialize board drivers
-    board_init();
+    //board_init();
 
     /* Insert application code here, after the board has been initialized. */
     printf("Hello World!\r\n");
