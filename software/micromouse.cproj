@@ -657,6 +657,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="include" />
     <Folder Include="src\" />
     <Folder Include="src\ASF\" />
     <Folder Include="src\ASF\common2\" />
@@ -738,6 +739,12 @@
     <Folder Include="src\Clocks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="include\error.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\errors.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\ASF\sam0\drivers\adc\adc_sam_d_r_h\adc.c">
       <SubType>compile</SubType>
     </Compile>
@@ -1456,6 +1463,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Clocks\definitions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\error.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\main.c">
