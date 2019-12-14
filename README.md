@@ -6,6 +6,6 @@ Code and PCB designs for micromouse 2020
 
 Get started with the following links:
 
-- [Project Structure](docs/Project%20Structure.md)
 - [Environment Setup](docs/Environment%20Setup.md)
+- [Project Structure](docs/Project%20Structure.md)
 - [Development Lifecycle](docs/Development%20Lifecycle.md)
