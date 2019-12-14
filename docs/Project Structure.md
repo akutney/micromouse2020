@@ -31,7 +31,7 @@ In the software folder is the following directory structure:
     └── micromouse.cproj
 
 
-##Here a few highlights
+## Here are a few highlights
 
 | Item             | Descripition                                                                                                                                            |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
