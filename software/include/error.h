@@ -6,7 +6,7 @@
 typedef enum {
 	ESUCCESS = 0,
 #ifdef E
-#error Please don't define E
+#error Please do not define E
 #endif
 #define ERROR_H_CONCAT(a, b) a ## b
 #define E(mnemonic, desc) ERROR_H_CONCAT(E, mnemonic),
