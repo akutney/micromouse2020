@@ -32,11 +32,3 @@ const char *mm_strerror(mm_error_t errno) {
 	}
 	return error_strings[errno];
 }
-
-void mm_perror(const char *func) {
-	
-}
-
-void mm_trace(const char *file, int line) {
-	
-}

@@ -19,27 +19,29 @@ extern mm_error_t mm_errno;
 extern const int mm_numerr;
 
 const char *mm_strerror(mm_error_t errno);
-void mm_perror(const char *func);
-void mm_trace(const char *file, int line);
+
+#define ERROR_H_STR(x) # x
 
 #define RETURN_ERROR (-1)
 #define RETURN_SUCCESS (0)
 
+#define TRACE_ERR() do { \
+		puts("  at " __FILE__ ":" ERROR_H_STR(__LINE__)); \
+	} while (0)
 #define THROW_ERR(func, error) do { \
 		mm_errno = error; \
-		puts(); \
-		mm_perror(func); \
+		printf(func ": %s\r\n", mm_strerror(mm_errno)); \
 		return RETURN_ERROR; \
 	} while (0)
 #define CHECK_ERR(code) do { \
 		if (code < 0) { \
-			mm_trace(__FILE__, __LINE__); \
+			TRACE_ERR(); \
 			return RETURN_ERROR; \
 		} \
 	} while (0)
 #define CHECK_ERR_JMP(code, label) do { \
 		if (code < 0) { \
-			mm_trace(__FILE__, __LINE__); \
+			TRACE_ERR(); \
 			goto label; \
 		} \
 	} while (0)
