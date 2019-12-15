@@ -31,26 +31,43 @@
 #include "samd21.h"
 #include <asf.h>
 
+#include "types/types.h"
+
+#include "drivers/adc_driver.h" // Probably don't need
+#include "drivers/button_driver.h"
+#include "drivers/distance_driver.h"
+#include "drivers/encoder_driver.h"
+#include "drivers/i2c_driver.h" // Probably don't need
+#include "drivers/imu_driver.h"
+#include "drivers/motor_driver.h"
+#include "drivers/pwm_driver.h" // Might not need
+#include "drivers/sensor_driver.h"
+#include "drivers/time_driver.h"
+
+#include "algorithms/navigation.h"
+#include "algorithms/guidance.h"
+#include "algorithms/controller.h"
+
+#define LED_PORT 0
+#define LED_PIN 17
+
 
 // Function Declarations
-void SysTickInit(void);
+void SysTick_Init(void);
 
 int main (void)
 {
     // ASF system and board initialization
-	system_init(); // broken out into system_clock_init and board_init
-    
-    // Initialize clocks
-    //ClocksInit();         // Old way
-    //system_clock_init();  // new way
-    
-    // Initialize board drivers
-    //board_init();
+	system_init();
 
     /* Insert application code here, after the board has been initialized. */
     printf("Hello World!\r\n");
     
-    SysTickInit();
+    // Configure LED pin
+    PORT->Group[LED_PORT].DIR.reg |= 0x1 << LED_PIN;
+    PORT->Group[LED_PORT].PINCFG[LED_PIN].reg = 0x0;
+
+    SysTick_Init();
 }
 
 void SysTick_Handler(void)
@@ -61,13 +78,13 @@ void SysTick_Handler(void)
     // Toggle LEDs every second (i.e. 1000ms)
     if(tickCount % 1000 == 0){
         // Toggle LED pin output level.
-        PORT->Group[0].OUTTGL.reg |= 0x1 << 17;
+        PORT->Group[LED_PORT].OUTTGL.reg |= 0x1 << LED_PIN;
     }
 
 }
 
 
-void SysTickInit(void)
+void SysTick_Init(void)
 {
     // Configure SysTick to trigger an ISR every millisecond using a 48MHz CPU Clock
     SysTick->CTRL = 0;					// Disable SysTick
