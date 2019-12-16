@@ -1,3 +1,4 @@
-// E(<mnemonic>, "<description>", <code>)
-E(INVAL, "Invalid argument", 1)
-E(NOSYS, "Not implemented", 2)
+// E(<mnemonic>, "<description>")
+E(INVAL, "Invalid argument")
+E(NOSYS, "Not implemented")
+E(IO, "IO error")

@@ -11,9 +11,9 @@ static const char *error_strings[] = {
 mm_error_t mm_errno = ESUCCESS;
 const int mm_numerr = sizeof(error_strings) / sizeof(error_strings[0]);
 
-static char *const invalid_error = "Invalid error XXXXXXXXXX";
+static char invalid_error[] = "Invalid error XXXXXXXXXX";
 static char *const invalid_error_num = invalid_error + 14;
-static char *const invalid_error_num_end = invalid_error_num + 10;
+static char *const invalid_error_num_end = invalid_error + 24;
 
 const char *mm_strerror(mm_error_t errno) {
 	if (errno < 0 || errno >= mm_numerr) {
@@ -31,12 +31,4 @@ const char *mm_strerror(mm_error_t errno) {
 		return invalid_error;
 	}
 	return error_strings[errno];
-}
-
-void mm_perror(const char *func) {
-	
-}
-
-void mm_trace(const char *file, int line) {
-	
 }
