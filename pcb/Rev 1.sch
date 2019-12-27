@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -184,17 +184,17 @@
 <text x="0" y="2.1636" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="3220-10-0100-00">
-<pad name="P1" x="-0.635" y="2.54" drill="0.7" diameter="1.016" shape="offset" rot="R180"/>
-<pad name="P2" x="-0.635" y="1.27" drill="0.7" diameter="1.016" shape="offset" rot="R180"/>
-<pad name="P3" x="-0.635" y="0" drill="0.7" diameter="1.016" shape="offset" rot="R180"/>
-<pad name="P4" x="-0.635" y="-1.27" drill="0.7" diameter="1.016" shape="offset" rot="R180"/>
-<pad name="P5" x="-0.635" y="-2.54" drill="0.7" diameter="1.016" shape="offset" rot="R180"/>
-<pad name="P6" x="0.635" y="-2.54" drill="0.7" diameter="1.016" shape="offset"/>
-<pad name="P7" x="0.635" y="-1.27" drill="0.7" diameter="1.016" shape="offset"/>
-<pad name="P8" x="0.635" y="0" drill="0.7" diameter="1.016" shape="offset"/>
-<pad name="P9" x="0.635" y="1.27" drill="0.7" diameter="1.016" shape="offset"/>
-<pad name="P10" x="0.635" y="2.54" drill="0.7" diameter="1.016" shape="offset"/>
-<text x="-3.013" y="6.399665625" size="1.27" layer="25">&gt;NAME</text>
+<pad name="P1" x="-0.635" y="2.54" drill="0.6" shape="offset" rot="R180"/>
+<pad name="P2" x="-0.635" y="1.27" drill="0.6" shape="offset" rot="R180"/>
+<pad name="P3" x="-0.635" y="0" drill="0.6" shape="offset" rot="R180"/>
+<pad name="P4" x="-0.635" y="-1.27" drill="0.6" shape="offset" rot="R180"/>
+<pad name="P5" x="-0.635" y="-2.54" drill="0.6" shape="offset" rot="R180"/>
+<pad name="P6" x="0.635" y="-2.54" drill="0.6" shape="offset"/>
+<pad name="P7" x="0.635" y="-1.27" drill="0.6" shape="offset"/>
+<pad name="P8" x="0.635" y="0" drill="0.6" shape="offset"/>
+<pad name="P9" x="0.635" y="1.27" drill="0.6" shape="offset"/>
+<pad name="P10" x="0.635" y="2.54" drill="0.6" shape="offset"/>
+<text x="-3.013" y="6.399665625" size="0.8128" layer="25">&gt;NAME</text>
 <wire x1="-2.55" y1="6.325" x2="2.55" y2="6.325" width="0.127" layer="21"/>
 <wire x1="2.55" y1="6.325" x2="2.55" y2="-6.325" width="0.127" layer="21"/>
 <wire x1="2.55" y1="-6.325" x2="-2.55" y2="-6.325" width="0.127" layer="21"/>
@@ -703,6 +703,32 @@
 <smd name="2" x="1.8" y="0" dx="4" dy="1.5" layer="1" rot="R90"/>
 <text x="0" y="3.5067" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
+<package name="0603" urn="urn:adsk.eagle:footprint:16053680/1" locally_modified="yes">
+<description>Chip, 1.55 X 0.85 X 0.45 mm body
+&lt;p&gt;Chip package with body size 1.55 X 0.85 X 0.45 mm&lt;/p&gt;</description>
+<wire x1="0.775" y1="0.7949" x2="-0.775" y2="0.7949" width="0.12" layer="21"/>
+<wire x1="0.775" y1="-0.7949" x2="-0.775" y2="-0.7949" width="0.12" layer="21"/>
+<wire x1="0.775" y1="-0.425" x2="-0.775" y2="-0.425" width="0.12" layer="51"/>
+<wire x1="-0.775" y1="-0.425" x2="-0.775" y2="0.425" width="0.12" layer="51"/>
+<wire x1="-0.775" y1="0.425" x2="0.775" y2="0.425" width="0.12" layer="51"/>
+<wire x1="0.775" y1="0.425" x2="0.775" y2="-0.425" width="0.12" layer="51"/>
+<smd name="1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1"/>
+<smd name="2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1"/>
+<text x="0" y="1.4299" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+</package>
+<package name="0402" urn="urn:adsk.eagle:footprint:16053684/1" locally_modified="yes">
+<description>Chip, 1.00 X 0.50 X 0.35 mm body
+&lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.35 mm&lt;/p&gt;</description>
+<wire x1="0.5" y1="0.6199" x2="-0.5" y2="0.6199" width="0.12" layer="21"/>
+<wire x1="0.5" y1="-0.6199" x2="-0.5" y2="-0.6199" width="0.12" layer="21"/>
+<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.12" layer="51"/>
+<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.12" layer="51"/>
+<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.12" layer="51"/>
+<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.12" layer="51"/>
+<smd name="1" x="-0.5" y="0" dx="0.5" dy="0.6" layer="1"/>
+<smd name="2" x="0.5" y="0" dx="0.5" dy="0.6" layer="1"/>
+<text x="0" y="1.2549" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="QFN50P700X700X90-49T515N" urn="urn:adsk.eagle:package:14495109/1" locally_modified="yes" type="model">
@@ -822,6 +848,20 @@
 &lt;p&gt;Chip package with body size 3.60 X 4.90 X 4.10 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="NRS5040"/>
+</packageinstances>
+</package3d>
+<package3d name="RESC1508X45N" urn="urn:adsk.eagle:package:16053670/1" type="model">
+<description>Chip, 1.55 X 0.85 X 0.45 mm body
+&lt;p&gt;Chip package with body size 1.55 X 0.85 X 0.45 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="0603"/>
+</packageinstances>
+</package3d>
+<package3d name="RESC1005X35N" urn="urn:adsk.eagle:package:16053683/1" type="model">
+<description>Chip, 1.00 X 0.50 X 0.35 mm body
+&lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.35 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="0402"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1452,6 +1492,30 @@
 <technology name=""/>
 </technologies>
 </device>
+<device name="0603" package="0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053670/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0402" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053683/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="RESISTOR" prefix="R" uservalue="yes">
@@ -1464,6 +1528,30 @@
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0603" package="0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053670/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0402" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053683/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -1871,11 +1959,35 @@
 <gate name="G$1" symbol="FERRITE" x="-5.08" y="0"/>
 </gates>
 <devices>
-<device name="" package="0805">
+<device name="0805" package="0805">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0603" package="0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053670/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0402" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053683/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -2120,42 +2232,42 @@
 <parts>
 <part name="U1" library="Micromouse 2020" deviceset="ATSAMD21G18A-MU" device="" package3d_urn="urn:adsk.eagle:package:14495109/1"/>
 <part name="GND1" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C1" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="10uF"/>
-<part name="C2" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="C3" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="C4" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="R1" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="2.2k"/>
+<part name="C1" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10uF"/>
+<part name="C2" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF"/>
+<part name="C3" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF"/>
+<part name="C4" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF"/>
+<part name="R1" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="2.2k"/>
 <part name="GND2" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C6" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="10uF"/>
+<part name="C6" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10uF"/>
 <part name="P+1" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+2" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="C5" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
+<part name="C5" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="1uF"/>
 <part name="GND4" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="GND3" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C7" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="100pF"/>
-<part name="R2" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="330R"/>
+<part name="C7" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="100pF"/>
+<part name="R2" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="330R"/>
 <part name="S1" library="Micromouse 2020" deviceset="PTS526SMG15SMTR2LFS" device=""/>
 <part name="GND5" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="GND6" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C8" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="C9" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="4.7uF"/>
+<part name="C8" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF"/>
+<part name="C9" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="4.7uF"/>
 <part name="GND7" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+3" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="XTAL1" library="Micromouse 2020" deviceset="FC-135" device="" package3d_urn="urn:adsk.eagle:package:14566881/1" value="32.768kHz"/>
-<part name="C11" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="22pF"/>
-<part name="C12" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="22pF"/>
+<part name="C11" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="22pF"/>
+<part name="C12" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="22pF"/>
 <part name="GND9" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="GND10" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="XTAL2" library="Micromouse 2020" deviceset="FC-135" device="" package3d_urn="urn:adsk.eagle:package:14566881/1" value="32MHz"/>
-<part name="C13" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="6.8pF"/>
-<part name="C14" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="10pF"/>
+<part name="C13" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="6.8pF"/>
+<part name="C14" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10pF"/>
 <part name="GND11" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="GND12" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="J1" library="Micromouse 2020" deviceset="3220-10-0100-00" device=""/>
-<part name="R5" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="1k"/>
+<part name="R5" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1k"/>
 <part name="P+4" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+5" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="C15" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
+<part name="C15" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
 <part name="GND13" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="U2" library="Micromouse 2020" deviceset="AP3441" device="" package3d_urn="urn:adsk.eagle:package:14523753/1"/>
 <part name="GND14" library="Micromouse 2020" deviceset="GND" device=""/>
@@ -2172,20 +2284,20 @@
 <part name="R6" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
 <part name="P+8" library="Micromouse 2020" deviceset="+3V7" device=""/>
 <part name="U3" library="Micromouse 2020" deviceset="TPS61089" device="" package3d_urn="urn:adsk.eagle:package:14523902/1"/>
-<part name="C20" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="R9" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="270k"/>
-<part name="C21" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="2.2uF"/>
+<part name="C20" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF"/>
+<part name="R9" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="270k"/>
+<part name="C21" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="2.2uF"/>
 <part name="GND19" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+9" library="Micromouse 2020" deviceset="+3V7" device=""/>
-<part name="R10" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
+<part name="R10" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
 <part name="P+10" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="R11" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="150k"/>
+<part name="R11" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="150k"/>
 <part name="GND20" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C23" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="33pF"/>
-<part name="C24" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="680pF"/>
-<part name="R12" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="348k"/>
-<part name="R13" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="18k"/>
-<part name="R14" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="160k"/>
+<part name="C23" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="33pF"/>
+<part name="C24" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="680pF"/>
+<part name="R12" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="348k"/>
+<part name="R13" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="18k"/>
+<part name="R14" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="160k"/>
 <part name="GND21" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+11" library="Micromouse 2020" deviceset="+12V" device=""/>
 <part name="Q1" library="Micromouse 2020" deviceset="MMBT3904,215" device="MMBT3904,215" package3d_urn="urn:adsk.eagle:package:12395711/1"/>
@@ -2322,14 +2434,14 @@
 <part name="C30" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
 <part name="C31" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
 <part name="C32" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
-<part name="C33" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
+<part name="C33" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF"/>
 <part name="C34" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C35" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C36" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C37" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C38" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="C39" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="C40" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
+<part name="C40" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
 <part name="C41" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
 <part name="P+39" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+40" library="Micromouse 2020" deviceset="+3V3" device=""/>
@@ -2351,43 +2463,43 @@
 <part name="GND52" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="U4" library="Micromouse 2020" deviceset="BNO055" device="" package3d_urn="urn:adsk.eagle:package:14494911/1"/>
 <part name="P+43" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="C52" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="C53" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.12uF"/>
-<part name="C54" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="6800pF"/>
+<part name="C52" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
+<part name="C53" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.12uF"/>
+<part name="C54" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="6800pF"/>
 <part name="GND53" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="GND54" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C55" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
+<part name="C55" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
 <part name="GND55" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="XTAL3" library="Micromouse 2020" deviceset="FC-135" device="" package3d_urn="urn:adsk.eagle:package:14566881/1" value="32.768kHz"/>
-<part name="C56" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="22pF"/>
-<part name="C57" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="22pF"/>
+<part name="C56" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="22pF"/>
+<part name="C57" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="22pF"/>
 <part name="GND56" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="R42" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R43" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R44" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R45" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
+<part name="R42" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R43" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R44" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R45" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
 <part name="GND57" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="P+44" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="R46" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R47" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
+<part name="R46" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R47" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
 <part name="GND58" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="U5" library="Micromouse 2020" deviceset="MCP73811" device="" package3d_urn="urn:adsk.eagle:package:14523950/1"/>
 <part name="GND59" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="C58" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
 <part name="C59" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
 <part name="GND60" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="R48" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R49" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
+<part name="R48" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k"/>
+<part name="R49" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k"/>
 <part name="GND61" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="R50" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="4.7k"/>
-<part name="R51" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="4.7k"/>
+<part name="R50" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="4.7k"/>
+<part name="R51" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="4.7k"/>
 <part name="P+45" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="J2" library="Micromouse 2020" deviceset="10118194-0001LF" device=""/>
 <part name="P+46" library="Micromouse 2020" deviceset="+5V" device=""/>
 <part name="GND62" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="R52" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R53" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="100k"/>
-<part name="R54" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="100k"/>
+<part name="R52" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k"/>
+<part name="R53" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="100k"/>
+<part name="R54" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="100k"/>
 <part name="C60" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
 <part name="P+47" library="Micromouse 2020" deviceset="+5V" device=""/>
 <part name="J3" library="Micromouse 2020" deviceset="B2B-PH-K-S(LF)(SN)" device=""/>
@@ -2397,10 +2509,10 @@
 <part name="P+48" library="Micromouse 2020" deviceset="+5V" device=""/>
 <part name="Q29" library="Micromouse 2020" deviceset="SI7157DP" device="" package3d_urn="urn:adsk.eagle:package:15328908/1"/>
 <part name="Q30" library="Micromouse 2020" deviceset="MMBT3906" device="" package3d_urn="urn:adsk.eagle:package:12395633/1"/>
-<part name="R55" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="68k"/>
+<part name="R55" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="68k"/>
 <part name="Q31" library="Micromouse 2020" deviceset="MMBT3906" device="" package3d_urn="urn:adsk.eagle:package:12395633/1"/>
-<part name="R56" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R57" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="100k"/>
+<part name="R56" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R57" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="100k"/>
 <part name="Q32" library="Micromouse 2020" deviceset="SI7157DP" device="" package3d_urn="urn:adsk.eagle:package:15328908/1"/>
 <part name="P+49" library="Micromouse 2020" deviceset="+3V7" device=""/>
 <part name="GND64" library="Micromouse 2020" deviceset="GND" device=""/>
@@ -2418,12 +2530,12 @@
 <part name="R61" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="0R"/>
 <part name="R62" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="0R"/>
 <part name="P+54" library="Micromouse 2020" deviceset="+3V7" device=""/>
-<part name="FB1" library="Micromouse 2020" deviceset="FERRITE" device=""/>
+<part name="FB1" library="Micromouse 2020" deviceset="FERRITE" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1"/>
 <part name="U6" library="Micromouse 2020" deviceset="MCP1501" device="" package3d_urn="urn:adsk.eagle:package:15205588/1"/>
 <part name="GND67" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C63" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="300pF"/>
-<part name="R63" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="C64" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="2.2uF"/>
+<part name="C63" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="300pF"/>
+<part name="R63" library="Micromouse 2020" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k"/>
+<part name="C64" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="2.2uF"/>
 <part name="GND68" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="TP1" library="Micromouse 2020" deviceset="TESTPOINT" device=""/>
 <part name="TP2" library="Micromouse 2020" deviceset="TESTPOINT" device=""/>
@@ -2492,38 +2604,38 @@
 <part name="C76" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
 <part name="GND88" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="SW1" library="Micromouse 2020" deviceset="210-10MS" device=""/>
-<part name="R67" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R68" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R69" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k\"/>
-<part name="R70" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R71" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R72" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R73" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R74" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R75" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
-<part name="R76" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
+<part name="R67" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R68" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R69" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k\"/>
+<part name="R70" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R71" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R72" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R73" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R74" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R75" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
+<part name="R76" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
 <part name="GND89" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="R77" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R78" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R79" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R80" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R81" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R82" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R83" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R84" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R85" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
-<part name="R86" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="470k"/>
+<part name="R77" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R78" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R79" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R80" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R81" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R82" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R83" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R84" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R85" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
+<part name="R86" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="470k"/>
 <part name="P+68" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="C77" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
+<part name="C77" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
 <part name="GND90" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="A5" library="Micromouse 2020" deviceset="HC-05" device=""/>
 <part name="P+69" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="GND91" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="C78" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
-<part name="FB2" library="Micromouse 2020" deviceset="FERRITE" device=""/>
-<part name="FB3" library="Micromouse 2020" deviceset="FERRITE" device=""/>
-<part name="C10" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
-<part name="C79" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
+<part name="FB2" library="Micromouse 2020" deviceset="FERRITE" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1"/>
+<part name="FB3" library="Micromouse 2020" deviceset="FERRITE" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1"/>
+<part name="C10" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF"/>
+<part name="C79" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF"/>
 <part name="GND8" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="L1" library="Micromouse 2020" deviceset="104CDMCC" device="" package3d_urn="urn:adsk.eagle:package:15317394/1" value="10uH"/>
 <part name="L2" library="Micromouse 2020" deviceset="NRS5040" device="" package3d_urn="urn:adsk.eagle:package:14566909/1" value="3.3uH"/>
@@ -3871,7 +3983,6 @@
 <wire x1="-33.02" y1="66.04" x2="-33.02" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="P$2"/>
 <wire x1="-33.02" y1="68.58" x2="-33.02" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="60.96" x2="-43.18" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="68.58" x2="-33.02" y2="68.58" width="0.1524" layer="91"/>
 <junction x="-33.02" y="68.58"/>
 </segment>
@@ -3887,7 +3998,7 @@
 <wire x1="55.88" y1="-12.7" x2="55.88" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="P$2"/>
 <wire x1="55.88" y1="-2.54" x2="55.88" y2="0" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="-5.08" x2="48.26" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="2.54" x2="48.26" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="-2.54" x2="55.88" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="55.88" y="-2.54"/>
 </segment>
@@ -3938,28 +4049,6 @@
 <pinref part="U1" gate="G$1" pin="PA03"/>
 <wire x1="-22.86" y1="30.48" x2="-33.02" y2="30.48" width="0.1524" layer="91"/>
 <label x="-33.02" y="30.48" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="C9" gate="G$1" pin="P$2"/>
-<wire x1="93.98" y1="55.88" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="58.42" x2="104.14" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="C8" gate="G$1" pin="P$2"/>
-<wire x1="104.14" y1="58.42" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
-<junction x="93.98" y="58.42"/>
-<pinref part="C63" gate="G$1" pin="P$2"/>
-<pinref part="U6" gate="G$1" pin="OUT"/>
-<wire x1="83.82" y1="55.88" x2="83.82" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="58.42" x2="81.28" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="58.42" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
-<junction x="83.82" y="58.42"/>
-<pinref part="FB3" gate="G$1" pin="P$1"/>
-<wire x1="114.3" y1="48.26" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="48.26" x2="111.76" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="58.42" x2="104.14" y2="58.42" width="0.1524" layer="91"/>
-<junction x="104.14" y="58.42"/>
-<pinref part="FB2" gate="G$1" pin="P$1"/>
-<wire x1="111.76" y1="58.42" x2="114.3" y2="58.42" width="0.1524" layer="91"/>
-<junction x="111.76" y="58.42"/>
 </segment>
 <segment>
 <pinref part="FB2" gate="G$1" pin="P$2"/>
@@ -4097,6 +4186,30 @@
 <pinref part="R63" gate="G$1" pin="P$1"/>
 <wire x1="50.8" y1="58.42" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="58.42" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$999" class="0">
+<segment>
+<pinref part="C9" gate="G$1" pin="P$2"/>
+<wire x1="93.98" y1="55.88" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="58.42" x2="104.14" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="P$2"/>
+<wire x1="104.14" y1="58.42" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
+<junction x="93.98" y="58.42"/>
+<pinref part="C63" gate="G$1" pin="P$2"/>
+<pinref part="U6" gate="G$1" pin="OUT"/>
+<wire x1="83.82" y1="55.88" x2="83.82" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="58.42" x2="81.28" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="58.42" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
+<junction x="83.82" y="58.42"/>
+<pinref part="FB3" gate="G$1" pin="P$1"/>
+<wire x1="114.3" y1="48.26" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="48.26" x2="111.76" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="58.42" x2="104.14" y2="58.42" width="0.1524" layer="91"/>
+<junction x="104.14" y="58.42"/>
+<pinref part="FB2" gate="G$1" pin="P$1"/>
+<wire x1="111.76" y1="58.42" x2="114.3" y2="58.42" width="0.1524" layer="91"/>
+<junction x="111.76" y="58.42"/>
 </segment>
 </net>
 </nets>
