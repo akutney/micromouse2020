@@ -3579,6 +3579,72 @@
 <sheet>
 <description>MCU</description>
 <plain>
+<text x="215.9" y="-60.96" size="1.778" layer="91"># UARTS:
+SDA
+SCL
+BT_RX
+BT_TX
+
+# PWMs:
+MOTOR_1A
+MOTOR_1B
+MOTOR_2A
+MOTOR_2B
+MOTOR_3A
+MOTOR_3B
+MOTOR_4A
+MOTOR_4B
+
+# Interrupts:
+ENCODER_1A
+ENCODER_1B
+ENCODER_2A
+ENCODER_2B
+ENCODER_3A
+ENCODER_3B
+ENCODER_4A
+ENCODER_4B
+IMU_INT
+
+# Digital Outputs:
+IR1
+IR2
+IR3
+IR4
+IR5
+IR6
+IR7
+IR8
+LED0
+LED1
+LED2
+LED3
+LED4
+LED5
+LED6
+LED7
+LED8
+LED9
+BT_EN
+
+Digital Inputs:
+SW0
+SW1
+SW2
+SW3
+SW4
+SW5
+BT_STATE
+
+# Analog Inputs:
+PHOTO1
+PHOTO2
+PHOTO3
+PHOTO4
+PHOTO5
+PHOTO6
+PHOTO7
+PHOTO8</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -6849,6 +6915,10 @@
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
