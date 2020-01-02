@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -149,6 +149,32 @@
 <smd name="GND" x="1.2746" y="0" dx="1.1709" dy="0.5471" layer="1"/>
 <text x="0" y="2.6125" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
+<package name="0603" urn="urn:adsk.eagle:footprint:16053680/1" locally_modified="yes">
+<description>Chip, 1.55 X 0.85 X 0.45 mm body
+&lt;p&gt;Chip package with body size 1.55 X 0.85 X 0.45 mm&lt;/p&gt;</description>
+<wire x1="0.775" y1="0.7949" x2="-0.775" y2="0.7949" width="0.12" layer="21"/>
+<wire x1="0.775" y1="-0.7949" x2="-0.775" y2="-0.7949" width="0.12" layer="21"/>
+<wire x1="0.775" y1="-0.425" x2="-0.775" y2="-0.425" width="0.12" layer="51"/>
+<wire x1="-0.775" y1="-0.425" x2="-0.775" y2="0.425" width="0.12" layer="51"/>
+<wire x1="-0.775" y1="0.425" x2="0.775" y2="0.425" width="0.12" layer="51"/>
+<wire x1="0.775" y1="0.425" x2="0.775" y2="-0.425" width="0.12" layer="51"/>
+<smd name="1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1"/>
+<smd name="2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1"/>
+<text x="0" y="1.4299" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+</package>
+<package name="0402" urn="urn:adsk.eagle:footprint:16053684/1" locally_modified="yes">
+<description>Chip, 1.00 X 0.50 X 0.35 mm body
+&lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.35 mm&lt;/p&gt;</description>
+<wire x1="0.5" y1="0.6199" x2="-0.5" y2="0.6199" width="0.12" layer="21"/>
+<wire x1="0.5" y1="-0.6199" x2="-0.5" y2="-0.6199" width="0.12" layer="21"/>
+<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.12" layer="51"/>
+<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.12" layer="51"/>
+<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.12" layer="51"/>
+<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.12" layer="51"/>
+<smd name="1" x="-0.5" y="0" dx="0.5" dy="0.6" layer="1"/>
+<smd name="2" x="0.5" y="0" dx="0.5" dy="0.6" layer="1"/>
+<text x="0" y="1.2549" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOT95P285X120-3N" urn="urn:adsk.eagle:package:14494850/1" locally_modified="yes" type="model">
@@ -156,6 +182,20 @@
 &lt;p&gt;3-pin SOT23 package with 0.95 mm pitch, 2.85 mm span with body size 3.00 X 1.52 X 1.20 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="TLE49462KHTSA1"/>
+</packageinstances>
+</package3d>
+<package3d name="RESC1508X45N" urn="urn:adsk.eagle:package:16053670/1" type="model">
+<description>Chip, 1.55 X 0.85 X 0.45 mm body
+&lt;p&gt;Chip package with body size 1.55 X 0.85 X 0.45 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="0603"/>
+</packageinstances>
+</package3d>
+<package3d name="RESC1005X35N" urn="urn:adsk.eagle:package:16053683/1" type="model">
+<description>Chip, 1.00 X 0.50 X 0.35 mm body
+&lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.35 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="0402"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -318,6 +358,30 @@
 <technology name=""/>
 </technologies>
 </device>
+<device name="0603" package="0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053670/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0402" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053683/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="MOTOR" prefix="L">
@@ -370,6 +434,30 @@
 <technology name=""/>
 </technologies>
 </device>
+<device name="0603" package="0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053670/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0402" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16053683/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -387,15 +475,15 @@
 <part name="A1" library="Micromouse 2020" deviceset="ENCODER" device=""/>
 <part name="P+1" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="GND1" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C1" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
+<part name="C1" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
 <part name="L1" library="Micromouse 2020" deviceset="MOTOR" device=""/>
-<part name="C2" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="3.3nF"/>
+<part name="C2" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="3.3nF"/>
 <part name="U1" library="Micromouse 2020" deviceset="TLE49462KHTSA1" device="" package3d_urn="urn:adsk.eagle:package:14494850/1"/>
-<part name="R1" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
+<part name="R1" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
 <part name="P+2" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="GND2" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="U2" library="Micromouse 2020" deviceset="TLE49462KHTSA1" device="" package3d_urn="urn:adsk.eagle:package:14494850/1"/>
-<part name="R2" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="10k"/>
+<part name="R2" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k"/>
 <part name="P+3" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="GND3" library="Micromouse 2020" deviceset="GND" device=""/>
 </parts>
@@ -484,12 +572,26 @@
 <wire x1="5.08" y1="0" x2="15.24" y2="0" width="0.1524" layer="91"/>
 <label x="7.62" y="0" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="Q"/>
+<wire x1="45.72" y1="2.54" x2="48.26" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="P$1"/>
+<wire x1="48.26" y1="2.54" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
+<label x="45.72" y="2.54" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="OUTA" class="0">
 <segment>
 <pinref part="A1" gate="G$1" pin="OUTA"/>
 <wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.1524" layer="91"/>
 <label x="7.62" y="2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="Q"/>
+<wire x1="63.5" y1="2.54" x2="66.04" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="P$1"/>
+<wire x1="66.04" y1="2.54" x2="66.04" y2="5.08" width="0.1524" layer="91"/>
+<label x="63.5" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -546,22 +648,6 @@
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="U2" gate="G$1" pin="GND"/>
 <wire x1="58.42" y1="-5.08" x2="58.42" y2="-2.54" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="Q"/>
-<wire x1="45.72" y1="2.54" x2="48.26" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="P$1"/>
-<wire x1="48.26" y1="2.54" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="Q"/>
-<wire x1="63.5" y1="2.54" x2="66.04" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="P$1"/>
-<wire x1="66.04" y1="2.54" x2="66.04" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
