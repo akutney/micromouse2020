@@ -2388,7 +2388,7 @@
 <part name="R5" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1k"/>
 <part name="P+4" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="P+5" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="C15" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
+<part name="C15" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
 <part name="GND13" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="U2" library="Micromouse 2020" deviceset="AP3441" device="" package3d_urn="urn:adsk.eagle:package:14523753/1"/>
 <part name="GND14" library="Micromouse 2020" deviceset="GND" device=""/>
@@ -3789,8 +3789,8 @@
 <instance part="P+4" gate="G$1" x="-48.26" y="-10.16" smashed="yes">
 <attribute name="VALUE" x="-48.26" y="-7.62" size="1.778" layer="96" rot="R180" align="bottom-center"/>
 </instance>
-<instance part="P+5" gate="G$1" x="55.88" y="10.16" smashed="yes">
-<attribute name="VALUE" x="55.88" y="12.7" size="1.778" layer="96" rot="R180" align="bottom-center"/>
+<instance part="P+5" gate="G$1" x="55.88" y="2.54" smashed="yes">
+<attribute name="VALUE" x="55.88" y="5.08" size="1.778" layer="96" rot="R180" align="bottom-center"/>
 </instance>
 <instance part="C15" gate="G$1" x="48.26" y="-12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="45.72" y="-8.89" size="1.778" layer="95" rot="R90" align="bottom-center"/>
@@ -4051,12 +4051,12 @@
 <pinref part="J1" gate="G$1" pin="1"/>
 <pinref part="P+5" gate="G$1" pin="+3V3"/>
 <wire x1="63.5" y1="-12.7" x2="55.88" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="-12.7" x2="55.88" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="-12.7" x2="55.88" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="P$2"/>
-<wire x1="55.88" y1="5.08" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="2.54" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="5.08" x2="55.88" y2="5.08" width="0.1524" layer="91"/>
-<junction x="55.88" y="5.08"/>
+<wire x1="55.88" y1="-2.54" x2="55.88" y2="0" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-5.08" x2="48.26" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-2.54" x2="55.88" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="55.88" y="-2.54"/>
 </segment>
 <segment>
 <pinref part="R50" gate="G$1" pin="P$2"/>
