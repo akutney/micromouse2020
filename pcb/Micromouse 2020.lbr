@@ -796,6 +796,111 @@
 <wire x1="-7.458" y1="-4.918" x2="-7.458" y2="4.918" width="0.127" layer="21"/>
 <text x="-7.458" y="5.129665625" size="0.8128" layer="25">&gt;NAME</text>
 </package>
+<package name="MAX7315" urn="urn:adsk.eagle:footprint:16145882/1" locally_modified="yes">
+<description>16-QFN, 0.50 mm pitch, 3.00 X 3.00 X 0.80 mm body, 1.10 X 1.10 mm thermal pad
+&lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 3.00 X 3.00 X 0.80 mm and thermal pad size 1.10 X 1.10 mm&lt;/p&gt;</description>
+<circle x="-2.054" y="1.389" radius="0.25" width="0" layer="21"/>
+<wire x1="-1.55" y1="1.139" x2="-1.55" y2="1.55" width="0.12" layer="21"/>
+<wire x1="-1.55" y1="1.55" x2="-1.139" y2="1.55" width="0.12" layer="21"/>
+<wire x1="1.55" y1="1.139" x2="1.55" y2="1.55" width="0.12" layer="21"/>
+<wire x1="1.55" y1="1.55" x2="1.139" y2="1.55" width="0.12" layer="21"/>
+<wire x1="1.55" y1="-1.139" x2="1.55" y2="-1.55" width="0.12" layer="21"/>
+<wire x1="1.55" y1="-1.55" x2="1.139" y2="-1.55" width="0.12" layer="21"/>
+<wire x1="-1.55" y1="-1.139" x2="-1.55" y2="-1.55" width="0.12" layer="21"/>
+<wire x1="-1.55" y1="-1.55" x2="-1.139" y2="-1.55" width="0.12" layer="21"/>
+<wire x1="1.55" y1="-1.55" x2="-1.55" y2="-1.55" width="0.12" layer="51"/>
+<wire x1="-1.55" y1="-1.55" x2="-1.55" y2="1.55" width="0.12" layer="51"/>
+<wire x1="-1.55" y1="1.55" x2="1.55" y2="1.55" width="0.12" layer="51"/>
+<wire x1="1.55" y1="1.55" x2="1.55" y2="-1.55" width="0.12" layer="51"/>
+<smd name="1" x="-1.4346" y="0.75" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="2" x="-1.4346" y="0.25" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="3" x="-1.4346" y="-0.25" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="4" x="-1.4346" y="-0.75" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="5" x="-0.75" y="-1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="6" x="-0.25" y="-1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="7" x="0.25" y="-1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="8" x="0.75" y="-1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="9" x="1.4346" y="-0.75" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="10" x="1.4346" y="-0.25" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="11" x="1.4346" y="0.25" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="12" x="1.4346" y="0.75" dx="0.86" dy="0.27" layer="1" roundness="100"/>
+<smd name="13" x="0.75" y="1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="14" x="0.25" y="1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="15" x="-0.25" y="1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="16" x="-0.75" y="1.4346" dx="0.86" dy="0.27" layer="1" roundness="100" rot="R90"/>
+<smd name="17" x="0" y="0" dx="1.1" dy="1.1" layer="1" thermals="no"/>
+<text x="0" y="2.4996" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+</package>
+<package name="PCA9571" urn="urn:adsk.eagle:footprint:16145915/1" locally_modified="yes">
+<description>12-QFN, 0.40 mm pitch, 1.70 X 2.00 X 0.50 mm body
+&lt;p&gt;12-pin QFN package with 0.40 mm pitch with body size 1.70 X 2.00 X 0.50 mm&lt;/p&gt;</description>
+<circle x="-1.554" y="-0.656" radius="0.25" width="0" layer="21"/>
+<wire x1="-1.164" y1="0.9" x2="-1.164" y2="0.364" width="0.12" layer="21"/>
+<wire x1="1.164" y1="0.9" x2="1.164" y2="0.364" width="0.12" layer="21"/>
+<wire x1="1.164" y1="-0.9" x2="1.164" y2="-0.364" width="0.12" layer="21"/>
+<wire x1="-1.164" y1="-0.9" x2="-1.164" y2="-0.364" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-0.9" x2="-1.05" y2="-0.9" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="-0.9" x2="-1.05" y2="0.9" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="0.9" x2="1.05" y2="0.9" width="0.12" layer="51"/>
+<wire x1="1.05" y1="0.9" x2="1.05" y2="-0.9" width="0.12" layer="51"/>
+<smd name="12" x="-0.8956" y="0" dx="0.938" dy="0.22" layer="1" roundness="100"/>
+<smd name="1" x="-0.8" y="-0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="2" x="-0.4" y="-0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="3" x="0" y="-0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="4" x="0.4" y="-0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="5" x="0.8" y="-0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="6" x="0.8956" y="0" dx="0.938" dy="0.22" layer="1" roundness="100"/>
+<smd name="7" x="0.8" y="0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="8" x="0.4" y="0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="9" x="0" y="0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="10" x="-0.4" y="0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<smd name="11" x="-0.8" y="0.7456" dx="0.938" dy="0.22" layer="1" roundness="100" rot="R90"/>
+<text x="0" y="1.8496" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+</package>
+<package name="PCAL6416A" urn="urn:adsk.eagle:footprint:16145936/1" locally_modified="yes">
+<description>24-QFN, 0.50 mm pitch, 4.00 X 4.00 X 0.80 mm body, 2.25 X 2.25 mm thermal pad
+&lt;p&gt;24-pin QFN package with 0.50 mm pitch with body size 4.00 X 4.00 X 0.80 mm and thermal pad size 2.25 X 2.25 mm&lt;/p&gt;</description>
+<circle x="-2.554" y="1.886" radius="0.25" width="0" layer="21"/>
+<wire x1="-2.05" y1="1.636" x2="-2.05" y2="2.05" width="0.12" layer="21"/>
+<wire x1="-2.05" y1="2.05" x2="-1.636" y2="2.05" width="0.12" layer="21"/>
+<wire x1="2.05" y1="1.636" x2="2.05" y2="2.05" width="0.12" layer="21"/>
+<wire x1="2.05" y1="2.05" x2="1.636" y2="2.05" width="0.12" layer="21"/>
+<wire x1="2.05" y1="-1.636" x2="2.05" y2="-2.05" width="0.12" layer="21"/>
+<wire x1="2.05" y1="-2.05" x2="1.636" y2="-2.05" width="0.12" layer="21"/>
+<wire x1="-2.05" y1="-1.636" x2="-2.05" y2="-2.05" width="0.12" layer="21"/>
+<wire x1="-2.05" y1="-2.05" x2="-1.636" y2="-2.05" width="0.12" layer="21"/>
+<wire x1="2.05" y1="-2.05" x2="-2.05" y2="-2.05" width="0.12" layer="51"/>
+<wire x1="-2.05" y1="-2.05" x2="-2.05" y2="2.05" width="0.12" layer="51"/>
+<wire x1="-2.05" y1="2.05" x2="2.05" y2="2.05" width="0.12" layer="51"/>
+<wire x1="2.05" y1="2.05" x2="2.05" y2="-2.05" width="0.12" layer="51"/>
+<smd name="1" x="-1.9346" y="1.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="2" x="-1.9346" y="0.75" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="3" x="-1.9346" y="0.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="4" x="-1.9346" y="-0.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="5" x="-1.9346" y="-0.75" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="6" x="-1.9346" y="-1.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="7" x="-1.25" y="-1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="8" x="-0.75" y="-1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="9" x="-0.25" y="-1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="10" x="0.25" y="-1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="11" x="0.75" y="-1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="12" x="1.25" y="-1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="13" x="1.9346" y="-1.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="14" x="1.9346" y="-0.75" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="15" x="1.9346" y="-0.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="16" x="1.9346" y="0.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="17" x="1.9346" y="0.75" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="18" x="1.9346" y="1.25" dx="0.86" dy="0.264" layer="1" roundness="100"/>
+<smd name="19" x="1.25" y="1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="20" x="0.75" y="1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="21" x="0.25" y="1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="22" x="-0.25" y="1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="23" x="-0.75" y="1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="24" x="-1.25" y="1.9346" dx="0.86" dy="0.264" layer="1" roundness="100" rot="R90"/>
+<smd name="25" x="0" y="0" dx="2.25" dy="2.25" layer="1" thermals="no"/>
+<text x="0" y="2.9996" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.9996" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOT95P285X120-3N" urn="urn:adsk.eagle:package:14494850/1" locally_modified="yes" type="model">
@@ -943,6 +1048,27 @@
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.35 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="0402"/>
+</packageinstances>
+</package3d>
+<package3d name="QFN50P300X300X80-17T110N" urn="urn:adsk.eagle:package:16145880/1" type="model">
+<description>16-QFN, 0.50 mm pitch, 3.00 X 3.00 X 0.80 mm body, 1.10 X 1.10 mm thermal pad
+&lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 3.00 X 3.00 X 0.80 mm and thermal pad size 1.10 X 1.10 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="MAX7315"/>
+</packageinstances>
+</package3d>
+<package3d name="QFN40P170X200X50-12N" urn="urn:adsk.eagle:package:16145914/1" type="model">
+<description>12-QFN, 0.40 mm pitch, 1.70 X 2.00 X 0.50 mm body
+&lt;p&gt;12-pin QFN package with 0.40 mm pitch with body size 1.70 X 2.00 X 0.50 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="PCA9571"/>
+</packageinstances>
+</package3d>
+<package3d name="QFN50P400X400X80-25T225N" urn="urn:adsk.eagle:package:16145924/1" type="model">
+<description>24-QFN, 0.50 mm pitch, 4.00 X 4.00 X 0.80 mm body, 2.25 X 2.25 mm thermal pad
+&lt;p&gt;24-pin QFN package with 0.50 mm pitch with body size 4.00 X 4.00 X 0.80 mm and thermal pad size 2.25 X 2.25 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="PCAL6416A"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1564,6 +1690,78 @@
 <wire x1="10.16" y1="-15.24" x2="0" y2="-15.24" width="0.254" layer="94"/>
 <wire x1="0" y1="-15.24" x2="0" y2="2.54" width="0.254" layer="94"/>
 <text x="5.08" y="3.81" size="1.27" layer="95" align="bottom-center">&gt;NAME</text>
+</symbol>
+<symbol name="MAX7315">
+<pin name="P1" x="30.48" y="25.4" length="middle" rot="R180"/>
+<pin name="P2" x="30.48" y="22.86" length="middle" rot="R180"/>
+<pin name="P3" x="30.48" y="20.32" length="middle" rot="R180"/>
+<pin name="P4" x="30.48" y="17.78" length="middle" rot="R180"/>
+<pin name="P5" x="30.48" y="15.24" length="middle" rot="R180"/>
+<pin name="P6" x="30.48" y="12.7" length="middle" rot="R180"/>
+<pin name="P7" x="30.48" y="10.16" length="middle" rot="R180"/>
+<pin name="P8" x="30.48" y="7.62" length="middle" rot="R180"/>
+<pin name="AD0" x="0" y="12.7" length="middle" direction="in"/>
+<pin name="AD1" x="0" y="10.16" length="middle" direction="in"/>
+<pin name="AD2" x="0" y="7.62" length="middle" direction="in"/>
+<pin name="SCL" x="0" y="17.78" length="middle" direction="in"/>
+<pin name="SDA" x="0" y="20.32" length="middle"/>
+<pin name="!INT" x="0" y="25.4" length="middle" direction="out"/>
+<pin name="GND" x="15.24" y="0" length="middle" direction="pas" rot="R90"/>
+<pin name="V+" x="15.24" y="33.02" length="middle" direction="pwr" rot="R270"/>
+<wire x1="5.08" y1="5.08" x2="25.4" y2="5.08" width="0.254" layer="94"/>
+<wire x1="25.4" y1="5.08" x2="25.4" y2="27.94" width="0.254" layer="94"/>
+<wire x1="25.4" y1="27.94" x2="5.08" y2="27.94" width="0.254" layer="94"/>
+<wire x1="5.08" y1="27.94" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<text x="17.78" y="27.94" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="PCA9571">
+<pin name="P1" x="30.48" y="25.4" visible="pin" length="middle" rot="R180"/>
+<pin name="P2" x="30.48" y="22.86" visible="pin" length="middle" rot="R180"/>
+<pin name="P3" x="30.48" y="20.32" visible="pin" length="middle" rot="R180"/>
+<pin name="P4" x="30.48" y="17.78" visible="pin" length="middle" rot="R180"/>
+<pin name="P5" x="30.48" y="15.24" visible="pin" length="middle" rot="R180"/>
+<pin name="P6" x="30.48" y="12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="P7" x="30.48" y="10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="P8" x="30.48" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="SDA" x="0" y="17.78" visible="pin" length="middle"/>
+<pin name="SCL" x="0" y="15.24" visible="pin" length="middle" direction="in"/>
+<pin name="VDD" x="15.24" y="33.02" visible="pin" length="middle" direction="pwr" rot="R270"/>
+<pin name="VSS" x="15.24" y="0" visible="pin" length="middle" direction="pas" rot="R90"/>
+<wire x1="5.08" y1="5.08" x2="25.4" y2="5.08" width="0.254" layer="94"/>
+<wire x1="25.4" y1="5.08" x2="25.4" y2="27.94" width="0.254" layer="94"/>
+<wire x1="25.4" y1="27.94" x2="5.08" y2="27.94" width="0.254" layer="94"/>
+<wire x1="5.08" y1="27.94" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<text x="17.78" y="27.94" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="PCAL6416A">
+<pin name="P0_0" x="0" y="25.4" visible="pin" length="middle"/>
+<pin name="P0_1" x="0" y="22.86" visible="pin" length="middle"/>
+<pin name="P0_2" x="0" y="20.32" visible="pin" length="middle"/>
+<pin name="P0_3" x="0" y="17.78" visible="pin" length="middle"/>
+<pin name="P0_4" x="0" y="15.24" visible="pin" length="middle"/>
+<pin name="P0_5" x="0" y="12.7" visible="pin" length="middle"/>
+<pin name="P0_6" x="0" y="10.16" visible="pin" length="middle"/>
+<pin name="P0_7" x="0" y="7.62" visible="pin" length="middle"/>
+<pin name="P1_0" x="30.48" y="25.4" visible="pin" length="middle" rot="R180"/>
+<pin name="P1_1" x="30.48" y="22.86" visible="pin" length="middle" rot="R180"/>
+<pin name="P1_2" x="30.48" y="20.32" visible="pin" length="middle" rot="R180"/>
+<pin name="P1_3" x="30.48" y="17.78" visible="pin" length="middle" rot="R180"/>
+<pin name="P1_4" x="30.48" y="15.24" visible="pin" length="middle" rot="R180"/>
+<pin name="P1_5" x="30.48" y="12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="P1_6" x="30.48" y="10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="P1_7" x="30.48" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="VSS" x="15.24" y="0" visible="pin" length="middle" direction="pas" rot="R90"/>
+<pin name="ADDR" x="30.48" y="30.48" visible="pin" length="middle" direction="in" rot="R180"/>
+<pin name="!INT" x="30.48" y="33.02" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="!RESET" x="30.48" y="35.56" visible="pin" length="middle" direction="in" rot="R180"/>
+<pin name="SCL" x="0" y="33.02" visible="pin" length="middle" direction="in"/>
+<pin name="SDA" x="0" y="35.56" visible="pin" length="middle"/>
+<pin name="VDD" x="15.24" y="43.18" visible="pin" length="middle" direction="pwr" rot="R270"/>
+<wire x1="5.08" y1="5.08" x2="25.4" y2="5.08" width="0.254" layer="94"/>
+<wire x1="25.4" y1="5.08" x2="25.4" y2="38.1" width="0.254" layer="94"/>
+<wire x1="25.4" y1="38.1" x2="5.08" y2="38.1" width="0.254" layer="94"/>
+<wire x1="5.08" y1="38.1" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<text x="17.78" y="38.1" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2473,6 +2671,108 @@
 <connect gate="G$1" pin="6A" pad="P6"/>
 <connect gate="G$1" pin="6B" pad="P7"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MAX7315" prefix="U">
+<gates>
+<gate name="G$1" symbol="MAX7315" x="-15.24" y="-15.24"/>
+</gates>
+<devices>
+<device name="" package="MAX7315">
+<connects>
+<connect gate="G$1" pin="!INT" pad="11"/>
+<connect gate="G$1" pin="AD0" pad="15"/>
+<connect gate="G$1" pin="AD1" pad="16"/>
+<connect gate="G$1" pin="AD2" pad="1"/>
+<connect gate="G$1" pin="GND" pad="6 17"/>
+<connect gate="G$1" pin="P1" pad="2"/>
+<connect gate="G$1" pin="P2" pad="3"/>
+<connect gate="G$1" pin="P3" pad="4"/>
+<connect gate="G$1" pin="P4" pad="5"/>
+<connect gate="G$1" pin="P5" pad="7"/>
+<connect gate="G$1" pin="P6" pad="8"/>
+<connect gate="G$1" pin="P7" pad="9"/>
+<connect gate="G$1" pin="P8" pad="10"/>
+<connect gate="G$1" pin="SCL" pad="12"/>
+<connect gate="G$1" pin="SDA" pad="13"/>
+<connect gate="G$1" pin="V+" pad="14"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16145880/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PCA9571" prefix="U">
+<gates>
+<gate name="G$1" symbol="PCA9571" x="-15.24" y="-15.24"/>
+</gates>
+<devices>
+<device name="" package="PCA9571">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+<connect gate="G$1" pin="P2" pad="2"/>
+<connect gate="G$1" pin="P3" pad="3"/>
+<connect gate="G$1" pin="P4" pad="4"/>
+<connect gate="G$1" pin="P5" pad="6"/>
+<connect gate="G$1" pin="P6" pad="7"/>
+<connect gate="G$1" pin="P7" pad="8"/>
+<connect gate="G$1" pin="P8" pad="9"/>
+<connect gate="G$1" pin="SCL" pad="10"/>
+<connect gate="G$1" pin="SDA" pad="11"/>
+<connect gate="G$1" pin="VDD" pad="12"/>
+<connect gate="G$1" pin="VSS" pad="5"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16145914/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PCAL6416A" prefix="U">
+<gates>
+<gate name="G$1" symbol="PCAL6416A" x="-15.24" y="-20.32"/>
+</gates>
+<devices>
+<device name="" package="PCAL6416A">
+<connects>
+<connect gate="G$1" pin="!INT" pad="22"/>
+<connect gate="G$1" pin="!RESET" pad="24"/>
+<connect gate="G$1" pin="ADDR" pad="18"/>
+<connect gate="G$1" pin="P0_0" pad="1"/>
+<connect gate="G$1" pin="P0_1" pad="2"/>
+<connect gate="G$1" pin="P0_2" pad="3"/>
+<connect gate="G$1" pin="P0_3" pad="4"/>
+<connect gate="G$1" pin="P0_4" pad="5"/>
+<connect gate="G$1" pin="P0_5" pad="6"/>
+<connect gate="G$1" pin="P0_6" pad="7"/>
+<connect gate="G$1" pin="P0_7" pad="8"/>
+<connect gate="G$1" pin="P1_0" pad="10"/>
+<connect gate="G$1" pin="P1_1" pad="11"/>
+<connect gate="G$1" pin="P1_2" pad="12"/>
+<connect gate="G$1" pin="P1_3" pad="13"/>
+<connect gate="G$1" pin="P1_4" pad="14"/>
+<connect gate="G$1" pin="P1_5" pad="15"/>
+<connect gate="G$1" pin="P1_6" pad="16"/>
+<connect gate="G$1" pin="P1_7" pad="17"/>
+<connect gate="G$1" pin="SCL" pad="19"/>
+<connect gate="G$1" pin="SDA" pad="20"/>
+<connect gate="G$1" pin="VDD" pad="21 23"/>
+<connect gate="G$1" pin="VSS" pad="9 25"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16145924/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
