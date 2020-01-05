@@ -1,5 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" InitialTargets="TestSourceExclusion" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="TestSourceExclusion" DependsOnTargets="TestSourceDetection">
+    <ItemGroup>
+      <Compile Remove="@(RemovedCompileSources)" />
+      <None Include="@(RemovedCompileSources)">
+        <SubType>compile</SubType>
+      </None>
+    </ItemGroup>
+  </Target>
+  <Target Name="TestSourceDetection" Inputs="@(Compile)" Outputs="%(Identity).PHONY">
+    <PropertyGroup>
+      <SourceDetectionInst>%(Compile.Identity)</SourceDetectionInst>
+    </PropertyGroup>
+    <ItemGroup Condition="$(SourceDetectionInst.EndsWith('.test.c'))">
+      <RemovedCompileSources Include="$(SourceDetectionInst)" />
+    </ItemGroup>
+  </Target>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
@@ -757,6 +773,7 @@
     <Folder Include="src\config\" />
     <Folder Include="src\algorithms" />
     <Folder Include="src\drivers" />
+    <Folder Include="src\test" />
     <Folder Include="src\types" />
   </ItemGroup>
   <ItemGroup>
@@ -764,6 +781,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="include\errors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\testing.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\algorithms\controller.h">
@@ -782,6 +802,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\test\add.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\test\add.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\test\add.test.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\adc_data.h">
