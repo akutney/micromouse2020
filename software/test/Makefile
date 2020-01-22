@@ -19,6 +19,4 @@ clean: test.make
 .PHONY: test.make
 test.make:
 	$(info $(C_GRN)GEN$(C_DEF) test.make)
-	@test -f testgen.sh || ( tr -d "\r" < "_testgen.sh" > "testgen.sh" && chmod +x "testgen.sh" )
-	@test -f quietcat.sh || ( tr -d "\r" < "_quietcat.sh" > "quietcat.sh" && chmod +x "quietcat.sh" )
 	@CFLAGS="$(CFLAGS)" ./testgen.sh > $@
