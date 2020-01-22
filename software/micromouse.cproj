@@ -773,7 +773,6 @@
     <Folder Include="src\config\" />
     <Folder Include="src\algorithms" />
     <Folder Include="src\drivers" />
-    <Folder Include="src\test" />
     <Folder Include="src\types" />
   </ItemGroup>
   <ItemGroup>
@@ -804,15 +803,6 @@
     <Compile Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\test\add.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\test\add.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\test\add.test.c">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\types\adc_data.h">
       <SubType>compile</SubType>
     </Compile>
@@ -834,27 +824,15 @@
     <Compile Include="src\types\maze_state.h">
       <SubType>compile</SubType>
     </Compile>
-    <None Include="src\algorithms\Makefile">
+    <Compile Include="src\types\maze_state.test.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\drivers\Makefile">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\types\Makefile">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\types\maze_state_test.c">
-      <SubType>compile</SubType>
-    </None>
+    </Compile>
     <Compile Include="src\types\motor_outputs.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\robot_state.h">
       <SubType>compile</SubType>
     </Compile>
-    <None Include="src\types\robot_state_test.c">
-      <SubType>compile</SubType>
-    </None>
     <Compile Include="src\types\sensor_data.h">
       <SubType>compile</SubType>
     </Compile>

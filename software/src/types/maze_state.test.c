@@ -14,7 +14,7 @@ int count_cell_references(maze_state_t *maze, wall_t *check) {
 	return count;
 }
 
-TEST(north border is 1, maze_state.c) {
+TEST(north border is 1, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int x = 0; x < MAX_MAZE_WIDTH; ++x) {
@@ -25,7 +25,7 @@ TEST(north border is 1, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(east border is 1, maze_state.c) {
+TEST(east border is 1, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int y = 0; y < MAX_MAZE_HEIGHT; ++y) {
@@ -36,7 +36,7 @@ TEST(east border is 1, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(south border is 1, maze_state.c) {
+TEST(south border is 1, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int x = 0; x < MAX_MAZE_WIDTH; ++x) {
@@ -47,7 +47,7 @@ TEST(south border is 1, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(west border is 1, maze_state.c) {
+TEST(west border is 1, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int y = 0; y < MAX_MAZE_HEIGHT; ++y) {
@@ -58,7 +58,7 @@ TEST(west border is 1, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(interior borders are 0.5, maze_state.c) {
+TEST(interior borders are 0.5, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int x = 1; x < MAX_MAZE_WIDTH - 1; ++x) {
@@ -99,7 +99,7 @@ TEST(interior borders are 0.5, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(duplicated wall references, maze_state.c) {
+TEST(duplicated wall references, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int i = 0; i < sizeof(maze.wall_buffer) / sizeof(maze.wall_buffer[0]); ++i) {
@@ -110,7 +110,7 @@ TEST(duplicated wall references, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(invalid wall references, maze_state.c) {
+TEST(invalid wall references, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int x = 1; x < MAX_MAZE_WIDTH - 1; ++x) {
@@ -126,7 +126,7 @@ TEST(invalid wall references, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(invalid outer wall references, maze_state.c) {
+TEST(invalid outer wall references, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int x = 0; x < MAX_MAZE_WIDTH; ++x) {
@@ -151,7 +151,7 @@ TEST(invalid outer wall references, maze_state.c) {
 	return TEST_SUCCESS;
 }
 
-TEST(memory waste, maze_state.c) {
+TEST(memory waste, src/types/maze_state.c) {
 	maze_state_t maze;
 	init_maze_state(&maze);
 	for (int i = 0; i < sizeof(maze.wall_buffer) / sizeof(maze.wall_buffer[0]); ++i) {

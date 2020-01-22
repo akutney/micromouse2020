@@ -1,6 +1,8 @@
 #ifndef TESTING_H_
 #define TESTING_H_
 
+#include <stdio.h>
+
 #ifndef MICROMOUSE_TEST_PREFIX
 #error Please do not compile test files in Atmel Studio!
 #endif
