@@ -1,0 +1,6 @@
+*.d
+*.o
+/test
+/test.make
+/tests.h
+/tests.o
