@@ -1,6 +1,6 @@
 # Development Lifecycle
 
-# 1. Create a branch off of `master`
+# 1. Create a branch off of **master**
 
 Name the branch with your first name pre-pended:
 
@@ -10,8 +10,6 @@ Name the branch with your first name pre-pended:
 # 2. Write code
 
 There are two main ways to view the code, either using [Atmel Studio 7](https://www.microchip.com/mplab/avr-support/atmel-studio-7) or with a plain text editor, such as [Visual Studio Code](https://code.visualstudio.com/download)
-
-- See also: [Environment Setup](Environment%20Setup.md) and [Project Structure](Project%20Structure.md)
 
 # 3. Commit Changes
 

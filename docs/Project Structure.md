@@ -1,11 +1,11 @@
 # Project Structure
 
-At a high level, this repository is split into two major folder:
+At a high level, this repository is split into two major folders:
 
 - `software/` for develop the code to be ran on the robot
 - `pcb/` for designing the pcb schematic and laying our the board
 
-# `software/`
+## software/
 
 In the software folder is the following directory structure:
 
@@ -31,7 +31,7 @@ In the software folder is the following directory structure:
     └── micromouse.cproj
 
 
-## Here are a few highlights
+### Here are a few highlights
 
 | Item             | Descripition                                                                                                                                            |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,5 +46,5 @@ In the software folder is the following directory structure:
 | testing.h        | Part of the testing framework. Include this file in *_test.c files.                                                                                     |
 | micromouse.atsln | The Atmel Studio solution. Double click this open the project in Atmel Studio.                                                                          |
 
-# `pcb/`
+## pcb/
 // TODO
