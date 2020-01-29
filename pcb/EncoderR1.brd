@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.500000001" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -358,26 +358,26 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="A1" library="Micromouse 2020" package="ENCODER-TAB" value="ENCODER" x="7.62" y="2.2352" smashed="yes" rot="R180">
-<attribute name="NAME" x="7.62" y="-0.3048" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="4.001" y="5.1952" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C1" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF" x="10.52" y="5.0352" smashed="yes">
-<attribute name="NAME" x="10.52" y="5.8988" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="9.52" y="6.1528" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C2" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="3.3nF" x="7.62" y="5.0352" smashed="yes" rot="R180">
-<attribute name="NAME" x="7.62" y="4.1716" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="5.874" y="6.4176" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="L1" library="Micromouse 2020" package="MOTOR" value="MOTOR" x="7.62" y="7.2352" smashed="yes" rot="R180"/>
 <element name="R1" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="1.62" y="7.7352" smashed="yes" rot="R90">
-<attribute name="NAME" x="0.7564" y="7.7352" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="1.6458" y="9.6294" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="R2" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="13.62" y="7.7352" smashed="yes" rot="R270">
-<attribute name="NAME" x="14.4836" y="7.7352" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="14.1458" y="8.8566" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="U1" library="Micromouse 2020" package="TLE49462KHTSA1" package3d_urn="urn:adsk.eagle:package:14494850/1" value="TLE49462KHTSA1" x="4.95" y="9.9052" smashed="yes" rot="R325">
-<attribute name="NAME" x="6.448471875" y="12.04523125" size="0.8128" layer="25" rot="R325" align="bottom-center"/>
+<attribute name="NAME" x="6.924528125" y="11.58176875" size="0.8128" layer="25" rot="R145" align="bottom-center"/>
 </element>
 <element name="U2" library="Micromouse 2020" package="TLE49462KHTSA1" package3d_urn="urn:adsk.eagle:package:14494850/1" value="TLE49462KHTSA1" x="10.29" y="9.9052" smashed="yes" rot="R215">
-<attribute name="NAME" x="11.788475" y="7.76516875" size="0.8128" layer="25" rot="R215" align="bottom-center"/>
+<attribute name="NAME" x="8.288475" y="11.51116875" size="0.8128" layer="25" rot="R215" align="bottom-center"/>
 </element>
 </elements>
 <signals>

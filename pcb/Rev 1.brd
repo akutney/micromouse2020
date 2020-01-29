@@ -26,7 +26,7 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
@@ -34,8 +34,8 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -1206,641 +1206,641 @@ design rules under a new name.</description>
 <attribute name="NAME" x="28.86" y="38.415" locked="yes" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
 </element>
 <element name="A5" library="Micromouse 2020" package="HC-05" value="HC-05" x="29.083" y="9.017" locked="yes" smashed="yes" rot="R90">
-<attribute name="NAME" x="26.543" y="9.017" locked="yes" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="29.083" y="17.653" locked="yes" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C1" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10uF" x="12.573" y="19.05" smashed="yes" rot="MR180">
-<attribute name="NAME" x="12.573" y="18.1864" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="15.875" y="19.9644" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C11" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="22pF" x="12.573" y="24.257" smashed="yes" rot="R90">
-<attribute name="NAME" x="11.7094" y="24.257" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="11.303" y="26.5684" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C12" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="22pF" x="12.573" y="22.225" smashed="yes" rot="R270">
-<attribute name="NAME" x="13.4366" y="22.225" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="11.303" y="24.8666" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C13" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="6.8pF" x="19.304" y="13.462" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.4404" y="13.462" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="18.288" y="12.5984" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C14" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10pF" x="23.876" y="13.462" smashed="yes" rot="R90">
-<attribute name="NAME" x="23.0124" y="13.462" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="25.654" y="15.5194" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C15" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF" x="12.446" y="28.067" smashed="yes" rot="MR90">
-<attribute name="NAME" x="13.3096" y="28.067" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="10.16" y="27.5336" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C16" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="64.77" y="35.56" smashed="yes" rot="MR90">
-<attribute name="NAME" x="68.155" y="35.56" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="64.77" y="30.944" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C17" library="Micromouse 2020" package="0805" value="22pF" x="55.88" y="22.86" smashed="yes" rot="MR270">
-<attribute name="NAME" x="55.0164" y="22.86" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="53.975" y="25.5524" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C18" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="55.88" y="16.51" smashed="yes" rot="MR0">
-<attribute name="NAME" x="55.88" y="19.895" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="55.88" y="12.656" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C19" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="63.5" y="16.51" smashed="yes" rot="MR180">
-<attribute name="NAME" x="63.5" y="13.125" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="63.5" y="13.506" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C2" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF" x="12.573" y="18.161" smashed="yes" rot="MR180">
-<attribute name="NAME" x="12.573" y="17.2974" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="15.875" y="18.9484" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C20" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF" x="34.925" y="42.672" smashed="yes" rot="MR270">
-<attribute name="NAME" x="34.0614" y="42.672" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="34.925" y="48.2854" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C21" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="2.2uF" x="34.29" y="39.37" smashed="yes" rot="MR0">
-<attribute name="NAME" x="34.29" y="40.2336" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="34.925" y="36.6776" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C22" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="44.45" y="33.02" smashed="yes" rot="MR0">
-<attribute name="NAME" x="44.45" y="36.405" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="40.386" y="35.516" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C23" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="33pF" x="30.607" y="40.767" smashed="yes" rot="MR180">
-<attribute name="NAME" x="30.607" y="39.9034" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="30.734" y="37.4904" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C24" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="680pF" x="29.21" y="40.386" smashed="yes" rot="MR270">
-<attribute name="NAME" x="28.3464" y="40.386" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="29.4894" y="36.576" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
 </element>
 <element name="C25" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="33.02" y="36.83" smashed="yes">
 <attribute name="NAME" x="33.02" y="40.215" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C26" library="Micromouse 2020" package="0805" value="1uF" x="5.08" y="53.34" smashed="yes">
-<attribute name="NAME" x="5.08" y="54.2036" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="5.08" y="51.5366" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C27" library="Micromouse 2020" package="0805" value="1uF" x="17.78" y="66.04" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.78" y="65.1764" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="14.986" y="65.9384" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C28" library="Micromouse 2020" package="0805" value="1uF" x="50.8" y="72.39" smashed="yes" rot="R180">
-<attribute name="NAME" x="50.8" y="71.5264" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="50.8" y="74.1934" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C29" library="Micromouse 2020" package="0805" value="1uF" x="66.421" y="58.039" smashed="yes" rot="R90">
-<attribute name="NAME" x="65.5574" y="58.039" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="65.4304" y="58.293" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="C3" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF" x="23.368" y="21.59" smashed="yes" rot="R90">
-<attribute name="NAME" x="22.5044" y="21.59" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="24.892" y="21.8694" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C30" library="Micromouse 2020" package="0805" value="1uF" x="64.77" y="25.4" smashed="yes">
 <attribute name="NAME" x="64.77" y="26.2636" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C31" library="Micromouse 2020" package="0805" value="1uF" x="60.96" y="11.43" smashed="yes" rot="R90">
-<attribute name="NAME" x="60.0964" y="11.43" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="60.96" y="13.9954" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C32" library="Micromouse 2020" package="0805" value="1uF" x="24.13" y="2.54" smashed="yes" rot="R180">
-<attribute name="NAME" x="24.13" y="1.6764" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="24.13" y="1.5494" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C33" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF" x="6.477" y="20.828" smashed="yes">
-<attribute name="NAME" x="6.477" y="21.6916" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="3.556" y="21.4376" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C34" library="Micromouse 2020" package="0805" value="0.1uF" x="10.16" y="60.96" smashed="yes">
-<attribute name="NAME" x="10.16" y="61.8236" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="12.954" y="61.9506" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C35" library="Micromouse 2020" package="0805" value="0.1uF" x="20.32" y="71.12" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.1836" y="71.12" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="22.733" y="74.2696" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C36" library="Micromouse 2020" package="0805" value="0.1uF" x="58.42" y="67.31" smashed="yes" rot="R90">
-<attribute name="NAME" x="57.5564" y="67.31" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="59.055" y="69.8754" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C37" library="Micromouse 2020" package="0805" value="0.1uF" x="70.358" y="57.277" smashed="yes" rot="R180">
-<attribute name="NAME" x="70.358" y="56.4134" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="70.358" y="59.2074" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C38" library="Micromouse 2020" package="0805" value="0.1uF" x="66.04" y="16.51" smashed="yes">
-<attribute name="NAME" x="66.04" y="17.3736" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="66.04" y="14.7066" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C39" library="Micromouse 2020" package="0805" value="0.1uF" x="50.8" y="5.08" smashed="yes">
-<attribute name="NAME" x="50.8" y="5.9436" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="50.8" y="3.2766" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C4" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF" x="17.78" y="13.843" smashed="yes">
-<attribute name="NAME" x="17.78" y="14.7066" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="16.51" y="11.7856" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C40" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF" x="19.05" y="7.62" smashed="yes">
-<attribute name="NAME" x="19.05" y="8.4836" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="16.637" y="7.2136" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C41" library="Micromouse 2020" package="0805" value="0.1uF" x="3.81" y="25.4" smashed="yes" rot="R90">
-<attribute name="NAME" x="2.9464" y="25.4" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="3.81" y="27.9654" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C42" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF" x="20.955" y="53.34" smashed="yes" rot="R90">
-<attribute name="NAME" x="20.0914" y="53.34" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="18.923" y="52.6796" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C43" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF" x="20.32" y="57.785" smashed="yes">
-<attribute name="NAME" x="20.32" y="58.6486" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="19.939" y="58.6486" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C44" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF" x="20.955" y="60.325" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.8186" y="60.325" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="19.2786" y="60.325" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
 </element>
 <element name="C45" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF" x="25.4" y="53.975" smashed="yes" rot="R180">
-<attribute name="NAME" x="25.4" y="53.1114" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="25.146" y="52.9844" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C46" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF" x="27.305" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="28.1686" y="58.42" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="28.9814" y="60.706" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="C5" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="1uF" x="19.431" y="24.257" smashed="yes" rot="R270">
-<attribute name="NAME" x="20.2946" y="24.257" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="20.828" y="23.8506" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C52" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF" x="42.672" y="8.382" smashed="yes" rot="MR0">
-<attribute name="NAME" x="42.672" y="9.2456" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="45.72" y="8.7376" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C53" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.12uF" x="42.672" y="7.112" smashed="yes" rot="MR0">
-<attribute name="NAME" x="42.672" y="7.9756" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="45.72" y="7.7216" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C54" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="6800pF" x="42.672" y="5.842" smashed="yes" rot="MR0">
-<attribute name="NAME" x="42.672" y="6.7056" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="45.72" y="6.7056" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C55" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF" x="38.608" y="3.048" smashed="yes" rot="MR90">
-<attribute name="NAME" x="39.4716" y="3.048" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="44.6786" y="2.032" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
 </element>
 <element name="C56" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="22pF" x="38.735" y="11.938" smashed="yes" rot="MR0">
-<attribute name="NAME" x="38.735" y="12.8016" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="38.735" y="12.9286" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C57" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="22pF" x="41.021" y="11.938" smashed="yes" rot="MR180">
-<attribute name="NAME" x="41.021" y="11.0744" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="41.021" y="13.7414" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C58" library="Micromouse 2020" package="0805" value="1uF" x="59.163946875" y="55.353946875" smashed="yes" rot="R45">
-<attribute name="NAME" x="58.553290625" y="55.964603125" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
+<attribute name="NAME" x="60.077290625" y="53.805603125" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
 </element>
 <element name="C59" library="Micromouse 2020" package="0805" value="1uF" x="56.469871875" y="52.659871875" smashed="yes" rot="R225">
 <attribute name="NAME" x="57.080528125" y="52.0492125" size="0.8128" layer="25" rot="R225" align="bottom-center"/>
 </element>
 <element name="C6" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10uF" x="18.542" y="24.257" smashed="yes" rot="R270">
-<attribute name="NAME" x="19.4056" y="24.257" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="17.526" y="24.9936" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C60" library="Micromouse 2020" package="0805" value="1uF" x="59.69" y="59.69" smashed="yes" rot="R315">
-<attribute name="NAME" x="60.30065625" y="60.300659375" size="0.8128" layer="25" rot="R315" align="bottom-center"/>
+<attribute name="NAME" x="58.52265625" y="58.522659375" size="0.8128" layer="25" rot="R315" align="bottom-center"/>
 </element>
 <element name="C61" library="Micromouse 2020" package="0805" value="10uF" x="55.88" y="50.8" smashed="yes" rot="MR270">
-<attribute name="NAME" x="55.0164" y="50.8" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="55.88" y="53.4924" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C62" library="Micromouse 2020" package="EEE-1EA101AP" package3d_urn="urn:adsk.eagle:package:15328765/1" value="100uF" x="72.39" y="39.37" smashed="yes" rot="MR270">
-<attribute name="NAME" x="67.505" y="39.37" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="72.39" y="33.215" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C63" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="300pF" x="12.573" y="19.05" smashed="yes">
-<attribute name="NAME" x="12.573" y="20.1676" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="7.493" y="16.4846" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C64" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="2.2uF" x="13.589" y="13.208" smashed="yes" rot="R180">
-<attribute name="NAME" x="13.589" y="12.3444" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="14.732" y="12.3444" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C65" library="Micromouse 2020" package="0805" value="0.1uF" x="43.18" y="59.69" smashed="yes" rot="MR0">
-<attribute name="NAME" x="43.18" y="60.5536" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="46.101" y="60.5536" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C66" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="44.45" y="55.88" smashed="yes" rot="MR180">
-<attribute name="NAME" x="44.45" y="52.495" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="46.101" y="60.242" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C67" library="Micromouse 2020" package="0805" value="1uF" x="45.72" y="55.88" smashed="yes" rot="R270">
-<attribute name="NAME" x="46.5836" y="55.88" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="45.72" y="53.3146" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C68" library="Micromouse 2020" package="0805" value="0.1uF" x="59.69" y="33.02" smashed="yes" rot="MR90">
-<attribute name="NAME" x="60.5536" y="33.02" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="60.579" y="30.4546" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C69" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="55.88" y="31.75" smashed="yes" rot="MR270">
-<attribute name="NAME" x="52.495" y="31.75" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="51.689" y="29.889" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C7" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="100pF" x="20.701" y="29.972" smashed="yes" rot="MR270">
-<attribute name="NAME" x="19.8374" y="29.972" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="20.828" y="28.3464" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C70" library="Micromouse 2020" package="0805" value="1uF" x="55.88" y="30.48" smashed="yes" rot="R180">
-<attribute name="NAME" x="55.88" y="29.6164" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="55.88" y="29.4894" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C71" library="Micromouse 2020" package="0805" value="0.1uF" x="33.02" y="16.51" smashed="yes" rot="MR180">
 <attribute name="NAME" x="33.02" y="15.6464" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C72" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="31.75" y="20.32" smashed="yes" rot="MR0">
-<attribute name="NAME" x="31.75" y="23.705" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="31.75" y="23.451" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C73" library="Micromouse 2020" package="0805" value="1uF" x="30.48" y="20.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="29.6164" y="20.32" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="31.115" y="22.8854" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="C74" library="Micromouse 2020" package="0805" value="0.1uF" x="17.78" y="43.18" smashed="yes" rot="MR270">
-<attribute name="NAME" x="16.9164" y="43.18" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="18.161" y="45.7454" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C75" library="Micromouse 2020" package="865080542006" package3d_urn="urn:adsk.eagle:package:15317400/1" value="22uF" x="13.97" y="44.45" smashed="yes" rot="MR90">
-<attribute name="NAME" x="17.355" y="44.45" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="18.161" y="46.057" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="C76" library="Micromouse 2020" package="0805" value="1uF" x="21.59" y="45.72" smashed="yes">
-<attribute name="NAME" x="21.59" y="46.5836" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="22.352" y="46.5836" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C78" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF" x="26.162" y="12.954" smashed="yes">
 <attribute name="NAME" x="26.162" y="13.8176" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C79" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF" x="14.224" y="19.7358" smashed="yes">
-<attribute name="NAME" x="14.224" y="20.5994" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="9.652" y="16.4084" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C8" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="0.1uF" x="12.573" y="20.193" smashed="yes">
-<attribute name="NAME" x="12.573" y="21.0566" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="7.874" y="17.3736" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C80" library="Micromouse 2020" package="EEE-1EA101AP" package3d_urn="urn:adsk.eagle:package:15328765/1" value="100uF" x="41.91" y="34.29" smashed="yes">
 <attribute name="NAME" x="41.91" y="39.175" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="C9" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="4.7uF" x="12.573" y="17.907" smashed="yes">
-<attribute name="NAME" x="12.573" y="18.7706" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="7.874" y="15.5956" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="D1" library="Micromouse 2020" package="1206" value="LED1206" x="52.07" y="25.4" smashed="yes">
-<attribute name="NAME" x="52.07" y="26.67" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="50.292" y="26.67" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="D12" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="8.27" y="54.95" locked="yes" smashed="yes" rot="R60">
-<attribute name="NAME" x="5.132996875" y="56.76114375" locked="yes" size="1.27" layer="25" rot="R60" align="bottom-center"/>
+<attribute name="NAME" x="5.132996875" y="56.76114375" locked="yes" size="0.8128" layer="25" rot="R60" align="bottom-center"/>
 </element>
 <element name="D13" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="21.88" y="68.56" locked="yes" smashed="yes" rot="R30">
-<attribute name="NAME" x="20.06885" y="71.697003125" locked="yes" size="1.27" layer="25" rot="R30" align="bottom-center"/>
+<attribute name="NAME" x="20.06885" y="71.697003125" locked="yes" size="0.8128" layer="25" rot="R30" align="bottom-center"/>
 </element>
 <element name="D14" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="54.95" y="68.56" locked="yes" smashed="yes" rot="R330">
-<attribute name="NAME" x="56.76115" y="71.697003125" locked="yes" size="1.27" layer="25" rot="R330" align="bottom-center"/>
+<attribute name="NAME" x="56.76115" y="71.697003125" locked="yes" size="0.8128" layer="25" rot="R330" align="bottom-center"/>
 </element>
 <element name="D15" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="68.56" y="54.95" locked="yes" smashed="yes" rot="R300">
-<attribute name="NAME" x="71.697003125" y="56.76115" locked="yes" size="1.27" layer="25" rot="R300" align="bottom-center"/>
+<attribute name="NAME" x="71.697003125" y="56.76115" locked="yes" size="0.8128" layer="25" rot="R300" align="bottom-center"/>
 </element>
 <element name="D16" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="68.56" y="21.88" locked="yes" smashed="yes" rot="R240">
-<attribute name="NAME" x="71.697003125" y="20.068846875" locked="yes" size="1.27" layer="25" rot="R240" align="bottom-center"/>
+<attribute name="NAME" x="71.697003125" y="20.068846875" locked="yes" size="0.8128" layer="25" rot="R240" align="bottom-center"/>
 </element>
 <element name="D17" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="54.95" y="8.27" locked="yes" smashed="yes" rot="R210">
-<attribute name="NAME" x="56.76115" y="5.132996875" locked="yes" size="1.27" layer="25" rot="R210" align="bottom-center"/>
+<attribute name="NAME" x="56.76115" y="5.132996875" locked="yes" size="0.8128" layer="25" rot="R210" align="bottom-center"/>
 </element>
 <element name="D18" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="21.88" y="8.27" locked="yes" smashed="yes" rot="R150">
-<attribute name="NAME" x="20.06885" y="5.132996875" locked="yes" size="1.27" layer="25" rot="R150" align="bottom-center"/>
+<attribute name="NAME" x="20.06885" y="5.132996875" locked="yes" size="0.8128" layer="25" rot="R150" align="bottom-center"/>
 </element>
 <element name="D19" library="Micromouse 2020" package="SFH4545" package3d_urn="urn:adsk.eagle:package:14528157/1" value="SFH4545" x="8.27" y="21.88" locked="yes" smashed="yes" rot="R120">
-<attribute name="NAME" x="5.132996875" y="20.06885" locked="yes" size="1.27" layer="25" rot="R120" align="bottom-center"/>
+<attribute name="NAME" x="5.132996875" y="20.06885" locked="yes" size="0.8128" layer="25" rot="R120" align="bottom-center"/>
 </element>
 <element name="D2" library="Micromouse 2020" package="1206" value="LED1206" x="22.86" y="52.07" smashed="yes" rot="R270">
-<attribute name="NAME" x="24.13" y="52.07" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="24.892" y="51.181" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="D3" library="Micromouse 2020" package="1206" value="LED1206" x="19.05" y="55.88" smashed="yes" rot="R180">
 <attribute name="NAME" x="19.05" y="54.61" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="D4" library="Micromouse 2020" package="1206" value="LED1206" x="22.86" y="59.69" smashed="yes" rot="R90">
-<attribute name="NAME" x="21.59" y="59.69" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="21.717" y="63.627" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="D5" library="Micromouse 2020" package="1206" value="LED1206" x="26.67" y="55.88" smashed="yes">
-<attribute name="NAME" x="26.67" y="57.15" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="29.972" y="55.499" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="D6" library="Micromouse 2020" package="1206" value="LED1206" x="25.4" y="59.69" smashed="yes" rot="R90">
-<attribute name="NAME" x="24.13" y="59.69" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="26.543" y="63.246" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="FB1" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="" x="12.573" y="19.939" smashed="yes" rot="MR0">
-<attribute name="NAME" x="12.573" y="20.8026" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="15.875" y="20.1676" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="FB2" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="" x="14.224" y="20.6248" smashed="yes">
-<attribute name="NAME" x="14.224" y="21.9964" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="9.652" y="17.4244" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="J1" library="Micromouse 2020" package="3220-10-0100-00" value="3220-10-0100-00" x="16.51" y="29.21" locked="yes" smashed="yes" rot="R90">
-<attribute name="NAME" x="10.110334375" y="26.197" locked="yes" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="9.998" y="31.954334375" locked="yes" size="0.8128" layer="25" rot="R180"/>
 </element>
 <element name="J2" library="Micromouse 2020" package="10118194-0001LF" value="10118194-0001LF" x="65.58" y="65.58" locked="yes" smashed="yes" rot="R135">
-<attribute name="NAME" x="62.04446875" y="62.044465625" locked="yes" size="0.8128" layer="25" rot="R135" align="bottom-center"/>
+<attribute name="NAME" x="61.91746875" y="68.648465625" locked="yes" size="0.8128" layer="25" rot="R135" align="bottom-center"/>
 </element>
 <element name="J3" library="Micromouse 2020" package="B2B-PH-K-S(LF)(SN)" value="B2B-PH-K-S(LF)(SN)" x="52.07" y="50.8" locked="yes" smashed="yes" rot="R90">
 <attribute name="NAME" x="48.67" y="50.8" locked="yes" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="L1" library="Micromouse 2020" package="104CDMCC" package3d_urn="urn:adsk.eagle:package:15317394/1" value="10uH" x="41.91" y="41.91" smashed="yes" rot="MR180">
-<attribute name="NAME" x="41.91" y="36.125" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="38.354" y="36.379" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="L2" library="Micromouse 2020" package="NRS5040" package3d_urn="urn:adsk.eagle:package:14566909/1" value="3.3uH" x="59.944" y="22.098" smashed="yes" rot="MR270">
-<attribute name="NAME" x="56.4373" y="22.098" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="62.23" y="25.7033" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="Q1" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="55.88" y="26.67" smashed="yes" rot="R270">
-<attribute name="NAME" x="58.514" y="26.67" size="1.27" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="55.88" y="23.97" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q12" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="10.16" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="12.794" y="58.42" size="1.27" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="12.954" y="60.8" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q13" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="22.86" y="72.39" smashed="yes" rot="R270">
-<attribute name="NAME" x="25.494" y="72.39" size="1.27" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="25.908" y="72.484" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q14" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="57.15" y="64.77" smashed="yes" rot="R90">
-<attribute name="NAME" x="54.516" y="64.77" size="1.27" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="57.15" y="62.898" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="Q15" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="71.501" y="54.864" smashed="yes" rot="R180">
-<attribute name="NAME" x="71.501" y="52.23" size="1.27" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="74.041" y="55.659" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="Q16" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="10.05" y="53.92" locked="yes" smashed="yes" rot="R60">
-<attribute name="NAME" x="7.4182375" y="55.43945" locked="yes" size="1.27" layer="25" rot="R60" align="bottom-center"/>
+<attribute name="NAME" x="7.4182375" y="55.43945" locked="yes" size="0.8128" layer="25" rot="R60" align="bottom-center"/>
 </element>
 <element name="Q17" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="22.91" y="66.78" locked="yes" smashed="yes" rot="R30">
-<attribute name="NAME" x="21.39055" y="69.4117625" locked="yes" size="1.27" layer="25" rot="R30" align="bottom-center"/>
+<attribute name="NAME" x="21.39055" y="69.4117625" locked="yes" size="0.8128" layer="25" rot="R30" align="bottom-center"/>
 </element>
 <element name="Q18" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="53.92" y="66.78" locked="yes" smashed="yes" rot="R330">
-<attribute name="NAME" x="55.43945" y="69.4117625" locked="yes" size="1.27" layer="25" rot="R330" align="bottom-center"/>
+<attribute name="NAME" x="55.43945" y="69.4117625" locked="yes" size="0.8128" layer="25" rot="R330" align="bottom-center"/>
 </element>
 <element name="Q19" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="66.78" y="53.92" locked="yes" smashed="yes" rot="R300">
-<attribute name="NAME" x="69.4117625" y="55.43945" locked="yes" size="1.27" layer="25" rot="R300" align="bottom-center"/>
+<attribute name="NAME" x="69.4117625" y="55.43945" locked="yes" size="0.8128" layer="25" rot="R300" align="bottom-center"/>
 </element>
 <element name="Q20" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="66.04" y="19.05" smashed="yes">
-<attribute name="NAME" x="66.04" y="21.684" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="68.326" y="17.62" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q21" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="50.8" y="7.62" smashed="yes">
-<attribute name="NAME" x="50.8" y="10.254" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="48.006" y="7.206" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q22" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="19.05" y="10.16" smashed="yes">
-<attribute name="NAME" x="19.05" y="12.794" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="16.256" y="10.127" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q23" library="Micromouse 2020" package="SOT95P230X110-3" package3d_urn="urn:adsk.eagle:package:12395711/1" value="MMBT3904,215MMBT3904,215" x="6.35" y="25.4" smashed="yes">
-<attribute name="NAME" x="6.35" y="28.034" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="6.35" y="27.399" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q24" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="66.78" y="22.91" locked="yes" smashed="yes" rot="R240">
-<attribute name="NAME" x="69.4117625" y="21.390546875" locked="yes" size="1.27" layer="25" rot="R240" align="bottom-center"/>
+<attribute name="NAME" x="69.4117625" y="21.390546875" locked="yes" size="0.8128" layer="25" rot="R240" align="bottom-center"/>
 </element>
 <element name="Q25" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="53.92" y="10.05" locked="yes" smashed="yes" rot="R210">
-<attribute name="NAME" x="55.43945" y="7.4182375" locked="yes" size="1.27" layer="25" rot="R210" align="bottom-center"/>
+<attribute name="NAME" x="55.43945" y="7.4182375" locked="yes" size="0.8128" layer="25" rot="R210" align="bottom-center"/>
 </element>
 <element name="Q26" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="22.81" y="10.05" locked="yes" smashed="yes" rot="R150">
-<attribute name="NAME" x="21.29055" y="7.4182375" locked="yes" size="1.27" layer="25" rot="R150" align="bottom-center"/>
+<attribute name="NAME" x="21.29055" y="7.4182375" locked="yes" size="0.8128" layer="25" rot="R150" align="bottom-center"/>
 </element>
 <element name="Q27" library="Micromouse 2020" package="TEFT4300" package3d_urn="urn:adsk.eagle:package:14528166/1" value="TEFT4300" x="10.05" y="22.91" locked="yes" smashed="yes" rot="R120">
-<attribute name="NAME" x="7.4182375" y="21.39055" locked="yes" size="1.27" layer="25" rot="R120" align="bottom-center"/>
+<attribute name="NAME" x="7.4182375" y="21.39055" locked="yes" size="0.8128" layer="25" rot="R120" align="bottom-center"/>
 </element>
 <element name="Q28" library="Micromouse 2020" package="SI7157DP" package3d_urn="urn:adsk.eagle:package:15328908/1" value="SI7157DP" x="60.96" y="49.53" smashed="yes" rot="R90">
-<attribute name="NAME" x="57.3951" y="49.53" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="60.833" y="46.0921" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="Q29" library="Micromouse 2020" package="SI7157DP" package3d_urn="urn:adsk.eagle:package:15328908/1" value="SI7157DP" x="68.58" y="48.26" smashed="yes">
-<attribute name="NAME" x="68.58" y="51.8249" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="69.85" y="44.7129" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q30" library="Micromouse 2020" package="SOT96P237X112-3" package3d_urn="urn:adsk.eagle:package:12395633/1" value="MMBT3906" x="74.168" y="52.07" smashed="yes" rot="R180">
-<attribute name="NAME" x="74.168" y="49.4164" size="1.27" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="75.057" y="54.7504" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="Q31" library="Micromouse 2020" package="SOT96P237X112-3" package3d_urn="urn:adsk.eagle:package:12395633/1" value="MMBT3906" x="73.66" y="46.99" smashed="yes" rot="R270">
-<attribute name="NAME" x="76.3136" y="46.99" size="1.27" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="75.311" y="45.0716" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="Q32" library="Micromouse 2020" package="SI7157DP" package3d_urn="urn:adsk.eagle:package:15328908/1" value="SI7157DP" x="68.58" y="48.26" smashed="yes" rot="MR180">
-<attribute name="NAME" x="68.58" y="44.6951" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="68.58" y="45.3301" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="Q33" library="Micromouse 2020" package="SOT96P237X112-3" package3d_urn="urn:adsk.eagle:package:12395633/1" value="MMBT3906" x="63.5" y="50.8" smashed="yes" rot="MR180">
-<attribute name="NAME" x="63.5" y="48.1464" size="1.27" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="65.405" y="52.9724" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="Q34" library="Micromouse 2020" package="SOT96P237X112-3" package3d_urn="urn:adsk.eagle:package:12395633/1" value="MMBT3906" x="59.69" y="46.99" smashed="yes" rot="MR90">
-<attribute name="NAME" x="62.3436" y="46.99" size="1.27" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="59.69" y="44.4366" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="R1" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="2.2k" x="21.971" y="29.972" smashed="yes" rot="MR270">
-<attribute name="NAME" x="21.1074" y="29.972" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="22.479" y="28.3464" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R10" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="31.877" y="44.577" smashed="yes" rot="MR90">
-<attribute name="NAME" x="32.7406" y="44.577" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="30.48" y="47.4726" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="R11" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="150k" x="33.02" y="46.101" smashed="yes" rot="MR270">
-<attribute name="NAME" x="32.1564" y="46.101" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="32.639" y="48.2854" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R12" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="348k" x="30.607" y="39.878" smashed="yes" rot="MR180">
-<attribute name="NAME" x="30.607" y="39.0144" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="30.734" y="36.4744" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R13" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="18k" x="33.02" y="39.116" smashed="yes" rot="MR90">
-<attribute name="NAME" x="33.8836" y="39.116" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="32.9946" y="36.703" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
 </element>
 <element name="R14" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="160k" x="32.131" y="39.116" smashed="yes" rot="MR270">
-<attribute name="NAME" x="31.2674" y="39.116" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="32.7914" y="36.703" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
 </element>
 <element name="R15" library="Micromouse 2020" package="0805" value="30R" x="52.07" y="22.86" smashed="yes">
-<attribute name="NAME" x="52.07" y="23.7236" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="52.07" y="21.1836" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R16" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="30R" x="20.955" y="50.8" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.8186" y="50.8" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="22.1234" y="48.514" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="R17" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="30R" x="17.78" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.6436" y="58.42" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="17.399" y="59.7916" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R18" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="30R" x="23.495" y="63.5" smashed="yes" rot="R270">
-<attribute name="NAME" x="24.3586" y="63.5" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="21.59" y="63.8556" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R19" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="30R" x="28.575" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="29.4386" y="58.42" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="29.9974" y="60.706" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="R2" library="Micromouse 2020" package="0805" value="330R" x="21.59" y="25.654" smashed="yes" rot="R180">
-<attribute name="NAME" x="21.59" y="24.7904" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="22.352" y="24.6634" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="R20" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="30R" x="24.765" y="63.5" smashed="yes" rot="R270">
-<attribute name="NAME" x="25.6286" y="63.5" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="26.924" y="63.4746" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R26" library="Micromouse 2020" package="0805" value="17R" x="6.35" y="55.88" smashed="yes">
-<attribute name="NAME" x="6.35" y="56.7436" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="7.239" y="58.3946" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R27" library="Micromouse 2020" package="0805" value="17R" x="17.78" y="68.58" smashed="yes">
-<attribute name="NAME" x="17.78" y="69.4436" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="14.986" y="66.2686" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R28" library="Micromouse 2020" package="0805" value="17R" x="50.8" y="69.85" smashed="yes">
-<attribute name="NAME" x="50.8" y="70.7136" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="50.8" y="68.0466" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R29" library="Micromouse 2020" package="0805" value="17R" x="68.072" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="68.9356" y="58.42" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="68.453" y="60.1726" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R30" library="Micromouse 2020" package="0805" value="1k" x="12.7" y="55.88" smashed="yes" rot="R270">
-<attribute name="NAME" x="13.5636" y="55.88" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="14.732" y="54.4576" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R31" library="Micromouse 2020" package="0805" value="1k" x="24.892" y="69.85" smashed="yes" rot="R270">
-<attribute name="NAME" x="25.7556" y="69.85" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="26.924" y="70.5866" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R32" library="Micromouse 2020" package="0805" value="1k" x="54.61" y="63.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="53.7464" y="63.5" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="54.61" y="61.7474" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="R33" library="Micromouse 2020" package="0805" value="1k" x="65.024" y="52.451" smashed="yes">
-<attribute name="NAME" x="65.024" y="53.3146" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="63.5" y="53.4416" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R34" library="Micromouse 2020" package="0805" value="17R" x="69.85" y="25.4" smashed="yes">
 <attribute name="NAME" x="69.85" y="26.2636" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R35" library="Micromouse 2020" package="0805" value="17R" x="58.42" y="11.43" smashed="yes" rot="R270">
-<attribute name="NAME" x="59.2836" y="11.43" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="58.42" y="13.1826" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R36" library="Micromouse 2020" package="0805" value="17R" x="24.13" y="5.08" smashed="yes">
-<attribute name="NAME" x="24.13" y="5.9436" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="25.781" y="6.0706" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R37" library="Micromouse 2020" package="0805" value="17R" x="8.89" y="19.05" smashed="yes">
-<attribute name="NAME" x="8.89" y="19.9136" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="6.223" y="18.1356" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R38" library="Micromouse 2020" package="0805" value="1k" x="63.5" y="21.59" smashed="yes">
-<attribute name="NAME" x="63.5" y="22.4536" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="63.5" y="22.5806" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R39" library="Micromouse 2020" package="0805" value="1k" x="49.53" y="10.16" smashed="yes">
-<attribute name="NAME" x="49.53" y="11.0236" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="49.53" y="11.1506" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R4" library="Micromouse 2020" package="0805" value="30k" x="43.18" y="62.23" smashed="yes" rot="MR0">
-<attribute name="NAME" x="43.18" y="63.0936" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="46.101" y="61.6966" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="R40" library="Micromouse 2020" package="0805" value="1k" x="25.4" y="11.43" smashed="yes" rot="R180">
-<attribute name="NAME" x="25.4" y="10.5664" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="26.289" y="10.4394" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="R41" library="Micromouse 2020" package="0805" value="1k" x="8.89" y="26.67" smashed="yes" rot="R270">
-<attribute name="NAME" x="9.7536" y="26.67" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="9.017" y="28.4226" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R42" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="41.148" y="3.048" smashed="yes" rot="MR90">
-<attribute name="NAME" x="42.0116" y="3.048" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="46.7106" y="2.032" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
 </element>
 <element name="R43" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="37.338" y="3.048" smashed="yes" rot="MR270">
-<attribute name="NAME" x="36.4744" y="3.048" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="44.4754" y="2.032" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
 </element>
 <element name="R44" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="42.418" y="3.048" smashed="yes" rot="MR270">
-<attribute name="NAME" x="41.5544" y="3.048" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="48.5394" y="2.032" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
 </element>
 <element name="R45" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="39.878" y="3.048" smashed="yes" rot="MR90">
-<attribute name="NAME" x="40.7416" y="3.048" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="45.6946" y="2.032" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
 </element>
 <element name="R46" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="33.909" y="6.477" smashed="yes" rot="MR180">
-<attribute name="NAME" x="33.909" y="5.6134" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="31.623" y="4.4704" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R47" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="33.909" y="7.62" smashed="yes" rot="MR180">
-<attribute name="NAME" x="33.909" y="6.7564" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="31.623" y="5.4864" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R48" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k" x="53.77579375" y="57.15" smashed="yes" rot="R45">
-<attribute name="NAME" x="53.1651375" y="57.76065625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
+<attribute name="NAME" x="53.2921375" y="57.88765625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
 </element>
 <element name="R49" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k" x="55.57184375" y="58.94605" smashed="yes" rot="R225">
-<attribute name="NAME" x="56.182503125" y="58.33539375" size="0.8128" layer="25" rot="R225" align="bottom-center"/>
+<attribute name="NAME" x="54.658503125" y="60.24039375" size="0.8128" layer="25" rot="R225" align="bottom-center"/>
 </element>
 <element name="R5" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1k" x="12.446" y="30.48" smashed="yes" rot="MR270">
-<attribute name="NAME" x="11.5824" y="30.48" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="10.16" y="29.3624" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R50" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="4.7k" x="31.369" y="5.461" smashed="yes" rot="R270">
-<attribute name="NAME" x="32.2326" y="5.461" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="31.0896" y="2.794" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
 </element>
 <element name="R51" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="4.7k" x="31.369" y="12.319" smashed="yes" rot="R90">
-<attribute name="NAME" x="30.5054" y="12.319" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="32.2834" y="18.796" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="R52" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k" x="60.452" y="61.722" smashed="yes" rot="R45">
-<attribute name="NAME" x="59.841340625" y="62.33265625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
+<attribute name="NAME" x="63.143340625" y="56.74465625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
 </element>
 <element name="R53" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="100k" x="60.96" y="60.96" smashed="yes" rot="R45">
-<attribute name="NAME" x="60.349340625" y="61.57065625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
+<attribute name="NAME" x="63.778340625" y="56.10965625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
 </element>
 <element name="R54" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="100k" x="61.722" y="60.452" smashed="yes" rot="R45">
-<attribute name="NAME" x="61.111340625" y="61.06265625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
+<attribute name="NAME" x="64.413340625" y="55.47465625" size="0.8128" layer="25" rot="R45" align="bottom-center"/>
 </element>
 <element name="R55" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="68k" x="72.771" y="50.292" smashed="yes" rot="R270">
-<attribute name="NAME" x="73.6346" y="50.292" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="76.6064" y="51.181" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="R56" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="74.676" y="49.53" smashed="yes">
-<attribute name="NAME" x="74.676" y="50.3936" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="76.6064" y="48.641" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="R57" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="100k" x="64.516" y="46.99" smashed="yes" rot="R90">
-<attribute name="NAME" x="63.6524" y="46.99" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="64.135" y="45.7454" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="R58" library="Micromouse 2020" package="0805" value="100k" x="63.5" y="54.61" smashed="yes" rot="MR270">
 <attribute name="NAME" x="62.6364" y="54.61" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
 </element>
 <element name="R59" library="Micromouse 2020" package="0805" value="10k" x="63.5" y="46.99" smashed="yes" rot="MR90">
-<attribute name="NAME" x="64.3636" y="46.99" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="62.611" y="44.4246" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="R6" library="Micromouse 2020" package="0805" value="10k" x="68.58" y="33.02" smashed="yes" rot="MR90">
-<attribute name="NAME" x="69.4436" y="33.02" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="68.58" y="30.5816" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="R60" library="Micromouse 2020" package="0805" value="68k" x="59.69" y="50.8" smashed="yes" rot="MR270">
-<attribute name="NAME" x="58.8264" y="50.8" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="59.69" y="53.3654" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R61" library="Micromouse 2020" package="0805" value="0R" x="64.77" y="43.18" smashed="yes" rot="MR0">
 <attribute name="NAME" x="64.77" y="44.0436" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="R62" library="Micromouse 2020" package="0805" value="0R" x="57.15" y="45.72" smashed="yes" rot="MR270">
-<attribute name="NAME" x="56.2864" y="45.72" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="57.15" y="43.9674" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R63" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10k" x="11.938" y="13.208" smashed="yes">
-<attribute name="NAME" x="11.938" y="14.0716" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="12.573" y="11.5316" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="R64" library="Micromouse 2020" package="0805" value="30k" x="62.23" y="30.48" smashed="yes" rot="MR90">
-<attribute name="NAME" x="63.0936" y="30.48" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="62.23" y="28.0416" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="R65" library="Micromouse 2020" package="0805" value="30k" x="33.02" y="13.97" smashed="yes" rot="MR180">
-<attribute name="NAME" x="33.02" y="13.1064" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="33.02" y="12.9794" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R66" library="Micromouse 2020" package="0805" value="30k" x="13.97" y="39.37" smashed="yes" rot="MR180">
-<attribute name="NAME" x="13.97" y="38.5064" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="11.303" y="40.1574" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R7" library="Micromouse 2020" package="0805" value="68k" x="53.34" y="22.86" smashed="yes" rot="MR270">
-<attribute name="NAME" x="52.4764" y="22.86" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="51.943" y="25.5524" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R8" library="Micromouse 2020" package="0805" value="15k" x="55.88" y="26.67" smashed="yes" rot="MR270">
-<attribute name="NAME" x="55.0164" y="26.67" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="54.229" y="27.9654" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R9" library="Micromouse 2020" package="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="270k" x="34.925" y="41.148" smashed="yes" rot="MR90">
-<attribute name="NAME" x="35.7886" y="41.148" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="35.1536" y="38.227" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
 </element>
 <element name="S1" library="Micromouse 2020" package="PTS526SMG15SMTR2LFS" value="PTS526SMG15SMTR2LFS" x="26.67" y="25.4" locked="yes" smashed="yes" rot="R180">
-<attribute name="NAME" x="26.67" y="22.4" locked="yes" size="1.27" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="26.67" y="22.4" locked="yes" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="S2" library="Micromouse 2020" package="OS102011MS2QN1" value="OS102011MS2QN1" x="69.85" y="29.21" smashed="yes" rot="R180">
-<attribute name="NAME" x="69.85" y="27.21" size="1.27" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="74.422" y="27.083" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="TP1" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="31.369" y="10.16" smashed="yes" rot="R270">
-<attribute name="NAME" x="32.639" y="10.16" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="31.496" y="16.637" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
 </element>
 <element name="TP2" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="31.369" y="7.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="32.639" y="7.62" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="31.496" y="14.478" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
 </element>
 <element name="TP3" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="55.88" y="48.26" smashed="yes">
-<attribute name="NAME" x="55.88" y="49.53" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="55.88" y="46.482" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="TP4" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="71.374" y="51.689" smashed="yes">
-<attribute name="NAME" x="71.374" y="52.959" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="69.469" y="51.181" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="TP5" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="62.23" y="58.42" smashed="yes">
-<attribute name="NAME" x="62.23" y="59.69" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="60.96" y="56.769" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="TP6" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="53.34" y="20.32" smashed="yes">
-<attribute name="NAME" x="53.34" y="21.59" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="53.34" y="18.542" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="TP7" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="30.734" y="42.418" smashed="yes">
 <attribute name="NAME" x="30.734" y="43.688" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="TP8" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="12.7" y="58.42" smashed="yes">
-<attribute name="NAME" x="12.7" y="59.69" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="12.954" y="59.563" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="TP9" library="Micromouse 2020" package="TESTPOINT" value="TESTPOINT" x="12.827" y="53.086" smashed="yes">
-<attribute name="NAME" x="12.827" y="54.356" size="0.8128" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="12.827" y="51.181" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="U1" library="Micromouse 2020" package="ATSAMD21G18A-MU" package3d_urn="urn:adsk.eagle:package:14495109/1" value="ATSAMD21G18A-MU" x="19.05" y="19.05" smashed="yes">
-<attribute name="NAME" x="19.05" y="23.5409" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="16.256" y="14.0159" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="U10" library="Micromouse 2020" package="DRV8871" package3d_urn="urn:adsk.eagle:package:15205599/1" value="DRV8871" x="19.05" y="38.1" smashed="yes" rot="MR180">
-<attribute name="NAME" x="19.05" y="34.5064" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="19.05" y="35.2684" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="U2" library="Micromouse 2020" package="AP3441" package3d_urn="urn:adsk.eagle:package:14523753/1" value="AP3441" x="59.69" y="26.67" smashed="yes" rot="MR270">
-<attribute name="NAME" x="57.416" y="26.67" size="1.27" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="62.23" y="26.682" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="U3" library="Micromouse 2020" package="TPS61089" package3d_urn="urn:adsk.eagle:package:14523902/1" value="TPS61089" x="33.02" y="41.91" smashed="yes" rot="MR0">
-<attribute name="NAME" x="33.02" y="43.9096" size="1.27" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="33.909" y="43.9096" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="U4" library="Micromouse 2020" package="BNO055" package3d_urn="urn:adsk.eagle:package:14494911/1" value="BNO055" x="38.415" y="6.604" locked="yes" smashed="yes" rot="MR0">
-<attribute name="NAME" x="38.415" y="9.4949" locked="yes" size="1.27" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="37.145" y="9.3679" locked="yes" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="U5" library="Micromouse 2020" package="MCP73811" package3d_urn="urn:adsk.eagle:package:14523950/1" value="MCP73811" x="56.469871875" y="56.251971875" smashed="yes" rot="R45">
-<attribute name="NAME" x="54.60749375" y="58.11435" size="1.27" layer="25" rot="R45" align="bottom-center"/>
+<attribute name="NAME" x="55.04265" y="54.60749375" size="0.8128" layer="25" rot="R135" align="bottom-center"/>
 </element>
 <element name="U6" library="Micromouse 2020" package="MCP1501" package3d_urn="urn:adsk.eagle:package:15205588/1" value="" x="11.938" y="15.494" smashed="yes" rot="R270">
-<attribute name="NAME" x="14.5718" y="15.494" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="10.414" y="12.7938" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="U7" library="Micromouse 2020" package="DRV8871" package3d_urn="urn:adsk.eagle:package:15205599/1" value="DRV8871" x="38.1" y="58.42" smashed="yes" rot="MR270">
-<attribute name="NAME" x="34.5064" y="58.42" size="0.8128" layer="26" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="38.1" y="63.0814" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="U8" library="Micromouse 2020" package="DRV8871" package3d_urn="urn:adsk.eagle:package:15205599/1" value="DRV8871" x="58.42" y="38.1" smashed="yes" rot="MR0">
-<attribute name="NAME" x="58.42" y="41.6936" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="58.42" y="41.0586" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="U9" library="Micromouse 2020" package="DRV8871" package3d_urn="urn:adsk.eagle:package:15205599/1" value="DRV8871" x="38.1" y="17.78" smashed="yes" rot="MR90">
-<attribute name="NAME" x="41.6936" y="17.78" size="0.8128" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="38.1" y="21.7546" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 <element name="XTAL1" library="Micromouse 2020" package="FC-135" package3d_urn="urn:adsk.eagle:package:14566881/1" value="32.768kHz" x="13.97" y="23.241" smashed="yes" rot="R270">
-<attribute name="NAME" x="16.1336" y="23.241" size="1.27" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="14.605" y="25.4046" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="XTAL2" library="Micromouse 2020" package="FC-135" package3d_urn="urn:adsk.eagle:package:14566881/1" value="32MHz" x="21.59" y="13.335" smashed="yes">
-<attribute name="NAME" x="21.59" y="15.4986" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="NAME" x="24.765" y="15.7526" size="0.8128" layer="25" align="bottom-center"/>
 </element>
 <element name="XTAL3" library="Micromouse 2020" package="FC-135" package3d_urn="urn:adsk.eagle:package:14566881/1" value="32.768kHz" x="39.878" y="10.16" smashed="yes" rot="MR180">
-<attribute name="NAME" x="39.878" y="7.9964" size="1.27" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="43.561" y="10.9174" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="U11" library="Micromouse 2020" package="PCAL6416A" package3d_urn="urn:adsk.eagle:package:16145924/1" value="PCAL6416A" x="16.51" y="48.26" smashed="yes" rot="R270">
-<attribute name="NAME" x="19.5096" y="48.26" size="1.27" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="NAME" x="16.002" y="50.8786" size="0.8128" layer="25" align="bottom-center"/>
 <attribute name="VALUE" x="13.5104" y="48.26" size="1.27" layer="27" rot="R270" align="top-center"/>
 </element>
 <element name="R3" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="19.685" y="50.8" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.2551" y="50.8" size="0.8128" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="NAME" x="17.0509" y="51.435" size="0.8128" layer="25" rot="R270" align="bottom-center"/>
 </element>
 <element name="C47" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF" x="20.193" y="48.514" smashed="yes" rot="R180">
-<attribute name="NAME" x="20.193" y="47.0841" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="20.193" y="47.4651" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="R21" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="19.05" y="45.339" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.05" y="43.9091" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="NAME" x="16.764" y="45.4331" size="0.8128" layer="25" rot="R180" align="bottom-center"/>
 </element>
 <element name="U12" library="Micromouse 2020" package="MAX7315" package3d_urn="urn:adsk.eagle:package:16145880/1" value="MAX7315" x="12.7" y="35.56" smashed="yes" rot="MR180">
-<attribute name="NAME" x="12.7" y="33.0604" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="9.398" y="37.2514" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R22" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="9.525" y="34.544" smashed="yes" rot="MR180">
-<attribute name="NAME" x="9.525" y="33.1141" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="5.461" y="34.8921" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R23" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="9.525" y="33.274" smashed="yes" rot="MR180">
-<attribute name="NAME" x="9.525" y="31.8441" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="5.461" y="33.8761" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="R24" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="10k" x="9.525" y="32.004" smashed="yes" rot="MR180">
-<attribute name="NAME" x="9.525" y="30.5741" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="5.461" y="32.8601" size="0.8128" layer="26" rot="MR180" align="bottom-center"/>
 </element>
 <element name="C48" library="Micromouse 2020" package="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF" x="13.843" y="33.02" smashed="yes" rot="MR0">
-<attribute name="NAME" x="13.843" y="34.4499" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="16.129" y="33.3069" size="0.8128" layer="26" rot="MR0" align="bottom-center"/>
 </element>
 </elements>
 <signals>
