@@ -1,4 +1,5 @@
 
+//#define IMU_ENABLED
 
 #include "stdint.h" // For uint8_t, uint16_t, etc...
 

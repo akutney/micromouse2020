@@ -58,24 +58,24 @@ void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator
     system_gclk_chan_enable(channel);
 }    
 
-void configure_usart(void)
-{
-    /* SERCOM0 clock source */
-    configure_gclk_source(GCLK_CHANNEL_SERCOM0_CORE, GCLK_GENERATOR_0);
-
-    /* SERCOM0 module configuration */
-    struct usart_config config_usart;
-    usart_get_config_defaults(&config_usart);
-    config_usart.baudrate = 38400;
-    config_usart.mux_setting = USART_RX_1_TX_0_XCK_1;
-    config_usart.pinmux_pad0 = PINMUX_PA08C_SERCOM0_PAD0; // TX
-    config_usart.pinmux_pad1 = PINMUX_PA09C_SERCOM0_PAD1; // RX/XCK
-    config_usart.pinmux_pad2 = PINMUX_UNUSED;
-    config_usart.pinmux_pad3 = PINMUX_UNUSED;
-    while (usart_init(&usart_instance, SERCOM0, &config_usart) != STATUS_OK);
-        
-    usart_enable(&usart_instance);
-}
+//void configure_usart(void)
+//{
+    ///* SERCOM0 clock source */
+    //configure_gclk_source(GCLK_CHANNEL_SERCOM0_CORE, GCLK_GENERATOR_0);
+//
+    ///* SERCOM0 module configuration */
+    //struct usart_config config_usart;
+    //usart_get_config_defaults(&config_usart);
+    //config_usart.baudrate = 38400;
+    //config_usart.mux_setting = USART_RX_1_TX_0_XCK_1;
+    //config_usart.pinmux_pad0 = PINMUX_PA08C_SERCOM0_PAD0; // TX
+    //config_usart.pinmux_pad1 = PINMUX_PA09C_SERCOM0_PAD1; // RX/XCK
+    //config_usart.pinmux_pad2 = PINMUX_UNUSED;
+    //config_usart.pinmux_pad3 = PINMUX_UNUSED;
+    //while (usart_init(&usart_instance, SERCOM0, &config_usart) != STATUS_OK);
+        //
+    //usart_enable(&usart_instance);
+//}
 
 void configure_stdio_serial(void)
 {

@@ -1553,9 +1553,6 @@
     <Compile Include="src\drivers\encoder_driver.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\drivers\i2c_driver.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\drivers\imu_driver.h">
       <SubType>compile</SubType>
     </Compile>
