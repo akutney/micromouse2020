@@ -37,7 +37,7 @@
 #include "algorithms/guidance.h"
 #include "algorithms/controller.h"
 
-#define LED_PORT	PORTA
+#define LED_PORT	0
 #define LED_PIN		17
 
 
@@ -53,8 +53,8 @@ int main (void)
     printf("Hello World!\r\n");
     
     // Configure LED pin
-    LED_PORT.DIR.reg |= 0x1 << LED_PIN;
-    LED_PORT.PINCFG[LED_PIN].reg = 0x0;
+    PORT->Group[LED_PORT].DIR.reg |= 0x1 << LED_PIN;
+    PORT->Group[LED_PORT].PINCFG[LED_PIN].reg = 0x0;
 
     SysTick_Init();
 }
@@ -67,7 +67,7 @@ void SysTick_Handler(void)
     // Toggle LEDs every second (i.e. 1000ms)
     if(tickCount % 1000 == 0){
         // Toggle LED pin output level.
-        LED_PORT.OUTTGL.reg |= 0x1 << LED_PIN;
+        PORT->Group[LED_PORT].OUTTGL.reg |= 0x1 << LED_PIN;
     }
 
 }
