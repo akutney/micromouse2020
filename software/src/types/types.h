@@ -1,3 +1,11 @@
+/* 
+ * types.h
+ */
+
+
+#ifndef __TYPES_H__
+#define __TYPES_H__
+
 
 //#define IMU_ENABLED
 
@@ -14,3 +22,6 @@
 
 #include "robot_state.h"
 #include "maze_state.h"
+
+
+#endif // __TYPES_H__

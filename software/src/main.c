@@ -33,23 +33,12 @@
 
 #include "types/types.h"
 
-#include "drivers/adc_driver.h" // Probably don't need
-#include "drivers/button_driver.h"
-#include "drivers/distance_driver.h"
-#include "drivers/encoder_driver.h"
-#include "drivers/i2c_driver.h" // Probably don't need
-#include "drivers/imu_driver.h"
-#include "drivers/motor_driver.h"
-#include "drivers/pwm_driver.h" // Might not need
-#include "drivers/sensor_driver.h"
-#include "drivers/time_driver.h"
-
 #include "algorithms/navigation.h"
 #include "algorithms/guidance.h"
 #include "algorithms/controller.h"
 
-#define LED_PORT 0
-#define LED_PIN 17
+#define LED_PORT	PORTA
+#define LED_PIN		17
 
 
 // Function Declarations
@@ -58,14 +47,14 @@ void SysTick_Init(void);
 int main (void)
 {
     // ASF system and board initialization
-	system_init();
+    system_init();
 
     /* Insert application code here, after the board has been initialized. */
     printf("Hello World!\r\n");
     
     // Configure LED pin
-    PORT->Group[LED_PORT].DIR.reg |= 0x1 << LED_PIN;
-    PORT->Group[LED_PORT].PINCFG[LED_PIN].reg = 0x0;
+    LED_PORT.DIR.reg |= 0x1 << LED_PIN;
+    LED_PORT.PINCFG[LED_PIN].reg = 0x0;
 
     SysTick_Init();
 }
@@ -78,7 +67,7 @@ void SysTick_Handler(void)
     // Toggle LEDs every second (i.e. 1000ms)
     if(tickCount % 1000 == 0){
         // Toggle LED pin output level.
-        PORT->Group[LED_PORT].OUTTGL.reg |= 0x1 << LED_PIN;
+        LED_PORT.OUTTGL.reg |= 0x1 << LED_PIN;
     }
 
 }
