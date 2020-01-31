@@ -773,6 +773,7 @@
     <Folder Include="src\config\" />
     <Folder Include="src\algorithms" />
     <Folder Include="src\drivers" />
+    <Folder Include="src\robot" />
     <Folder Include="src\types" />
   </ItemGroup>
   <ItemGroup>
@@ -801,6 +802,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\robot\robot.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\robot\robot.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\adc_data.h">
