@@ -19,12 +19,13 @@ void board_init(void);
 #  pragma weak board_init=system_board_init
 #endif
 
-
+// Utility Function
 void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator);
 
-void configure_usart(void);
+// ASF module configuration functions
 void configure_stdio_serial(void);
 void configure_rtc_count(void);
+
 
 void system_board_init(void)
 {
@@ -33,7 +34,6 @@ void system_board_init(void)
      * specific board configuration, found in conf_board.h.
      */
 
-    // configure_usart();
     configure_stdio_serial();
     configure_rtc_count();
 }
@@ -56,27 +56,11 @@ void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator
 
     // 4. Re-enable the generic clock by writing a one to CLKCTRL.CLKEN
     system_gclk_chan_enable(channel);
-}    
+}
 
-// void configure_usart(void)
-// {
-//     /* SERCOM0 clock source */
-//     configure_gclk_source(GCLK_CHANNEL_SERCOM0_CORE, GCLK_GENERATOR_0);
-
-//     /* SERCOM0 module configuration */
-//     struct usart_config config_usart;
-//     usart_get_config_defaults(&config_usart);
-//     config_usart.baudrate = 38400;
-//     config_usart.mux_setting = USART_RX_1_TX_0_XCK_1;
-//     config_usart.pinmux_pad0 = PINMUX_PA08C_SERCOM0_PAD0; // TX
-//     config_usart.pinmux_pad1 = PINMUX_PA09C_SERCOM0_PAD1; // RX/XCK
-//     config_usart.pinmux_pad2 = PINMUX_UNUSED;
-//     config_usart.pinmux_pad3 = PINMUX_UNUSED;
-//     while (usart_init(&usart_instance, SERCOM0, &config_usart) != STATUS_OK);
-        
-//     usart_enable(&usart_instance);
-// }
-
+/**
+ * After this function, stdio library should work
+ */
 void configure_stdio_serial(void)
 {
     /* SERCOM0 clock source */
@@ -88,7 +72,7 @@ void configure_stdio_serial(void)
     config_usart.baudrate = 38400;
     config_usart.mux_setting = USART_RX_1_TX_0_XCK_1;
     config_usart.pinmux_pad0 = PINMUX_PA08C_SERCOM0_PAD0; // TX
-    config_usart.pinmux_pad1 = PINMUX_PA09C_SERCOM0_PAD1; // RX/XCK
+    config_usart.pinmux_pad1 = PINMUX_PA09C_SERCOM0_PAD1; // RX/XCK // TODO: Use correct pins
     config_usart.pinmux_pad2 = PINMUX_UNUSED;
     config_usart.pinmux_pad3 = PINMUX_UNUSED;
     stdio_serial_init(&usart_instance, SERCOM0, &config_usart);
@@ -112,11 +96,8 @@ void configure_rtc_count(void)
     config_rtc_count.prescaler          = 1;
     status = rtc_count_init(&rtc_instance, RTC, &config_rtc_count);
    
-    if (status == STATUS_OK) {
-        rtc_count_enable(&rtc_instance);
+    if (status != STATUS_OK) {
+        while(1); // Error, stop everything
     }
-    
-    // use rtc_tamper_get_stamp(&rtc_instance) to read the count value
-    // use rtc_count_register_callback(...) with callback_type = RTC_COUNT_CALLBACK_OVERFLOW
-    // implement "millis()"
+    // Will be enabled when needed
 }
