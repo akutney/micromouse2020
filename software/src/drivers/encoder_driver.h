@@ -10,7 +10,8 @@
 #include "../types/types.h"
 
 
-/* */
+void init_encoder_driver(void);
+
 void get_encoder_values(encoder_data_t * values);
 
 

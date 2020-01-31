@@ -10,6 +10,8 @@
 #include "../types/types.h"
 
 
+void init_motor_driver(void);
+
 void set_motor_outputs(motor_outputs_t * outputs);
 
 

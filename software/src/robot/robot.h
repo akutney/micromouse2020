@@ -9,7 +9,7 @@
 
 void init_robot(void);
 
-void run_robot_loop(float current_time);
+void run_robot_loop(void);
 
 
 #endif //__ROBOT_H__

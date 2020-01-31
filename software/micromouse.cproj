@@ -804,19 +804,19 @@
     <Compile Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\drivers\time_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\robot\robot.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\robot\robot.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\types\adc_data.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\types\button_data.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\types\distance_data.h">
+    <Compile Include="src\types\distance_sensor_data.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\encoder_data.h">
@@ -1548,13 +1548,10 @@
     <Compile Include="src\ASF\sam0\utils\syscalls\gcc\syscalls.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\drivers\adc_driver.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\drivers\button_driver.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\drivers\distance_driver.h">
+    <Compile Include="src\drivers\distance_sensor_driver.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\drivers\encoder_driver.h">
@@ -1564,9 +1561,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\drivers\motor_driver.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\drivers\pwm_driver.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\drivers\sensor_driver.h">

@@ -10,7 +10,9 @@
 #include "../types/types.h"
 
 
-void get_distances(distance_data_t * distances);
+void init_distance_sensor_driver(void);
+
+void get_distances(distance_sensor_data_t * distances);
 
 
 #endif //__DISTANCE_SENSOR_DRIVER_H__

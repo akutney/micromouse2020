@@ -10,6 +10,8 @@
 #include "../types/types.h"
 
 
+void init_sensor_driver(void);
+
 void get_sensor_data(sensor_data_t * data);
 
 

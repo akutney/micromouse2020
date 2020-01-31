@@ -32,7 +32,6 @@
 #include <asf.h>
 
 #include "robot/robot.h"
-#include "drivers/time_driver.h"
 
 
 #define CONTINUOUS_MODE
@@ -57,7 +56,7 @@ int main (void)
 #ifdef CONTINUOUS_MODE
     while(1)
     {
-        run_robot_loop(get_time());
+        run_robot_loop();
     }
 #else
     systick_init();
@@ -79,5 +78,5 @@ void systick_init(void)
 
 void SysTick_Handler(void)
 {
-    run_robot_loop(get_time());
+    run_robot_loop();
 }

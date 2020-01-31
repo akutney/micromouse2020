@@ -10,6 +10,8 @@
 #include "../types/types.h"
 
 
+void init_button_driver(void);
+
 void get_button_data(button_data_t * values);
 
 

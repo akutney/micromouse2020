@@ -27,10 +27,10 @@ typedef struct
 {
     /* Readings from distance sensor
      * - Each array location corresponds to a distance sensor by ID
-     * - Values in mm
+     * - Values in m
      */
     float distances[NUM_OF_DISTANCE_SENSORS];
-} distance_data_t;
+} distance_sensor_data_t;
 
 
 #endif //__DISTANCE_DATA_H__
