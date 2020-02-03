@@ -2365,7 +2365,7 @@
 <part name="C5" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="1uF"/>
 <part name="GND4" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="GND3" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="C7" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="100pF"/>
+<part name="C7" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="100pF"/>
 <part name="R2" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="330R"/>
 <part name="S1" library="Micromouse 2020" deviceset="PTS526SMG15SMTR2LFS" device=""/>
 <part name="GND5" library="Micromouse 2020" deviceset="GND" device=""/>
@@ -4039,6 +4039,7 @@
 <wire x1="-33.02" y1="66.04" x2="-33.02" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="P$2"/>
 <wire x1="-33.02" y1="68.58" x2="-33.02" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="60.96" x2="-43.18" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="68.58" x2="-33.02" y2="68.58" width="0.1524" layer="91"/>
 <junction x="-33.02" y="68.58"/>
 </segment>

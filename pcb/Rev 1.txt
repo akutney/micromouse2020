@@ -19,7 +19,7 @@ C3       0.1uF                    CAPACITOR0402            0402                M
 C4       0.1uF                    CAPACITOR0402            0402                Micromouse 2020 3
 C5       1uF                      CAPACITOR0402            0402                Micromouse 2020 3
 C6       10uF                     CAPACITOR0402            0402                Micromouse 2020 3
-C7       100pF                    RESISTOR0603             0603                Micromouse 2020 3
+C7       100pF                    CAPACITOR0603            0603                Micromouse 2020 3
 C8       0.1uF                    CAPACITOR0402            0402                Micromouse 2020 3
 C9       4.7uF                    CAPACITOR0402            0402                Micromouse 2020 3
 C11      22pF                     CAPACITOR0402            0402                Micromouse 2020 3
