@@ -2738,7 +2738,6 @@
 <part name="C76" library="Micromouse 2020" deviceset="CAPACITOR" device="0805" value="1uF"/>
 <part name="GND88" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="A5" library="Micromouse 2020" deviceset="HC-05" device=""/>
-<part name="P+69" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="GND91" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="C78" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1uF"/>
 <part name="FB2" library="Micromouse 2020" deviceset="FERRITE" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1"/>
@@ -2770,6 +2769,7 @@
 <part name="P+20" library="Micromouse 2020" deviceset="+3V3" device=""/>
 <part name="C48" library="Micromouse 2020" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="0.1uF"/>
 <part name="GND25" library="Micromouse 2020" deviceset="GND" device=""/>
+<part name="P+21" library="Micromouse 2020" deviceset="+3V7" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6760,13 +6760,13 @@
 <instance part="A5" gate="G$1" x="-5.08" y="0" smashed="yes" rot="R180">
 <attribute name="NAME" x="1.27" y="-10.795" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="P+69" gate="G$1" x="17.78" y="10.16" smashed="yes">
-<attribute name="VALUE" x="17.78" y="12.7" size="1.778" layer="96" rot="R180" align="bottom-center"/>
-</instance>
 <instance part="GND91" gate="1" x="17.78" y="-12.7" smashed="yes"/>
 <instance part="C78" gate="G$1" x="22.86" y="-5.08" smashed="yes" rot="R90">
 <attribute name="NAME" x="20.32" y="-1.27" size="1.778" layer="95" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="27.94" y="-1.27" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="P+21" gate="G$1" x="17.78" y="10.16" smashed="yes">
+<attribute name="VALUE" x="17.78" y="12.7" size="1.778" layer="96" rot="R180" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -6813,17 +6813,17 @@
 <junction x="17.78" y="-7.62"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="+3V7" class="0">
 <segment>
 <pinref part="A5" gate="G$1" pin="VCC"/>
 <wire x1="0" y1="2.54" x2="17.78" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="P+69" gate="G$1" pin="+3V3"/>
 <wire x1="17.78" y1="2.54" x2="17.78" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="C78" gate="G$1" pin="P$2"/>
 <wire x1="17.78" y1="5.08" x2="17.78" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="2.54" x2="22.86" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="5.08" x2="17.78" y2="5.08" width="0.1524" layer="91"/>
 <junction x="17.78" y="5.08"/>
+<pinref part="P+21" gate="G$1" pin="+3V7"/>
 </segment>
 </net>
 </nets>
