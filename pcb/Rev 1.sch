@@ -4434,18 +4434,11 @@
 <label x="-40.64" y="-12.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENCODER_1B" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PB02"/>
-<wire x1="20.32" y1="38.1" x2="40.64" y2="38.1" width="0.1524" layer="91"/>
-<label x="22.86" y="38.1" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="ENCODER_1A" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB03"/>
-<wire x1="20.32" y1="35.56" x2="40.64" y2="35.56" width="0.1524" layer="91"/>
-<label x="22.86" y="35.56" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="PA21"/>
+<wire x1="-22.86" y1="-15.24" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
+<label x="-40.64" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENCODER_4B" class="0">
@@ -4460,6 +4453,13 @@
 <pinref part="U1" gate="G$1" pin="PB23"/>
 <wire x1="20.32" y1="20.32" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
 <label x="22.86" y="20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENCODER_1B" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PA24"/>
+<wire x1="-22.86" y1="-22.86" x2="-40.64" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-40.64" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
