@@ -1,6 +1,6 @@
 Partlist
 
-Exported from Rev 1.sch at 2/3/2020 12:45 PM
+Exported from Rev 1.sch at 2/3/2020 6:17 PM
 
 EAGLE Version 9.5.2 Copyright (c) 1988-2019 Autodesk, Inc.
 
@@ -171,7 +171,7 @@ R36      17R                      RESISTOR0805             0805                M
 R37      17R                      RESISTOR0805             0805                Micromouse 2020 6
 R38      1k                       RESISTOR0805             0805                Micromouse 2020 6
 R39      1k                       RESISTOR0805             0805                Micromouse 2020 6
-R40      1k                       RESISTOR0805             0805                Micromouse 2020 6
+R40      1k                       RESISTOR0603             0603                Micromouse 2020 6
 R41      1k                       RESISTOR0805             0805                Micromouse 2020 6
 R42      10k                      RESISTOR0603             0603                Micromouse 2020 5
 R43      10k                      RESISTOR0603             0603                Micromouse 2020 5
@@ -222,5 +222,5 @@ U10      DRV8871                  DRV8871                  DRV8871             M
 U11      PCAL6416A                PCAL6416A                PCAL6416A           Micromouse 2020 7
 U12      MAX7315                  MAX7315                  MAX7315             Micromouse 2020 4
 XTAL1    32.768kHz                FC-135                   FC-135              Micromouse 2020 3
-XTAL2    32MHz                    FC-135                   FC-135              Micromouse 2020 3
+XTAL2    32MHz                    XRCGB                    XRCGB               Micromouse 2020 3
 XTAL3    32.768kHz                FC-135                   FC-135              Micromouse 2020 5

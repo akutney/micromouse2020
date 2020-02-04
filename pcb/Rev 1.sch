@@ -170,6 +170,21 @@
 <wire x1="2.6" y1="-2.6" x2="-2.6" y2="-2.6" width="0.127" layer="25"/>
 <wire x1="-2.6" y1="-2.6" x2="-2.6" y2="2.6" width="0.127" layer="25"/>
 </package>
+<package name="XRCGB" urn="urn:adsk.eagle:footprint:14566901/1" locally_modified="yes">
+<description>DFN4, 2.00 X 1.60 X 0.70 mm body
+&lt;p&gt;DFN4 package with body size 2.00 X 1.60 X 0.70 mm&lt;/p&gt;</description>
+<wire x1="1.05" y1="1.0786" x2="-1.05" y2="1.0786" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-1.0786" x2="-1.05" y2="-1.0786" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-0.85" x2="-1.05" y2="-0.85" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="-0.85" x2="-1.05" y2="0.85" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="0.85" x2="1.05" y2="0.85" width="0.12" layer="51"/>
+<wire x1="1.05" y1="0.85" x2="1.05" y2="-0.85" width="0.12" layer="51"/>
+<smd name="2" x="-0.975" y="0.65" dx="0.75" dy="0.7" layer="1"/>
+<smd name="3" x="-0.975" y="-0.65" dx="0.75" dy="0.7" layer="1"/>
+<smd name="4" x="0.975" y="-0.65" dx="0.75" dy="0.7" layer="1"/>
+<smd name="1" x="0.975" y="0.65" dx="0.75" dy="0.7" layer="1"/>
+<text x="0" y="1.7136" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+</package>
 <package name="FC-135" urn="urn:adsk.eagle:footprint:14566884/1" locally_modified="yes">
 <description>Crystal, 3.20 X 1.50 X 0.90 mm body
 &lt;p&gt;Crystal package with body size 3.20 X 1.50 X 0.90 mm&lt;/p&gt;</description>
@@ -790,6 +805,13 @@
 <packageinstance name="ATSAMD21G18A-MU"/>
 </packageinstances>
 </package3d>
+<package3d name="DFN200X160X70-4N" urn="urn:adsk.eagle:package:14566896/1" locally_modified="yes" type="model">
+<description>DFN4, 2.00 X 1.60 X 0.70 mm body
+&lt;p&gt;DFN4 package with body size 2.00 X 1.60 X 0.70 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="XRCGB"/>
+</packageinstances>
+</package3d>
 <package3d name="XTAL320X150X90N" urn="urn:adsk.eagle:package:14566881/1" locally_modified="yes" type="model">
 <description>Crystal, 3.20 X 1.50 X 0.90 mm body
 &lt;p&gt;Crystal package with body size 3.20 X 1.50 X 0.90 mm&lt;/p&gt;</description>
@@ -1025,6 +1047,20 @@
 <wire x1="-1.27" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="94"/>
 <text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
 <pin name="GND" x="5.08" y="-2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="XRCGB">
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="P$2" x="7.62" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="-1.27" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="2.54" x2="3.81" y2="-2.54" width="0.254" layer="94"/>
+<text x="-1.27" y="-2.54" size="1.27" layer="96" align="top-left">&gt;VALUE</text>
 </symbol>
 <symbol name="FC-135">
 <wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
@@ -1664,6 +1700,25 @@
 <connect gate="G$1" pin="2" pad="3 4"/>
 <connect gate="G$1" pin="GND" pad="5 6"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="XRCGB" prefix="XTAL" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="XRCGB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="XRCGB">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1 3"/>
+<connect gate="G$1" pin="P$2" pad="2 4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14566896/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -2379,7 +2434,7 @@
 <part name="C12" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="22pF"/>
 <part name="GND9" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="GND10" library="Micromouse 2020" deviceset="GND" device=""/>
-<part name="XTAL2" library="Micromouse 2020" deviceset="FC-135" device="" package3d_urn="urn:adsk.eagle:package:14566881/1" value="32MHz"/>
+<part name="XTAL2" library="Micromouse 2020" deviceset="XRCGB" device="" package3d_urn="urn:adsk.eagle:package:14566896/1" value="32MHz"/>
 <part name="C13" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="6.8pF"/>
 <part name="C14" library="Micromouse 2020" deviceset="CAPACITOR" device="0402" package3d_urn="urn:adsk.eagle:package:16053683/1" value="10pF"/>
 <part name="GND11" library="Micromouse 2020" deviceset="GND" device=""/>
@@ -2507,7 +2562,7 @@
 <part name="GND46" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="Q26" library="Micromouse 2020" deviceset="TEFT4300" device="" package3d_urn="urn:adsk.eagle:package:14528166/1"/>
 <part name="P+37" library="Micromouse 2020" deviceset="+3V3" device=""/>
-<part name="R40" library="Micromouse 2020" deviceset="RESISTOR" device="0805" value="1k"/>
+<part name="R40" library="Micromouse 2020" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:16053670/1" value="1k"/>
 <part name="GND47" library="Micromouse 2020" deviceset="GND" device=""/>
 <part name="Q27" library="Micromouse 2020" deviceset="TEFT4300" device="" package3d_urn="urn:adsk.eagle:package:14528166/1"/>
 <part name="P+38" library="Micromouse 2020" deviceset="+3V3" device=""/>
@@ -4154,13 +4209,13 @@
 <label x="-40.64" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="C13" gate="G$1" pin="P$2"/>
-<wire x1="170.18" y1="25.4" x2="170.18" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="XTAL2" gate="G$1" pin="P$1"/>
-<wire x1="170.18" y1="30.48" x2="172.72" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="30.48" x2="160.02" y2="30.48" width="0.1524" layer="91"/>
-<junction x="170.18" y="30.48"/>
-<label x="160.02" y="30.48" size="1.778" layer="95"/>
+<pinref part="XTAL2" gate="G$1" pin="P$2"/>
+<wire x1="185.42" y1="30.48" x2="187.96" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="C14" gate="G$1" pin="P$2"/>
+<wire x1="187.96" y1="30.48" x2="198.12" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="30.48" x2="187.96" y2="25.4" width="0.1524" layer="91"/>
+<junction x="187.96" y="30.48"/>
+<label x="187.96" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="XOUT" class="0">
@@ -4170,13 +4225,13 @@
 <label x="-40.64" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="XTAL2" gate="G$1" pin="P$2"/>
-<wire x1="185.42" y1="30.48" x2="187.96" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="C14" gate="G$1" pin="P$2"/>
-<wire x1="187.96" y1="30.48" x2="198.12" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="30.48" x2="187.96" y2="25.4" width="0.1524" layer="91"/>
-<junction x="187.96" y="30.48"/>
-<label x="187.96" y="30.48" size="1.778" layer="95"/>
+<pinref part="C13" gate="G$1" pin="P$2"/>
+<wire x1="170.18" y1="25.4" x2="170.18" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="XTAL2" gate="G$1" pin="P$1"/>
+<wire x1="170.18" y1="30.48" x2="172.72" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="30.48" x2="160.02" y2="30.48" width="0.1524" layer="91"/>
+<junction x="170.18" y="30.48"/>
+<label x="160.02" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWDIO" class="0">
