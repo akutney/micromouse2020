@@ -39,6 +39,7 @@
 
 struct usart_module usart_instance;
 struct rtc_module   rtc_instance;
+struct adc_module   adc_instance;
 
 // Generic Clock Channels - From Table 14-4 on pg. 107
 #define GCLK_CHANNEL_RTC 0x04

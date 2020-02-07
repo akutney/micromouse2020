@@ -1,41 +1,66 @@
 /*
  * robot.c
- */ 
-
+ */
 
 #include <asf.h>
+#include <string.h>
+#include <error.h>
 
 #include "robot.h"
-#include "../drivers/time_driver.h"
+#include "../types/types.h"
+#include "../algorithms/controller.h"
+#include "../algorithms/guidance.h"
+#include "../algorithms/navigation.h"
 
+//#define LOOP_FREQUENCY (1)
 
-#define LED_PORT    PORT_A
-#define LED_PIN     17
-
-
-void init_robot(void)
+/* This function is called with in a loop in main.c */
+int run_robot_loop(robot_t *robot)
 {
-    // Initialize all sub components
-    // TODO: initialize drivers
+  // Static so that we don't have to allocate each time the loop is called
+  static sensor_data_t sensor_data;
+  static motor_outputs_t motor_outputs;
+  static robot_state_t updated_robot_state;
+  static maze_state_t updated_maze_state;
 
-    // Configure LED pin
-    PORT->Group[LED_PORT].DIR.reg |= 0x1 << LED_PIN;
-    PORT->Group[LED_PORT].PINCFG[LED_PIN].reg = 0x0;
-}
+  if (robot == NULL) { THROW_ERR("run_robot_loop", EINVAL); }
 
-void run_robot_loop(void)
-{
-    float current_time = 0.0;
-    get_time(&current_time);
+  CHECK_ERR(robot->get_sensor_data_callback(&sensor_data));
 
-    // TODO: Make work in CONTINUOUS_MODE by using current_time
-    
-    static uint32_t tickCount = 0;
+  /* Uncomment as the functions are implemented */
+  // CHECK_ERR(navigation(
+  //   &robot->robot_state,
+  //   &robot->maze_state,
+  //   &sensor_data,
+  //   &updated_robot_state,
+  //   &updated_maze_state));
 
-    tickCount++ ;
-    // Toggle LEDs every second (i.e. 1000ms)
-    if(tickCount % 1000 == 0){
-        // Toggle LED pin output level.
-        PORT->Group[LED_PORT].OUTTGL.reg |= 0x1 << LED_PIN;
-    }
+  // memcpy(&robot->robot_state, &updated_robot_state, sizeof(robot_state_t));
+  // memcpy(&robot->maze_state, &updated_maze_state, sizeof(maze_state_t));
+
+
+  // CHECK_ERR(guidance(
+  //   &robot->robot_state,
+  //   &robot->maze_state,
+  //   &robot->next_state));
+
+  // CHECK_ERR(controller(
+  //   &robot->robot_state, 
+  //   &robot->next_state, 
+  //   &motor_outputs));
+
+  CHECK_ERR(robot->set_motor_outputs_callback(&motor_outputs));
+
+  return RETURN_SUCCESS;
+
+  //static float prev_time = 0.0;
+  //float current_time = 0.0;
+  //get_time(&current_time);
+  //
+  //if (current_time - prev_time > (1.0 / LOOP_FREQUENCY))
+  //{
+  //toggle_pin(internal_led_pin);
+  //
+  //prev_time = current_time;
+  //}
 }

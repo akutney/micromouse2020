@@ -1,4 +1,5 @@
 #include <testing.h>
+
 #include "maze_state.h"
 
 int count_cell_references(maze_state_t *maze, wall_t *check) {

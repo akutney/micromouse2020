@@ -38,7 +38,9 @@ void system_board_init(void);
 #define PORT_A 0
 #define PORT_B 1
 
-/** Pin Definitions from Rev 1.pdf @ec186d34d300730f485768154128261eb8063653 */
+/** Pin Definitions from Rev 1.pdf @6be619c870b1b9da70d8728ddd70563d5addc3b0 */
+
+// Clock Pins
 #define XIN32_PORT       PORT_A
 #define XIN32_PIN        00
 #define XOUT32_PORT      PORT_A
@@ -47,24 +49,36 @@ void system_board_init(void);
 #define XIN_PIN          14
 #define XOUT_PORT        PORT_A
 #define XOUT_PIN         15
+
+// ADC Pins
 #define VREFA_PORT       PORT_A
-#define VREFA_PIN        03
+#define VREFA_PIN        3
 #define PHOTO1_PORT      PORT_A
-#define PHOTO1_PIN       04
+#define PHOTO1_PIN       4
+#define PHOTO1_AIN       4
 #define PHOTO2_PORT      PORT_A
-#define PHOTO2_PIN       05
+#define PHOTO2_PIN       5
+#define PHOTO2_AIN       5
 #define PHOTO3_PORT      PORT_A
-#define PHOTO3_PIN       06
+#define PHOTO3_PIN       6
+#define PHOTO3_AIN       6
 #define PHOTO4_PORT      PORT_A
-#define PHOTO4_PIN       07
+#define PHOTO4_PIN       7
+#define PHOTO4_AIN       7
 #define PHOTO5_PORT      PORT_A
-#define PHOTO5_PIN       08
+#define PHOTO5_PIN       8
+#define PHOTO5_AIN       16
 #define PHOTO6_PORT      PORT_A
-#define PHOTO6_PIN       09
+#define PHOTO6_PIN       9
+#define PHOTO6_AIN       17
 #define PHOTO7_PORT      PORT_A
 #define PHOTO7_PIN       10
+#define PHOTO7_AIN       18
 #define PHOTO8_PORT      PORT_B
-#define PHOTO8_PIN       09
+#define PHOTO8_PIN       9
+#define PHOTO8_AIN       3
+
+// Bluetooth Serial
 #define BT_STATE_PORT    PORT_A
 #define BT_STATE_PIN     11
 #define BT_TX_PORT       PORT_A
@@ -73,28 +87,44 @@ void system_board_init(void);
 #define BT_RX_PIN        13
 #define BT_EN_PORT       PORT_A
 #define BT_EN_PIN        16
-#define ENCODER_1A_PORT  PORT_B
-#define ENCODER_1A_PIN   03
-#define ENCODER_1B_PORT  PORT_B
-#define ENCODER_1B_PIN   02
-#define ENCODER_2A_PORT  PORT_A
-#define ENCODER_2A_PIN   18
-#define ENCODER_2B_PORT  PORT_A
-#define ENCODER_2B_PIN   17
-#define ENCODER_3A_PORT  PORT_A
-#define ENCODER_3A_PIN   20
-#define ENCODER_3B_PORT  PORT_A
-#define ENCODER_3B_PIN   19
-#define ENCODER_4A_PORT  PORT_B
-#define ENCODER_4A_PIN   23
-#define ENCODER_4B_PORT  PORT_B
-#define ENCODER_4B_PIN   22
+
+// Motor Encoders
+#define ENCODER_1A_PORT     PORT_A
+#define ENCODER_1A_PIN      21
+#define ENCODER_1A_EXTINT   5
+#define ENCODER_1B_PORT     PORT_A
+#define ENCODER_1B_PIN      24
+#define ENCODER_1B_EXTINT   12
+#define ENCODER_2A_PORT     PORT_A
+#define ENCODER_2A_PIN      18
+#define ENCODER_2A_EXTINT   2
+#define ENCODER_2B_PORT     PORT_A
+#define ENCODER_2B_PIN      17
+#define ENCODER_2B_EXTINT   1
+#define ENCODER_3A_PORT     PORT_A
+#define ENCODER_3A_PIN      20
+#define ENCODER_3A_EXTINT   4
+#define ENCODER_3B_PORT     PORT_A
+#define ENCODER_3B_PIN      19
+#define ENCODER_3B_EXTINT   3
+#define ENCODER_4A_PORT     PORT_B
+#define ENCODER_4A_PIN      23
+#define ENCODER_4A_EXTINT   7
+#define ENCODER_4B_PORT     PORT_B
+#define ENCODER_4B_PIN      22
+#define ENCODER_4B_EXTINT   6
+
+// IMU
 #define IMU_INT_PORT     PORT_B
 #define IMU_INT_PIN      10
+
+// I2C Pins
 #define SDA_PORT         PORT_A
 #define SDA_PIN          22
 #define SCL_PORT         PORT_A
 #define SCL_PIN          23
+
+// Debugging Pins
 #define SWDCLK_PORT      PORT_A
 #define SWDCLK_PIN       30
 #define SWDIO_PORT       PORT_A
