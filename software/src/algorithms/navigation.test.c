@@ -8,6 +8,6 @@
 
 #include "navigation.h"
 
-TEST(navigation compiles, src/algorithms/navigation.c src/error.c) {
+TEST(navigation compiles, src/algorithms/navigation.c, src/error.c) {
   return TEST_SUCCESS;
 }
