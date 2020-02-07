@@ -2,6 +2,7 @@
  * error.c
  */
 
+#include <stdint.h>
 #include <stdio.h>
 #include <error.h>
 
