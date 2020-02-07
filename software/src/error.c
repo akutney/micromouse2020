@@ -1,3 +1,8 @@
+/* 
+ * error.c
+ */
+
+#include <stdint.h>
 #include <stdio.h>
 #include <error.h>
 
@@ -15,20 +20,24 @@ static char invalid_error[] = "Invalid error XXXXXXXXXX";
 static char *const invalid_error_num = invalid_error + 14;
 static char *const invalid_error_num_end = invalid_error + 24;
 
-const char *mm_strerror(mm_error_t errno) {
-	if (errno < 0 || errno >= mm_numerr) {
-		char *it = invalid_error_num_end;
-		uint32_t err = (uint32_t) errno;
-		while (err) {
-			*it-- = '0' + (err % 10);
-			err /= 10;
-		}
-		char *it2 = invalid_error_num;
-		while (it < invalid_error_num_end) {
-			*it2++ = *it++;
-		}
-		*it2 = 0;
-		return invalid_error;
-	}
-	return error_strings[errno];
+const char *mm_strerror(mm_error_t errno)
+{
+  if (errno < 0 || errno >= mm_numerr)
+  {
+    char *it = invalid_error_num_end;
+    uint32_t err = (uint32_t)errno;
+    while (err)
+    {
+      *it-- = '0' + (err % 10);
+      err /= 10;
+    }
+    char *it2 = invalid_error_num;
+    while (it < invalid_error_num_end)
+    {
+      *it2++ = *it++;
+    }
+    *it2 = 0;
+    return invalid_error;
+  }
+  return error_strings[errno];
 }

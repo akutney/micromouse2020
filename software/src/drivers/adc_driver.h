@@ -1,16 +1,14 @@
-/* 
+/*
  * adc_driver.h
  */
 
+#ifndef ADC_DRIVER_H_
+#define ADC_DRIVER_H_
 
-#ifndef __ADC_DRIVER_H__
-#define __ADC_DRIVER_H__
+#include <stdint.h>
 
+int init_adc_driver(void);
 
-#include "../types/types.h"
+int get_adc_value(uint16_t* val);
 
-
-void get_adc_data(adc_data_t * data);
-
-
-#endif //__ADC_DRIVER_H__
+#endif /* ADC_DRIVER_H_ */
