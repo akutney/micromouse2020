@@ -2,23 +2,41 @@
  * adc_driver.c
  */
 
+#include <asf.h>
+#include <string.h>
+#include <error.h>
+
 #include "adc_driver.h"
 
-#define ADC_BUFFER_SIZE 15
 uint16_t read_buffer[ADC_BUFFER_SIZE];
 
 void receive_values(struct adc_module *const module);
 
 int init_adc_driver(void)
 {
-  //adc_register_callback(&adc_instance, receive_values, ADC_CALLBACK_READ_BUFFER)
-  //adc_callback_t()
-  //adc_read_buffer_job
+  adc_register_callback(&adc_instance, receive_values, ADC_CALLBACK_READ_BUFFER);
+  
+  memset(read_buffer, 0x00, sizeof(read_buffer));
+  
+  return RETURN_SUCCESS;
 }
 
-int get_adc_values(uint16_t* vals)
+int start_get_adc_data(void)
 {
-  //adc_read_buffer_job(&adc_instance, &read_buffer, ADC_BUFFER_SIZE);
-  //
-  //adc_enable_interrupt()
+  THROW_ERR("start_get_adc_data", ENOSYS);
+}
+
+int get_adc_data(uint16_t *buffer)
+{
+  THROW_ERR("get_adc_data", ENOSYS);
+}
+
+int free_buffer()
+{
+  THROW_ERR("free_buffer", ENOSYS);
+}
+
+void receive_values(struct adc_module *const module)
+{
+  // TODO
 }

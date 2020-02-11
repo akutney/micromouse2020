@@ -7,8 +7,14 @@
 
 #include <stdint.h>
 
+#define ADC_BUFFER_SIZE 15
+
 int init_adc_driver(void);
 
-int get_adc_value(uint16_t* val);
+int start_get_adc_data(void);
+
+int get_adc_data(uint16_t *buffer);
+
+int free_buffer();
 
 #endif /* ADC_DRIVER_H_ */

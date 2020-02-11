@@ -15,7 +15,12 @@ int init_encoder_driver(void)
   THROW_ERR("init_encoder_driver", ENOSYS);
 }
 
-int get_encoder_values(encoder_data_t *values)
+int start_get_encoder_data(void)
 {
-  THROW_ERR("get_encoder_values", ENOSYS);
+  THROW_ERR("start_get_encoder_data", ENOSYS);
+}
+
+int get_encoder_data(encoder_data_t *values)
+{
+  THROW_ERR("get_encoder_data", ENOSYS);
 }

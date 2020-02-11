@@ -13,8 +13,8 @@ extern bool DISTANCE_SENSOR_DRIVER_ENABLED;
 
 int init_distance_sensor_driver(void);
 
-int get_distances(distance_sensor_data_t *distances);
+int start_get_distance_sensor_data(void);
 
-int test_adc(void);
+int get_distance_sensor_data(distance_sensor_data_t *distances);
 
 #endif //__DISTANCE_SENSOR_DRIVER_H__

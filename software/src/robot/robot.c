@@ -20,8 +20,8 @@ int run_robot_loop(robot_t *robot)
   // Static so that we don't have to allocate each time the loop is called
   static sensor_data_t sensor_data;
   static motor_outputs_t motor_outputs;
-  static robot_state_t updated_robot_state;
-  static maze_state_t updated_maze_state;
+  //static robot_state_t updated_robot_state;
+  //static maze_state_t updated_maze_state;
 
   if (robot == NULL) { THROW_ERR("run_robot_loop", EINVAL); }
 

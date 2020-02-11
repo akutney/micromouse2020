@@ -15,7 +15,12 @@ int init_distance_sensor_driver(void)
   THROW_ERR("init_distance_sensor_driver", ENOSYS);
 }
 
-int get_distances(distance_sensor_data_t *distances)
+int start_get_distance_sensor_data(void)
 {
-  THROW_ERR("get_distances", ENOSYS);
+  THROW_ERR("start_get_distance_sensor_data", ENOSYS);
+}
+
+int get_distance_sensor_data(distance_sensor_data_t *distances)
+{
+  THROW_ERR("get_distance_sensor_data", ENOSYS);
 }
