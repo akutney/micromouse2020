@@ -8,12 +8,12 @@
 #include <asf.h>
 
 // Returns state from before
-inline bool disable_interrupts();
+bool disable_interrupts(void);
 
 // Returns state from before
-inline bool enable_interrupts();
+bool enable_interrupts(void);
 
 // Set interrupts to the given state
-inline void set_interrupts(bool state);
+void set_interrupts(bool state);
 
 #endif /* __INTERRUPTS_H__ */

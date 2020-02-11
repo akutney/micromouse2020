@@ -7,14 +7,14 @@
 #include "interrupts.h"
 
 // Returns state from before
-bool disable_interrupts() {
+bool disable_interrupts(void) {
   bool to_return = Is_global_interrupt_enabled();
   Disable_global_interrupt();
   return to_return;
 }
 
 // Returns state from before
-bool enable_interrupts() {
+bool enable_interrupts(void) {
   bool to_return = Is_global_interrupt_enabled();
   Enable_global_interrupt();
   return to_return;

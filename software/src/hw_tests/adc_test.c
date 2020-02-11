@@ -25,7 +25,7 @@ int adc_test(void)
     printf("Getting Adc Data\n");
     
     uint16_t buffer[ADC_BUFFER_SIZE];
-    CHECK_ERR(get_adc_data(&buffer));
+    CHECK_ERR(get_adc_data(buffer));
     
     for (int i = 0; i < ADC_BUFFER_SIZE; i++)
     {
