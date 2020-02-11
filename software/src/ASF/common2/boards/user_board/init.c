@@ -123,7 +123,7 @@ void configure_adc(void)
   config_adc.freerunning = false; // Set true for continuous recording
 
   config_adc.pin_scan.offset_start_scan = 0;
-  config_adc.pin_scan.inputs_to_scan =    16;
+  config_adc.pin_scan.inputs_to_scan =    ADC_INPUTS_TO_SCAN;
 
   enum status_code status;
   while ((status = adc_init(&adc_instance, ADC, &config_adc)) != STATUS_OK)

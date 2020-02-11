@@ -5,6 +5,7 @@
 #include <asf.h>
 #include <error.h>
 
+#include "interrupts.h"
 #include "time_driver.h"
 
 // Extern declarations
@@ -66,10 +67,10 @@ int get_time_counts(uint64_t *counts)
 {
   if (counts == NULL) { THROW_ERR("get_time_counts", EINVAL); }
 
-  // Turn off interrupts if already on
+  bool state = disable_interrupts();
   uint32_t seconds = seconds_since_start;
   uint32_t current_counts = rtc_count_get_count(&rtc_instance);
-  // Return interrupts to original state
+  set_interrupts(state);
 
   // 32768 is the current rtc frequency configuration
   *counts = (seconds * 32768) + current_counts;

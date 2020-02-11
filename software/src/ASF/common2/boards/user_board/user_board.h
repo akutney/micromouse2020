@@ -130,6 +130,9 @@ void system_board_init(void);
 #define SWDIO_PORT       PORT_A
 #define SWDIO_PIN        31
 
+/* Other Definitions */
+#define ADC_INPUTS_TO_SCAN 15
+
 /** @} */
 
 #ifdef __cplusplus

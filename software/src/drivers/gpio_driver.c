@@ -3,7 +3,7 @@
  */
 
 #include <asf.h>
-#include <stdint.h>
+#include <error.h>
 
 #include "gpio_driver.h"
 
@@ -24,13 +24,15 @@ int configure_pin(pin_t pin, pin_config config)
     PORT->Group[pin.port].PINCFG[pin.pinNum].reg = PORT_PINCFG_INEN | PORT_PINCFG_PULLEN;
     break;
   default:
-    break;
+    THROW_ERR("configure_pin", EINVAL);
   }
+  return RETURN_SUCCESS;
 }
 
 inline int read_pin(pin_t pin, pin_value *val)
 {
   (*val) = PORT->Group[pin.port].IN.reg & (0x1 << pin.pinNum) ? PIN_HIGH : PIN_LOW;
+  return RETURN_SUCCESS;
 }
 
 int set_pin(pin_t pin, pin_value val)
@@ -43,10 +45,14 @@ int set_pin(pin_t pin, pin_value val)
   case PIN_HIGH:
     PORT->Group[pin.port].OUTSET.reg |= 0x1 << pin.pinNum;
     break;
+  default:
+    THROW_ERR("set_pin", EINVAL);
   }
+  return RETURN_SUCCESS;
 }
 
 inline int toggle_pin(pin_t pin)
 {
   PORT->Group[pin.port].OUTTGL.reg |= 0x1 << pin.pinNum;
+  return RETURN_SUCCESS;
 }

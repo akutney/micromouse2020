@@ -31,7 +31,7 @@ int get_adc_data(uint16_t *buffer)
   THROW_ERR("get_adc_data", ENOSYS);
 }
 
-int free_buffer()
+int free_buffer(void)
 {
   THROW_ERR("free_buffer", ENOSYS);
 }
