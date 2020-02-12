@@ -2,3 +2,4 @@
 E(INVAL, "Invalid argument")
 E(NOSYS, "Not implemented")
 E(IO, "IO error")
+E(BUSY, "Device or resource busy")
