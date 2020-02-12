@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" InitialTargets="TestSourceExclusion" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="TestSourceExclusion" DependsOnTargets="TestSourceDetection">
     <ItemGroup>
@@ -753,6 +753,7 @@
     <Folder Include="src\config\" />
     <Folder Include="src\algorithms" />
     <Folder Include="src\drivers" />
+    <Folder Include="src\hw_tests" />
     <Folder Include="src\robot" />
     <Folder Include="src\types" />
   </ItemGroup>
@@ -832,10 +833,22 @@
     <Compile Include="src\drivers\time_driver.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\hw_tests\adc_test.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hw_tests\adc_test.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\robot\robot.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\robot\robot.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\robot\robot_main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\robot\robot_main.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\robot\robot_setup.c">

@@ -45,5 +45,13 @@ const char *mm_strerror(mm_error_t errno);
 			goto label; \
 		} \
 	} while (0)
+#define CHECK_ERR_STOP(code, msg) do { \
+  if (code < 0) { \
+    TRACE_ERR(); \
+    printf(msg); \
+    printf("\nStopping...\n"); \
+    while (1); \
+  } \
+} while (0)
 
 #endif
