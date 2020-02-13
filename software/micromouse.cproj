@@ -753,6 +753,7 @@
     <Folder Include="src\config\" />
     <Folder Include="src\algorithms" />
     <Folder Include="src\drivers" />
+    <Folder Include="src\util" />
     <Folder Include="src\robot" />
     <Folder Include="src\types" />
   </ItemGroup>
@@ -776,6 +777,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\algorithms\guidance.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\algorithms\guidance.test.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\algorithms\navigation.c">
@@ -866,6 +870,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\queue.test.c">
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\ASF\sam0\drivers\rtc\rtc_count.h">

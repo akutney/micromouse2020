@@ -10,7 +10,7 @@
 /* guidance
  * 
  * Runs an algorithm on the robot and maze state to determine
- * the next desired state */
+ * the next dcdesired state */
 int guidance(
     const robot_state_t *const current_state,
     const maze_state_t *const current_maze,
