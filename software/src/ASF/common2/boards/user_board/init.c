@@ -120,10 +120,10 @@ void configure_adc(void)
   config_adc.reference = ADC_REFERENCE_AREFA;
   config_adc.positive_input = ADC_POSITIVE_INPUT_PIN4;
   config_adc.negative_input = ADC_NEGATIVE_INPUT_IOGND;
-  config_adc.freerunning = false; // Set true for continuous recording
+  config_adc.freerunning = false;
 
   config_adc.pin_scan.offset_start_scan = 0;
-  config_adc.pin_scan.inputs_to_scan =    ADC_INPUTS_TO_SCAN;
+  config_adc.pin_scan.inputs_to_scan = ADC_INPUTS_TO_SCAN;
 
   enum status_code status;
   while ((status = adc_init(&adc_instance, ADC, &config_adc)) != STATUS_OK)
@@ -134,19 +134,8 @@ void configure_adc(void)
         ; // Error, stop everything
     }
   }
-
-  /* Don't need adc_init does this */
-  //uint32_t pinArrary[NUM_OF_AIN] = {
-  //PHOTO1_AIN, PHOTO2_AIN,
-  //PHOTO3_AIN, PHOTO4_AIN,
-  //PHOTO5_AIN, PHOTO6_AIN,
-  //PHOTO7_AIN, PHOTO8_AIN,
-  //};
-  //
-  //adc_regular_ain_channel((uint32_t*)&pinArrary, NUM_OF_AIN);
-
-  // use adc_register_callback(...) instead
-  //adc_enable_interrupt(&adc_instance, ADC_INTERRUPT_RESULT_READY);
+  
+  adc_enable_callback(&adc_instance, ADC_CALLBACK_READ_BUFFER);
 
   adc_enable(&adc_instance);
 }
