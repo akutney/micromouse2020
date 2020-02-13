@@ -832,6 +832,9 @@
     <Compile Include="src\drivers\sensor_driver.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\drivers\i2c_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\drivers\time_driver.c">
       <SubType>compile</SubType>
     </Compile>

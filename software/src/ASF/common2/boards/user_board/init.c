@@ -26,6 +26,7 @@ void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator
 void configure_stdio_serial(void);
 void configure_rtc_count(void);
 void configure_adc(void);
+void configure_i2c_master(void);
 
 void system_board_init(void)
 {
@@ -37,6 +38,7 @@ void system_board_init(void)
   configure_stdio_serial();
   configure_rtc_count();
   configure_adc();
+  configure_i2c_master();
 }
 
 void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator)
@@ -138,4 +140,23 @@ void configure_adc(void)
   adc_enable_callback(&adc_instance, ADC_CALLBACK_READ_BUFFER);
 
   adc_enable(&adc_instance);
+}
+
+void configure_i2c_master(void)
+{
+  /* SERCOM3 clock source */
+  configure_gclk_source(GCLK_CHANNEL_SERCOM3_CORE, GCLK_GENERATOR_0);
+
+  /* I2C Master module configuration */
+  struct i2c_master_config config_i2c_master;
+  i2c_master_get_config_defaults(&config_i2c_master);
+  config_i2c_master.buffer_timeout = 65535;
+  config_i2c_master.pinmux_pad0 = PINMUX_PA22C_SERCOM3_PAD0; // SDA
+  config_i2c_master.pinmux_pad1 = PINMUX_PA23C_SERCOM3_PAD1; // SCL
+
+  /* Initialize and enable device with config */
+  while (i2c_master_init(&i2c_master_instance, SERCOM3, &config_i2c_master) != STATUS_OK)
+    ;
+
+  i2c_master_enable(&i2c_master_instance);
 }

@@ -37,9 +37,10 @@
 #ifndef CONF_BOARD_H
 #define CONF_BOARD_H
 
-struct usart_module usart_instance;
-struct rtc_module   rtc_instance;
-struct adc_module   adc_instance;
+struct usart_module       usart_instance;
+struct rtc_module         rtc_instance;
+struct adc_module         adc_instance;
+struct i2c_master_module  i2c_master_instance;
 
 // Generic Clock Channels - From Table 14-4 on pg. 107
 #define GCLK_CHANNEL_RTC 0x04
