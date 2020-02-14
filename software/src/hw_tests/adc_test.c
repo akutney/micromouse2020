@@ -22,15 +22,16 @@ int adc_test(void)
   
   while (1)
   {
-    // printf("Getting Adc Data\n");
+    //printf("Getting Adc Data\n");
     
     uint16_t *data = NULL;
+    CHECK_ERR(start_get_adc_data());
     CHECK_ERR(get_adc_data(data));
     
-    // for (int i = 0; i < ADC_BUFFER_SIZE; i++)
-    // {
-    //   printf("data[%d]: %d\n", i, data[i]);
-    // }
+    //for (int i = 0; i < ADC_BUFFER_SIZE; i++)
+    //{
+      //printf("data[%d]: %d\n", i, data[i]);
+    //}
     
     CHECK_ERR(free_buffer());
   }
