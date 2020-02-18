@@ -71,7 +71,7 @@ void configure_stdio_serial(void)
   /* SERCOM0 module configuration */
   struct usart_config config_usart;
   usart_get_config_defaults(&config_usart);
-  config_usart.baudrate = 38400;
+  config_usart.baudrate = 9600;
   config_usart.mux_setting = USART_RX_1_TX_0_XCK_1;
   config_usart.pinmux_pad0 = PINMUX_PA08C_SERCOM0_PAD0; // TX
   config_usart.pinmux_pad1 = PINMUX_PA09C_SERCOM0_PAD1; // RX/XCK // TODO: Use correct pins
@@ -80,6 +80,8 @@ void configure_stdio_serial(void)
   stdio_serial_init(&usart_instance, SERCOM0, &config_usart);
 
   usart_enable(&usart_instance);
+  
+  printf("\n");
 }
 
 void configure_rtc_count(void)
@@ -113,7 +115,6 @@ void configure_rtc_count(void)
 void configure_adc(void)
 {
   /* ADC clock source */
-  // configure_gclk_source(GCLK_ADC, GCLK_GENERATOR_0); // Done in adc_init()
 
   struct adc_config config_adc;
   adc_get_config_defaults(&config_adc);
