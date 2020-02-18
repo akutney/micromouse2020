@@ -7,46 +7,55 @@
 
 #include "queue.h"
 
-TEST(queue compiles, src/util/queue.c, src/error.c) {
-	return TEST_SUCCESS;
+TEST(queue counter, src/util/queue.c, src/error.c) {
+    queue que;
+    que.size = 10;
+    que.head = 0;
+    que.tail=0;
+
+    que.count = 0;
+
+    init(&que);
+
+    enqueue(&que, 3);
+    enqueue(&que, 2);
+    enqueue(&que, 1);
+
+    dequeue(&que);
+
+    if(que.count == 2){
+        return TEST_SUCCESS;
+    }else
+    {
+        return TEST_FAIL;
+    }
+    
 }
 
 
 TEST(queue2 compiles, src/util/queue.c, src/error.c) {
 
-	const int SIZE = 10; // queue's size 
-    int head, tail, element;
-    int queue[SIZE];
+   queue que;
 
-	init(&head,&tail);
- 
-    printf("--Enqueue elements--\n");
-    // push elements into stack 
-    while(!full(tail,SIZE))
-    {
-        printf("Enter a number to enqueue:");
-        scanf("%d",&element);
- 
-        enqueue(queue,&tail,element);
- 
-        display(queue,head,tail);
-    }
-    printf("Queue is full\n\n");
- 
-    printf("--Dequeue elements --\n");
-    while(!empty(head,tail))
-    {
-        element = dequeue(queue,&head);
-        printf("dequeue element %d \n",element);
- 
-        display(queue,head,tail);
-    }
-    printf("Queue is empty\n");
+   que.size = 10;
+   que.head = 0;
+   que.tail= 0;
 
-	if(empty(head, tail) == 1){
+    int element = 0;
+
+	init(&que);
+
+    while(!full(&que)){
+        enqueue(&que, element++);
+    }
+ 
+   while(!empty(&que)){
+       dequeue(&que);
+   }
+
+	if(empty(&que) == 1){
 		return TEST_SUCCESS;
 	}else{
 		return TEST_FAIL;
 	}
-
 }
