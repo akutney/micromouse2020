@@ -49,5 +49,6 @@ struct adc_module   adc_instance;
 #define GCLK_CHANNEL_SERCOM3_CORE 0x17
 #define GCLK_CHANNEL_SERCOM4_CORE 0x18
 #define GCLK_CHANNEL_SERCOM5_CORE 0x19
+#define GCLK_ADC 0x1E
 
 #endif // CONF_BOARD_H

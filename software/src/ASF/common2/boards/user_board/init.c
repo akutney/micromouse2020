@@ -114,7 +114,6 @@ void configure_rtc_count(void)
  */
 void configure_adc(void)
 {
-  /* ADC clock source */
 
   struct adc_config config_adc;
   adc_get_config_defaults(&config_adc);

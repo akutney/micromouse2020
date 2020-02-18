@@ -17,4 +17,6 @@ int start_get_distance_sensor_data(void);
 
 int get_distance_sensor_data(distance_sensor_data_t *distances);
 
+int try_get_distance_sensor_data(distance_sensor_data_t *distances);
+
 #endif //__DISTANCE_SENSOR_DRIVER_H__
