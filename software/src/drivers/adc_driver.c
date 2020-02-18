@@ -6,7 +6,7 @@
 #include <string.h>
 #include <error.h>
 
-#include "interrupts.h"
+// #include "interrupts.h"
 #include "adc_driver.h"
 
 uint16_t read_buffer[ADC_BUFFER_SIZE]; // To fill during reading and give to user when done
@@ -16,14 +16,16 @@ bool buffer_ready_flag;
 
 int _get_adc_data(uint16_t *buffer, bool is_blocking);
 void receive_values(struct adc_module *const module);
+static inline void set_read_started(bool value);
+static inline void set_buffer_ready_flag(bool value);
 
 int init_adc_driver(void)
 {
   // Clear buffers and flags
   memset(read_buffer, 0x00, sizeof(read_buffer));
 
-  read_started = false;
-  buffer_ready_flag = false;
+  set_read_started(false);
+  set_buffer_ready_flag(false);
 
   adc_register_callback(&adc_instance, receive_values, ADC_CALLBACK_READ_BUFFER);
   return RETURN_SUCCESS;
@@ -39,7 +41,8 @@ int start_get_adc_data(void)
 
   while (adc_read_buffer_job(&adc_instance, read_buffer, ADC_BUFFER_SIZE) != STATUS_OK)
     ;
-  read_started = true;
+  
+  set_read_started(true);
 
   return RETURN_SUCCESS;
 }
@@ -61,9 +64,7 @@ int try_get_adc_data(uint16_t *buffer)
 // If not called, another read cannot be started
 int free_buffer(void)
 {
-  bool state = disable_interrupts();
-  read_started = false;
-  set_interrupts(state);
+  set_read_started(false);
 
   return RETURN_SUCCESS;
 }
@@ -90,7 +91,7 @@ int _get_adc_data(uint16_t *buffer, bool is_blocking)
   }
 
   // Reset flag
-  buffer_ready_flag = false;
+  set_buffer_ready_flag(false);
 
   buffer = read_buffer;
 
@@ -99,7 +100,19 @@ int _get_adc_data(uint16_t *buffer, bool is_blocking)
 
 void receive_values(struct adc_module *const module)
 {
-  bool state = disable_interrupts();
-  buffer_ready_flag = true;
-  set_interrupts(state);
+  set_buffer_ready_flag(true);
+}
+
+static inline void set_read_started(bool value)
+{
+  system_interrupt_enter_critical_section();
+  read_started = value;
+  system_interrupt_leave_critical_section();
+}
+
+static inline void set_buffer_ready_flag(bool value)
+{
+  system_interrupt_enter_critical_section();
+  buffer_ready_flag = value;
+  system_interrupt_leave_critical_section();
 }

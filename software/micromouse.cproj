@@ -817,13 +817,10 @@
     <Compile Include="src\drivers\gpio_driver.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\drivers\i2c_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\drivers\imu_driver.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\drivers\interrupts.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\drivers\interrupts.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\drivers\motor_driver.c">

@@ -4,14 +4,22 @@
 
 #include <error.h>
 
-#include "sensor_driver.h"
+#include "i2c_driver.h"
 #include "distance_sensor_driver.h"
 #include "encoder_driver.h"
 #include "time_driver.h"
 #include "imu_driver.h"
 
+#include "sensor_driver.h"
+
 int init_sensor_driver(void)
 {
+  // Initialized shared drivers
+  if (I2C_DRIVER_ENABLED)
+  {
+    CHECK_ERR(init_i2c_driver());
+  }
+
   // Initialize each sensors driver
   if (DISTANCE_SENSOR_DRIVER_ENABLED)
   {
