@@ -12,6 +12,7 @@ extern bool I2C_DRIVER_ENABLED;
 
 #define PWM_I2C_ADDRESS 0x20
 #define IO_I2C_ADDRESS  0x20
+#define IMU_I2C_ADDRESS 0x28
 
 int init_i2c_driver(void);
 
