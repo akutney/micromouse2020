@@ -9,100 +9,114 @@
 
 bool I2C_DRIVER_ENABLED = true;
 
-typedef struct
-{
-  bool enabled;
-  int8_t address;
-  write_callback_t write_callback;
-  read_callback_t read_callback;
-} registered_callback_t;
-
 // Privates Globals
-bool i2c_driver_initialized = false;
+struct i2c_master_packet write_packet;
+struct i2c_master_packet read_packet;
 
-#define MAX_NUM_OF_I2C_ADDRESSES 3
-registered_callback_t callbacks[MAX_NUM_OF_I2C_ADDRESSES];
-int8_t callbacks_idx;
+uint8_t write_buffer[3];
+uint8_t read_buffer[2];
 
 // Function Prototypes
 int validate_address(int8_t address);
-void i2c_write_complete_callback(struct i2c_master_module *const module);
-void i2c_read_complete_callback(struct i2c_master_module *const module);
+void lock(void);
+void unlock(void);
 
 int init_i2c_driver(void)
 {
-  // Don't initialize twice
-  if (i2c_driver_initialized)
-  {
-    return RETURN_SUCCESS;
-  }
-
-  for (int i = 0; i < MAX_NUM_OF_I2C_ADDRESSES; i++)
-  {
-    callbacks[i].enabled = false;
-    callbacks[i].address = 0x00;
-    callbacks[i].write_callback = NULL;
-    callbacks[i].read_callback = NULL;
-  }
-
-  // Register and enable Underlying callbacks
-  // Write
-  i2c_master_register_callback(
-    &i2c_master_instance,
-    i2c_write_complete_callback,
-    I2C_MASTER_CALLBACK_WRITE_COMPLETE);
-
-  i2c_master_enable_callback(
-    &i2c_master_instance,
-    I2C_MASTER_CALLBACK_WRITE_COMPLETE);
-  
-  // Read
-  i2c_master_register_callback(
-    &i2c_master_instance,
-    i2c_read_complete_callback,
-    I2C_MASTER_CALLBACK_READ_COMPLETE);
-
-  i2c_master_enable_callback(
-    &i2c_master_instance,
-    I2C_MASTER_CALLBACK_READ_COMPLETE);
-   
-  
-  callbacks_idx = 0;
-  i2c_driver_initialized = true;
-  return RETURN_SUCCESS;
-}
-
-int register_i2c_callbacks(
-    int8_t address,
-    write_callback_t write_callback,
-    read_callback_t read_callback)
-{
-  // Validate arguments
-  if (address < 0) {
-    THROW_ERR("register_i2c_callbacks", EINVAL);
-  }
-  if (callbacks_idx >= MAX_NUM_OF_I2C_ADDRESSES) {
-    THROW_ERR("register_i2c_callbacks", ENOSR);
-  }
-
-  callbacks[callbacks_idx].enabled = true;
-  callbacks[callbacks_idx].address = address;
-  callbacks[callbacks_idx].write_callback = write_callback;
-  callbacks[callbacks_idx].read_callback = read_callback;
-
-  callbacks_idx++;
-
   return RETURN_SUCCESS;
 }
 
 int write_reg8(int8_t address, uint8_t reg, uint8_t val)
 {
-  THROW_ERR("write_reg8", ENOSYS);
+  lock();
+  
+  // Construct write packet
+  write_buffer[0] = reg;
+  write_buffer[1] = val;
+
+  write_packet.address     = address;
+  write_packet.data_length = 2;
+  write_packet.data        = write_buffer;
+
+  i2c_master_write_packet_wait(&i2c_master_instance, &write_packet);
+
+  unlock();
+  
+  return RETURN_SUCCESS;
+}
+
+int write_reg16(int8_t address, uint8_t reg, uint16_t val)
+{
+  lock();
+
+  // Construct write packet
+  write_buffer[0] = reg;
+  write_buffer[1] = (val & 0xFF00) >> 8;
+  write_buffer[2] = (val & 0x00FF);
+
+  write_packet.address     = address;
+  write_packet.data_length = 3;
+  write_packet.data        = write_buffer;
+  
+  i2c_master_write_packet_wait(&i2c_master_instance, &write_packet);
+
+  unlock();
+  
+  return RETURN_SUCCESS;
 }
 
 int read_reg8(int8_t address, uint8_t reg, uint8_t *val)
 {
-  THROW_ERR("read_reg8", ENOSYS);
+  lock();
+
+  // Construct write packet
+  write_buffer[0] = reg;
+
+  write_packet.address     = address;
+  write_packet.data_length = 1;
+  write_packet.data        = write_buffer;
+
+  i2c_master_write_packet_wait(&i2c_master_instance, &write_packet);
+
+  // Construct read packet
+  read_packet.address     = address;
+  read_packet.data_length = 1;
+  read_packet.data        = read_buffer;
+    
+  i2c_master_read_packet_wait(&i2c_master_instance, &read_packet);
+
+  (*val) = read_buffer[0];
+
+  unlock();
+    
+  return RETURN_SUCCESS;
+}
+
+int read_reg16(int8_t address, uint8_t reg, uint16_t *val)
+{
+  lock();
+
+  // Construct write packet
+  write_buffer[0] = reg;
+
+  write_packet.address     = address;
+  write_packet.data_length = 1;
+  write_packet.data        = write_buffer;
+
+  i2c_master_write_packet_wait(&i2c_master_instance, &write_packet);
+
+  // Construct read packet
+  read_packet.address     = address;
+  read_packet.data_length = 1;
+  read_packet.data        = read_buffer;
+    
+  i2c_master_read_packet_wait(&i2c_master_instance, &read_packet);
+
+  (*val) = ((uint16_t)read_buffer[0] << 8) + read_buffer[1];
+  
+  unlock();
+    
+  return RETURN_SUCCESS;
 }
 
 // Private functions
@@ -115,12 +129,12 @@ int validate_address(int8_t address)
   return RETURN_SUCCESS;
 }
 
-void i2c_write_complete_callback(struct i2c_master_module *const module)
+void lock(void)
 {
-  
+  while(i2c_master_lock(&i2c_master_instance) == STATUS_BUSY);
 }
 
-void i2c_read_complete_callback(struct i2c_master_module *const module)
+void unlock(void)
 {
-
+  i2c_master_unlock(&i2c_master_instance);
 }

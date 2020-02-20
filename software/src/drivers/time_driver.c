@@ -5,7 +5,6 @@
 #include <asf.h>
 #include <error.h>
 
-// #include "interrupts.h"
 #include "time_driver.h"
 
 // Extern declarations

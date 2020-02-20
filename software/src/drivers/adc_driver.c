@@ -6,7 +6,6 @@
 #include <string.h>
 #include <error.h>
 
-// #include "interrupts.h"
 #include "adc_driver.h"
 
 uint16_t read_buffer[ADC_BUFFER_SIZE]; // To fill during reading and give to user when done
