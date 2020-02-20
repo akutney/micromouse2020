@@ -44,7 +44,7 @@ void enqueue(int *q,int *tail, int element)
 }
 */
 
-void enqueue(queue* s, int element)
+void enqueue(queue* s, void* element)
 {
     s->count++;
     s->q[(s->tail)++] = element;
@@ -97,6 +97,13 @@ int empty(queue* s)
     return (s->tail) == (s->head);
 }
  
+//code from 2019, need to test
+template<typename T> void swap(T& a, T& b){
+	T c = a;
+	*a = b;
+	b* = a
+}
+
 /*
   display queue content
 */
@@ -109,6 +116,7 @@ void display(int *q,int head,int tail)
     printf("\n");
 }
 */
+
 
 void display(queue* s)
 {
