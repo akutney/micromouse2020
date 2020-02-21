@@ -17,5 +17,6 @@
 
 // Outputs
 #include "motor_outputs.h"
+#include "led_outputs.h"
 
 #endif // __TYPES_H__

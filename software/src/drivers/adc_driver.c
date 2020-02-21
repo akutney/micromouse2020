@@ -11,7 +11,7 @@
 uint16_t read_buffer[ADC_BUFFER_SIZE]; // To fill during reading and give to user when done
 
 bool read_started;
-bool buffer_ready_flag;
+volatile bool buffer_ready_flag;
 
 int _get_adc_data(uint16_t *buffer, bool is_blocking);
 void receive_values(struct adc_module *const module);

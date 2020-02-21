@@ -19,9 +19,6 @@ void board_init(void);
 #pragma weak board_init = system_board_init
 #endif
 
-// Utility Function
-void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator);
-
 // ASF module configuration functions
 void configure_stdio_serial(void);
 void configure_rtc_count(void);
@@ -41,36 +38,11 @@ void system_board_init(void)
   configure_i2c_master();
 }
 
-void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator)
-{
-  /* Following 14.6.3.3 - Selecting a Clock Source for the Generic Clock */
-
-  // 1. Write a zero to CLKCTRL.CLKEN
-  system_gclk_chan_disable(channel);
-
-  // 2. Wait until CLKCTRL.CLKEN reads as zero
-  while (system_gclk_chan_is_enabled(channel))
-    ;
-
-  // 3. Change the source of the generic clock by writing CLKCTRL.GEN
-  struct system_gclk_chan_config config_rtc_clk;
-  system_gclk_chan_get_config_defaults(&config_rtc_clk);
-  config_rtc_clk.source_generator = source_generator;
-  system_gclk_chan_set_config(channel, &config_rtc_clk);
-
-  // 4. Re-enable the generic clock by writing a one to CLKCTRL.CLKEN
-  system_gclk_chan_enable(channel);
-}
-
 /**
  * After this function, stdio library should work
  */
 void configure_stdio_serial(void)
 {
-  /* SERCOM0 clock source */
-  configure_gclk_source(GCLK_CHANNEL_SERCOM0_CORE, GCLK_GENERATOR_0);
-
-  /* SERCOM0 module configuration */
   struct usart_config config_usart;
   usart_get_config_defaults(&config_usart);
   config_usart.baudrate = 9600;
@@ -88,10 +60,6 @@ void configure_stdio_serial(void)
 
 void configure_rtc_count(void)
 {
-  /* RTC clock source */
-  configure_gclk_source(GCLK_CHANNEL_RTC, GCLK_GENERATOR_2);
-
-  /* RTC module configuration */
   enum status_code status;
   struct rtc_count_config config_rtc_count;
   rtc_count_get_config_defaults(&config_rtc_count);
@@ -116,7 +84,6 @@ void configure_rtc_count(void)
  */
 void configure_adc(void)
 {
-
   struct adc_config config_adc;
   adc_get_config_defaults(&config_adc);
   config_adc.reference = ADC_REFERENCE_AREFA;
@@ -144,15 +111,15 @@ void configure_adc(void)
 
 void configure_i2c_master(void)
 {
-  /* SERCOM3 clock source */
-  configure_gclk_source(GCLK_CHANNEL_SERCOM3_CORE, GCLK_GENERATOR_0);
-
   /* I2C Master module configuration */
   struct i2c_master_config config_i2c_master;
   i2c_master_get_config_defaults(&config_i2c_master);
   config_i2c_master.buffer_timeout = 65535;
   config_i2c_master.pinmux_pad0 = PINMUX_PA22C_SERCOM3_PAD0; // SDA
   config_i2c_master.pinmux_pad1 = PINMUX_PA23C_SERCOM3_PAD1; // SCL
+#ifdef I2C_USE_FAST_MODE
+  config_i2c_master.baud_rate = I2C_MASTER_BAUD_RATE_400KHZ;
+#endif
 
   /* Initialize and enable device with config */
   while (i2c_master_init(&i2c_master_instance, SERCOM3, &config_i2c_master) != STATUS_OK)

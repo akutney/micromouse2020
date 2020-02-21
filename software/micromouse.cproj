@@ -823,6 +823,12 @@
     <Compile Include="src\drivers\imu_driver.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\drivers\led_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\led_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\drivers\motor_driver.c">
       <SubType>compile</SubType>
     </Compile>
@@ -866,6 +872,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\imu_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\types\led_outputs.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\maze_state.c">

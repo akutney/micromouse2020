@@ -8,6 +8,7 @@
 #include "../types/types.h"
 #include "distance_sensor_driver.h"
 #include "adc_driver.h"
+#include "i2c_driver.h"
 
 // Need to take two measurements, one to record a base amount IR being
 // received on the sensor, and one with the IR emitter on
@@ -34,8 +35,7 @@ int init_distance_sensor_driver(void)
 {
   state = NOT_STARTED;
   init_adc_driver();
-  // TODO: init_i2c_driver() ??? // Probably will call init_i2c_driver
-  // multiple times from different drivers
+  init_i2c_driver();
 
   THROW_ERR("start_get_distance_sensor_data", ENOSYS);
 }

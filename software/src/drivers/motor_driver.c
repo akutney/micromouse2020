@@ -5,10 +5,13 @@
 #include <error.h>
 
 #include "motor_driver.h"
+#include "i2c_driver.h"
 #include "../types/types.h"
 
 int init_motor_driver(void)
 {
+  init_i2c_driver();
+
   THROW_ERR("init_motor_driver", ENOSYS);
 }
 

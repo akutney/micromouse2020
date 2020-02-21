@@ -42,14 +42,4 @@ struct rtc_module         rtc_instance;
 struct adc_module         adc_instance;
 struct i2c_master_module  i2c_master_instance;
 
-// Generic Clock Channels - From Table 14-4 on pg. 107
-#define GCLK_CHANNEL_RTC 0x04
-#define GCLK_CHANNEL_SERCOM0_CORE 0x14
-#define GCLK_CHANNEL_SERCOM1_CORE 0x15
-#define GCLK_CHANNEL_SERCOM2_CORE 0x16
-#define GCLK_CHANNEL_SERCOM3_CORE 0x17
-#define GCLK_CHANNEL_SERCOM4_CORE 0x18
-#define GCLK_CHANNEL_SERCOM5_CORE 0x19
-#define GCLK_ADC 0x1E
-
 #endif // CONF_BOARD_H

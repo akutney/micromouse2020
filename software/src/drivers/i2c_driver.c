@@ -21,6 +21,7 @@ int validate_address(int8_t address);
 void lock(void);
 void unlock(void);
 
+// Is called multiple times
 int init_i2c_driver(void)
 {
   return RETURN_SUCCESS;

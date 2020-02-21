@@ -134,6 +134,12 @@ void system_board_init(void);
 
 /* Other Definitions */
 #define ADC_INPUTS_TO_SCAN 15
+#define I2C_USE_FAST_MODE
+
+// I2C Addresses
+#define PWM_I2C_ADDRESS 0x20
+#define IO_I2C_ADDRESS  0x20
+#define IMU_I2C_ADDRESS 0x28
 
 #endif
 
@@ -231,6 +237,12 @@ void system_board_init(void);
 
 /* Other Definitions */
 #define ADC_INPUTS_TO_SCAN 2
+#define I2C_USE_FAST_MODE
+
+// I2C Addresses
+#define PWM_I2C_ADDRESS 0x20
+#define IO_I2C_ADDRESS  0x20
+#define IMU_I2C_ADDRESS 0x28
 
 #endif
 

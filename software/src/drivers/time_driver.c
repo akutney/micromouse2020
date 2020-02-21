@@ -11,7 +11,7 @@
 bool TIME_DRIVER_ENABLED = true;
 
 // Driver Globals
-uint32_t seconds_since_start;
+volatile uint32_t seconds_since_start;
 
 // Function Declarations
 void rtc_overflow_callback(void);
@@ -55,7 +55,9 @@ int get_time_ms(uint64_t *millis)
  */
 void rtc_overflow_callback(void)
 {
+  system_interrupt_enter_critical_section();
   seconds_since_start++;
+  system_interrupt_leave_critical_section();
 }
 
 /**
