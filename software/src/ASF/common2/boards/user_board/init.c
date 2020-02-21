@@ -26,6 +26,7 @@ void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator
 void configure_stdio_serial(void);
 void configure_rtc_count(void);
 void configure_adc(void);
+void configure_extint_channel(void);
 
 void system_board_init(void)
 {
@@ -37,6 +38,7 @@ void system_board_init(void)
   configure_stdio_serial();
   configure_rtc_count();
   configure_adc();
+  configure_extint_channel();
 }
 
 void configure_gclk_source(uint8_t channel, enum gclk_generator source_generator)
@@ -138,4 +140,15 @@ void configure_adc(void)
   adc_enable_callback(&adc_instance, ADC_CALLBACK_READ_BUFFER);
 
   adc_enable(&adc_instance);
+}
+
+void configure_extint_channel(void)
+{
+    struct extint_chan_conf config_extint_chan;
+    extint_chan_get_config_defaults(&config_extint_chan);
+    config_extint_chan.gpio_pin           = BUTTON_0_EIC_PIN;
+    config_extint_chan.gpio_pin_mux       = BUTTON_0_EIC_MUX;
+    config_extint_chan.gpio_pin_pull      = EXTINT_PULL_UP;
+    config_extint_chan.detection_criteria = EXTINT_DETECT_BOTH;
+    extint_chan_set_config(BUTTON_0_EIC_LINE, &config_extint_chan);
 }
