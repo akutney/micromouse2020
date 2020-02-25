@@ -34,13 +34,13 @@ void system_board_init(void);
 
 /** Name string macro */
 #define BOARD_NAME       "MICROMOUSE"
-//#define OCTO_CAT
+//#define OCTO_CAT_BOARD
 #define SPARKFUN_BOARD
 
 #define PORT_A 0
 #define PORT_B 1
 
-#ifdef OCTO_CAT
+#ifdef OCTO_CAT_BOARD
 
 // Clock Pins
 #define XIN32_PORT       PORT_A
@@ -133,7 +133,8 @@ void system_board_init(void);
 #define SWDIO_PIN        31
 
 /* Other Definitions */
-#define ADC_INPUTS_TO_SCAN 15
+#define ADC_INPUT_START     ADC_POSITIVE_INPUT_PIN4
+#define ADC_INPUTS_TO_SCAN  15
 #define I2C_USE_FAST_MODE
 
 // I2C Addresses
@@ -236,7 +237,8 @@ void system_board_init(void);
 #define SWDIO_PIN        31
 
 /* Other Definitions */
-#define ADC_INPUTS_TO_SCAN 2
+#define ADC_INPUT_START     ADC_POSITIVE_INPUT_PIN2
+#define ADC_INPUTS_TO_SCAN  1
 #define I2C_USE_FAST_MODE
 
 // I2C Addresses

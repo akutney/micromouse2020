@@ -13,7 +13,7 @@ uint16_t read_buffer[ADC_BUFFER_SIZE]; // To fill during reading and give to use
 bool read_started;
 volatile bool buffer_ready_flag;
 
-int _get_adc_data(uint16_t *buffer, bool is_blocking);
+int _get_adc_data(uint16_t **buffer, bool is_blocking);
 void receive_values(struct adc_module *const module);
 static inline void set_read_started(bool value);
 static inline void set_buffer_ready_flag(bool value);
@@ -46,13 +46,13 @@ int start_get_adc_data(void)
   return RETURN_SUCCESS;
 }
 
-int get_adc_data(uint16_t *buffer)
+int get_adc_data(uint16_t **buffer)
 {
   CHECK_ERR(_get_adc_data(buffer, true));
   return RETURN_SUCCESS;
 }
 
-int try_get_adc_data(uint16_t *buffer)
+int try_get_adc_data(uint16_t **buffer)
 {
   CHECK_ERR(_get_adc_data(buffer, false));
   return RETURN_SUCCESS;
@@ -68,7 +68,7 @@ int free_buffer(void)
   return RETURN_SUCCESS;
 }
 
-int _get_adc_data(uint16_t *buffer, bool is_blocking)
+int _get_adc_data(uint16_t **buffer, bool is_blocking)
 {
   // Start read if not already started, then give user the data once ready
   if (!read_started)
@@ -92,7 +92,7 @@ int _get_adc_data(uint16_t *buffer, bool is_blocking)
   // Reset flag
   set_buffer_ready_flag(false);
 
-  buffer = read_buffer;
+  (*buffer) = read_buffer;
 
   return RETURN_SUCCESS;
 }

@@ -847,6 +847,12 @@
     <Compile Include="src\hw_tests\adc_test.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\hw_tests\distance_test.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hw_tests\distance_test.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\robot\robot.c">
       <SubType>compile</SubType>
     </Compile>

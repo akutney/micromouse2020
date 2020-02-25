@@ -21,6 +21,8 @@
 #ifndef __LED_OUTPUTS_H__
 #define __LED_OUTPUTS_H__
 
+#include <stdbool.h>
+
 #define NUM_OF_LEDS 5
 
 typedef enum

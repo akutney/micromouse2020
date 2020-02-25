@@ -87,7 +87,7 @@ void configure_adc(void)
   struct adc_config config_adc;
   adc_get_config_defaults(&config_adc);
   config_adc.reference = ADC_REFERENCE_AREFA;
-  config_adc.positive_input = ADC_POSITIVE_INPUT_PIN4;
+  config_adc.positive_input = ADC_INPUT_START;
   config_adc.negative_input = ADC_NEGATIVE_INPUT_IOGND;
   config_adc.freerunning = false;
 
