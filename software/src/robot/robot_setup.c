@@ -9,6 +9,7 @@
 #include "robot.h"
 #include "../drivers/sensor_driver.h"
 #include "../drivers/motor_driver.h"
+#include "../drivers/led_driver.h"
 
 int init_robot(robot_t *robot)
 {
@@ -19,9 +20,11 @@ int init_robot(robot_t *robot)
 
   CHECK_ERR(init_sensor_driver());
   CHECK_ERR(init_motor_driver());
+  CHECK_ERR(init_led_driver());
   
   robot->get_sensor_data_callback = get_sensor_data;
   robot->set_motor_outputs_callback = set_motor_outputs;
+  robot->set_led_outputs_callback = set_led_outputs;
   
   return RETURN_SUCCESS;
 }

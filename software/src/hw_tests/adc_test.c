@@ -24,15 +24,15 @@ int adc_test(void)
   {
     printf("Getting Adc Data\n");
     
-    uint16_t *data = NULL;
-    CHECK_ERR(start_get_adc_data());
-    CHECK_ERR(get_adc_data(&data));
-    
-    for (int i = 0; i < ADC_BUFFER_SIZE; i++)
-    {
-      printf("data[%d]: %d\n", i, data[i]);
-    }
-    
-    CHECK_ERR(free_buffer());
+    //uint16_t *data = NULL;
+    //CHECK_ERR(start_get_adc_data());
+    //CHECK_ERR(get_adc_data(&data));
+    //
+    //for (int i = 0; i < ADC_BUFFER_SIZE; i++)
+    //{
+      //printf("data[%d]: %d\n", i, data[i]);
+    //}
+    //
+    //CHECK_ERR(free_buffer());
   }
 }

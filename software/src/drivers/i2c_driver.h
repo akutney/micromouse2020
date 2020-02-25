@@ -12,6 +12,7 @@ extern bool I2C_DRIVER_ENABLED;
 
 int init_i2c_driver(void);
 
+/* Blocking calls */
 int write_reg8(int8_t address, uint8_t reg, uint8_t val);
 
 int write_reg16(int8_t address, uint8_t reg, uint16_t val);

@@ -802,6 +802,9 @@
     <Compile Include="src\drivers\adc_driver.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\drivers\delay.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\drivers\delay.h">
       <SubType>compile</SubType>
     </Compile>
@@ -869,6 +872,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\robot\robot_setup.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\types\distance_sensor_data.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\distance_sensor_data.h">

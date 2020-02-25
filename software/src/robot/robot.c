@@ -38,7 +38,6 @@ int run_robot_loop(robot_t *robot)
   // memcpy(&robot->robot_state, &updated_robot_state, sizeof(robot_state_t));
   // memcpy(&robot->maze_state, &updated_maze_state, sizeof(maze_state_t));
 
-
   // CHECK_ERR(guidance(
   //   &robot->robot_state,
   //   &robot->maze_state,
@@ -50,17 +49,7 @@ int run_robot_loop(robot_t *robot)
   //   &motor_outputs));
 
   CHECK_ERR(robot->set_motor_outputs_callback(&motor_outputs));
+  //CHECK_ERR(robot->set_led_outputs_callback(&led_outputs)); // TODO
 
   return RETURN_SUCCESS;
-
-  //static float prev_time = 0.0;
-  //float current_time = 0.0;
-  //get_time(&current_time);
-  //
-  //if (current_time - prev_time > (1.0 / LOOP_FREQUENCY))
-  //{
-  //toggle_pin(internal_led_pin);
-  //
-  //prev_time = current_time;
-  //}
 }

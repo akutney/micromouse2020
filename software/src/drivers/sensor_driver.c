@@ -9,8 +9,11 @@
 #include "encoder_driver.h"
 #include "time_driver.h"
 #include "imu_driver.h"
+#include "delay.h"
 
 #include "sensor_driver.h"
+
+#define SENSOR_LOOP_DELAY_USEC 500
 
 int init_sensor_driver(void)
 {
@@ -48,17 +51,17 @@ int get_sensor_data(sensor_data_t *data)
 {
   /* ----- Call start functions ----- */
   CHECK_ERR(start_get_distance_sensor_data());
-  CHECK_ERR(start_get_encoder_data());
   CHECK_ERR(start_get_imu_data());
 
   // Maybe wait for a bit?
+  delay_usec(SENSOR_LOOP_DELAY_USEC);
 
   /* ----- Call get functions ----- */
-  CHECK_ERR(get_distance_sensor_data(&(data->distance_sensor_data)));
-  CHECK_ERR(get_encoder_data(&(data->encoder_data)));
-  CHECK_ERR(get_imu_data(&(data->imu_data)));
+  CHECK_ERR(try_get_distance_sensor_data(&(data->distance_sensor_data)));
+  CHECK_ERR(try_get_imu_data(&(data->imu_data)));
 
-  // Finally, get time last so it is most up to date
+  // Finally, get time and encoder data last so it is most up to date
+  CHECK_ERR(get_encoder_data(&(data->encoder_data)));
   CHECK_ERR(get_time(&(data->time_data)));
 
   return RETURN_SUCCESS;

@@ -27,7 +27,7 @@ typedef enum
   MOTOR_FR = 1,
   MOTOR_BR = 2,
   MOTOR_BL = 3,
-} motor_idx;
+} motor_idx_t;
 
 typedef struct
 {

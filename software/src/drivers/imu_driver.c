@@ -23,3 +23,8 @@ int get_imu_data(imu_data_t *data)
 {
   THROW_ERR("get_imu_data", ENOSYS);
 }
+
+int try_get_imu_data(imu_data_t *data)
+{
+  THROW_ERR("try_get_imu_data", ENOSYS);
+}

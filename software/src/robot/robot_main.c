@@ -23,14 +23,14 @@ int robot_main(void)
 
   CHECK_ERR(init_robot(&robot));
 
-  #ifdef CONTINUOUS_MODE
+#ifdef CONTINUOUS_MODE
   while (1)
   {
     CHECK_ERR(run_robot_loop(&robot));
   }
-  #else
+#else
   systick_init();
-  #endif
+#endif
 }
 
 void systick_init(void)
