@@ -842,6 +842,9 @@
     <Compile Include="src\robot\robot_setup.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\types\cell_location.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\types\distance_sensor_data.h">
       <SubType>compile</SubType>
     </Compile>

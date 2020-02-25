@@ -14,6 +14,7 @@
 // State
 #include "robot_state.h"
 #include "maze_state.h"
+#include "cell_location.h"
 
 // Outputs
 #include "motor_outputs.h"
