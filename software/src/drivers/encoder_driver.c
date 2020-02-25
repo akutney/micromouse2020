@@ -13,11 +13,9 @@ bool ENCODER_DRIVER_ENABLED = false;
 int init_encoder_driver(void)
 {
   THROW_ERR("init_encoder_driver", ENOSYS);
-
+  
   //initialize encoder
-  //
-
-
+  
 }
 
 int start_get_encoder_data(void)
