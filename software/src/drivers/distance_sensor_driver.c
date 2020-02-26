@@ -9,8 +9,7 @@
 #include "../types/types.h"
 #include "distance_sensor_driver.h"
 #include "adc_driver.h"
-#include "i2c_driver.h"
-#include "gpio_driver.h"
+#include "PCAL6416A.h"
 
 // Need to take two measurements, one to record a base amount IR being
 // received on the sensor, and one with the IR emitter on
@@ -34,11 +33,12 @@ float final_distance_values[NUM_OF_DISTANCE_SENSORS];
 
 int init_distance_sensor_driver(void)
 {
-  init_adc_driver();
-  init_i2c_driver();
-  // TODO: Initialize pins on I/O expander
-
-  THROW_ERR("start_get_distance_sensor_data", ENOSYS);
+  CHECK_ERR(init_adc_driver());
+  CHECK_ERR(init_pcal6416a_driver());
+  
+  // Initialize IR pins on I/O expander
+  // - Set all of port 1 as output
+  CHECK_ERR(set_pcal6416a_reg(PCAL6416A_CONFIGURATION_PORT_0, 0x00FF, 0x00FF));
 
   return RETURN_SUCCESS;
 }
@@ -52,22 +52,6 @@ int start_get_distance_sensor_data(void)
 int get_distance_sensor_data(distance_sensor_data_t *distances)
 {
   uint16_t *buffer = NULL;
-  //int16_t base_value;
-  //int16_t diff_value;
-//
-  //get_adc_data(&buffer);
-  //base_value = buffer[0];
-  //free_buffer();
-//
-  //set_pin(test_ir_pin, PIN_HIGH);
-//
-  //get_adc_data(&buffer);
-  //diff_value = buffer[0] - base_value;
-  //free_buffer();
-//
-  //set_pin(test_ir_pin, PIN_LOW); // reset
-//
-  //printf("base_value: %d\tdiff_value: %d\n", base_value, diff_value);
 
   return RETURN_SUCCESS;
 }
@@ -91,8 +75,8 @@ void adc_driver_callback_0(uint16_t *buffer)
     baseline_adc_values[i] = buffer[ain_idx];
   }
 
-  // Set I/O pins over i2c
-  // TODO
+  // Set I/O pins over i2c on port 1 as high
+  set_pcal6416a_reg(PCAL6416A_OUTPUT_PORT_0, 0x00FF, 0x00FF);
 
   // Start next conversion
   start_get_adc_data(adc_driver_callback_1);
@@ -115,16 +99,15 @@ void adc_driver_callback_1(uint16_t *buffer)
     final_distance_values[i] = sensor_linear_regression_model(difference);
   }
 
-  // Unset I/O pins over i2c
-  // TODO
+  // Unset I/O pins over i2c on port 1 back to low
+  set_pcal6416a_reg(PCAL6416A_OUTPUT_PORT_0, 0x00FF, 0x0000);
 
-  // Mark distance sensing as done
-  // TODO
+  // TODO: Mark distance sensing as done
 }
 
 float sensor_linear_regression_model(int16_t adc_value)
 {
-  // TODO
+  // TODO: Complete linear regression model
   return (float)adc_value;
 }
 

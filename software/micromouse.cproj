@@ -832,7 +832,16 @@
     <Compile Include="src\drivers\led_driver.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\drivers\MAX7315.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\drivers\motor_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\PCAL6416A.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\PCAL6416A.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\drivers\sensor_driver.c">
