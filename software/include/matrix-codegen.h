@@ -38,7 +38,14 @@
 #       if COLS_3 == COLS_2 && ROWS_1 == ROWS_2
 
 void CONCAT(CONCAT(mult, SIZE_3), CONCAT(_, ROWS_1))(matrix3_t a, matrix1_t b, CONCAT(CONCAT(matrix, COLS_3), CONCAT(_, ROWS_1)) *prod) {
-    // TODO
+    for (int i = COLS_3; i > 0; --i) {
+        for (int j = ROWS_1; j > 0; --j) {
+            prod->e[i][j] = 0;
+            for (int k = ROWS_3; k > 0; --k) {
+                prod->e[i][j] += a.e[i][k] * b.e[k][j];
+            }
+        }
+    }
 }
 
 #       endif
