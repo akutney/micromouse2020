@@ -1,0 +1,18 @@
+Partlist
+
+Exported from EncoderR1.sch at 2/3/2020 5:00 PM
+
+EAGLE Version 9.5.2 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value          Device         Package        Library         Sheet
+
+A1       ENCODER        ENCODER        ENCODER-TAB    Micromouse 2020 1
+C1       0.1uF          CAPACITOR0603  0603           Micromouse 2020 1
+C2       3.3nF          CAPACITOR0603  0603           Micromouse 2020 1
+L1       MOTOR          MOTOR          MOTOR          Micromouse 2020 1
+R1       10k            RESISTOR0603   0603           Micromouse 2020 1
+R2       10k            RESISTOR0603   0603           Micromouse 2020 1
+U1       TLE49462KHTSA1 TLE49462KHTSA1 TLE49462KHTSA1 Micromouse 2020 1
+U2       TLE49462KHTSA1 TLE49462KHTSA1 TLE49462KHTSA1 Micromouse 2020 1
