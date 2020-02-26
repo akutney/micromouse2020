@@ -51,19 +51,35 @@ void CONCAT(CONCAT(mult, SIZE_3), CONCAT(_, ROWS_1))(matrix3_t a, matrix1_t b, C
 #       ifdef MATRIX_FUNCS
 
 void CONCAT(add, SIZE)(matrix_t a, matrix_t b, matrix_t *sum) {
-    // TODO
+    for (int i = COLS_3; i > 0; --i) {
+        for (int j = ROWS_3; j > 0; --j) {
+            sum->e[i][j] = a.e[i][j] + b.e[i][j];
+        }
+    }
 }
 
 void CONCAT(sub, SIZE)(matrix_t a, matrix_t b, matrix_t *diff) {
-    // TODO
+    for (int i = COLS_3; i > 0; --i) {
+        for (int j = ROWS_3; j > 0; --j) {
+            diff->e[i][j] = a.e[i][j] - b.e[i][j];
+        }
+    }
 }
 
 void CONCAT(element_mult, SIZE)(matrix_t a, matrix_t b, matrix_t *prod) {
-    // TODO
+    for (int i = COLS_3; i > 0; --i) {
+        for (int j = ROWS_3; j > 0; --j) {
+            prod->e[i][j] = a.e[i][j] * b.e[i][j];
+        }
+    }
 }
 
 void CONCAT(zero, SIZE)(matrix_t *m) {
-    // TODO
+    for (int i = COLS_3; i > 0; --i) {
+        for (int j = ROWS_3; j > 0; --j) {
+            m->e[i][j] = 0;
+        }
+    }
 }
 
 #           if COLS_3 == ROWS_3
@@ -73,7 +89,11 @@ void CONCAT(inverse, SIZE)(matrix_t in, matrix_t *out) {
 }
 
 void CONCAT(ident, SIZE)(matrix_t *m) {
-    // TODO
+    for (int i = COLS_3; i > 0; --i) {
+        for (int j = ROWS_3; j > 0; --j) {
+            m->e[i][j] = i == j ? 1 : 0;
+        }
+    }
 }
 
 #           endif
