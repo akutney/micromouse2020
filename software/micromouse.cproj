@@ -763,6 +763,15 @@
     <Compile Include="include\errors.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="include\matrices.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\matrix-codegen.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\matrix.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\testing.h">
       <SubType>compile</SubType>
     </Compile>
@@ -824,6 +833,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\drivers\time_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\matrix.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\robot\robot.c">
