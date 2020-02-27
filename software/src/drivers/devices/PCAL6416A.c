@@ -6,7 +6,7 @@
 #include <error.h>
 
 #include "PCAL6416A.h"
-#include "i2c_driver.h"
+#include "../i2c_driver.h"
 
 int init_pcal6416a_driver(void)
 {

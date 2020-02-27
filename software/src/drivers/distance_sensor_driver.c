@@ -1,5 +1,14 @@
 /*
  * distance_sensor_driver.c
+ * 
+ * Need to take two measurements, one to record a base amount IR being
+ * received on the sensor, and one with the IR emitter on
+ *
+ * Need to set up interrupts and callbacks start these actions in order:
+ * - Take adc measurement (baseline)
+ * - Set emitter high
+ * - Take adc measurement
+ * - Set emitter low
  */
 
 #include <asf.h>
@@ -9,20 +18,12 @@
 #include "../types/types.h"
 #include "distance_sensor_driver.h"
 #include "adc_driver.h"
-#include "PCAL6416A.h"
-
-// Need to take two measurements, one to record a base amount IR being
-// received on the sensor, and one with the IR emitter on
-
-// Need to set up interrupts and callbacks start these actions in order:
-// - Take adc measurement (baseline)
-// - Set emitter high
-// - Take adc measurement
-// - Set emitter low
+#include "devices/PCAL6416A.h"
 
 bool DISTANCE_SENSOR_DRIVER_ENABLED = true;
 
-distance_sensor_data_t * distance_data_ptr;
+volatile distance_sensor_data_t * distance_data_ptr;
+volatile uint16_t baseline_adc_values[NUM_OF_DISTANCE_SENSORS];
 
 volatile bool started;
 volatile bool ready_flag;
@@ -33,8 +34,6 @@ void adc_driver_callback_1(uint16_t *buffer);
 float sensor_linear_regression_model(int16_t adc_value);
 static inline int sensor_idx_to_ain_idx(uint8_t sensor_idx, uint8_t *ain_idx);
 //static inline int ain_idx_to_sensor_idx(uint8_t ain_idx, uint8_t *sensor_idx);
-
-uint16_t baseline_adc_values[NUM_OF_DISTANCE_SENSORS];
 
 int init_distance_sensor_driver(void)
 {
@@ -60,7 +59,7 @@ int start_get_distance_sensor_data(distance_sensor_data_t *distance_data)
   if (started)
   {
     system_interrupt_leave_critical_section();
-    THROW_ERR("start_get_distance_sensor_data", EBUSY);
+    return RETURN_SUCCESS;
   }
 
   started = true;
