@@ -22,20 +22,30 @@
 
 bool DISTANCE_SENSOR_DRIVER_ENABLED = true;
 
+distance_sensor_data_t * distance_data_ptr;
+
+volatile bool started;
+volatile bool ready_flag;
+
+int _get_distance_sensor_data(bool is_blocking);
 void adc_driver_callback_0(uint16_t *buffer);
 void adc_driver_callback_1(uint16_t *buffer);
 float sensor_linear_regression_model(int16_t adc_value);
 static inline int sensor_idx_to_ain_idx(uint8_t sensor_idx, uint8_t *ain_idx);
-static inline int ain_idx_to_sensor_idx(uint8_t ain_idx, uint8_t *sensor_idx);
+//static inline int ain_idx_to_sensor_idx(uint8_t ain_idx, uint8_t *sensor_idx);
 
 uint16_t baseline_adc_values[NUM_OF_DISTANCE_SENSORS];
-float final_distance_values[NUM_OF_DISTANCE_SENSORS];
 
 int init_distance_sensor_driver(void)
 {
   CHECK_ERR(init_adc_driver());
   CHECK_ERR(init_pcal6416a_driver());
-  
+
+  system_interrupt_enter_critical_section();
+  started = false;
+  ready_flag = false;
+  system_interrupt_leave_critical_section();
+
   // Initialize IR pins on I/O expander
   // - Set all of port 1 as output
   CHECK_ERR(set_pcal6416a_reg(PCAL6416A_CONFIGURATION_PORT_0, 0x00FF, 0x00FF));
@@ -43,31 +53,83 @@ int init_distance_sensor_driver(void)
   return RETURN_SUCCESS;
 }
 
-int start_get_distance_sensor_data(void)
+int start_get_distance_sensor_data(distance_sensor_data_t *distance_data)
 {
+  system_interrupt_enter_critical_section();
+
+  if (started)
+  {
+    system_interrupt_leave_critical_section();
+    THROW_ERR("start_get_distance_sensor_data", EBUSY);
+  }
+
+  started = true;
+  ready_flag = false;
+  distance_data_ptr = distance_data;
+  distance_data_ptr->data_valid = false;
+
+  system_interrupt_leave_critical_section();
+
   CHECK_ERR(start_get_adc_data(adc_driver_callback_0));
-  return RETURN_SUCCESS;
-}
-
-int get_distance_sensor_data(distance_sensor_data_t *distances)
-{
-  uint16_t *buffer = NULL;
 
   return RETURN_SUCCESS;
 }
 
-int try_get_distance_sensor_data(distance_sensor_data_t *distances)
+int get_distance_sensor_data()
 {
-  THROW_ERR("get_distance_sensor_data", ENOSYS);
+  CHECK_ERR(_get_distance_sensor_data(true));
+  return RETURN_SUCCESS;
+}
+
+int try_get_distance_sensor_data()
+{
+  CHECK_ERR(_get_distance_sensor_data(false));
+  return RETURN_SUCCESS;
 }
 
 
 /* Private Functions */
 
+int _get_distance_sensor_data(bool is_blocking)
+{
+  // Start read if not already started, then give user the distance_data once ready
+  system_interrupt_enter_critical_section();
+
+  if (!started)
+  {
+    system_interrupt_leave_critical_section();
+    THROW_ERR("_get_distance_sensor_data", EIO);
+  }
+
+  if (is_blocking)
+  {
+    // Block
+    system_interrupt_leave_critical_section();
+    while (!ready_flag)
+      ;
+    system_interrupt_enter_critical_section();
+  }
+  else
+  {
+    // Non-Blocking
+    if (!ready_flag)
+    {
+      system_interrupt_leave_critical_section();
+      return RETURN_SUCCESS;
+    }
+  }
+
+  // Reset flag
+  ready_flag = false;
+
+  system_interrupt_leave_critical_section();
+  return RETURN_SUCCESS;
+}
+
 void adc_driver_callback_0(uint16_t *buffer)
 {
   // Completed first baseline read
-  // Store Data
+  // Store Data for later
   uint8_t ain_idx;
   for (int i = 0; i < NUM_OF_DISTANCE_SENSORS; i++)
   {
@@ -91,18 +153,22 @@ void adc_driver_callback_1(uint16_t *buffer)
   for (int i = 0; i < NUM_OF_DISTANCE_SENSORS; i++)
   {
     sensor_idx_to_ain_idx(i, &ain_idx);
-    
+
     // Calculate IR difference
-    difference = buffer[ain_idx] - baseline_adc_values[i]; // With emitter - without emitter
-    
+    difference = buffer[ain_idx] - baseline_adc_values[i]; // With emitter minus without emitter
+
     // Regress with linear model
-    final_distance_values[i] = sensor_linear_regression_model(difference);
+    distance_data_ptr->distances[i] = sensor_linear_regression_model(difference);
   }
 
   // Unset I/O pins over i2c on port 1 back to low
   set_pcal6416a_reg(PCAL6416A_OUTPUT_PORT_0, 0x00FF, 0x0000);
 
-  // TODO: Mark distance sensing as done
+  // Mark distance sensing as done
+  system_interrupt_enter_critical_section();
+  ready_flag = true;
+  distance_data_ptr->data_valid = true;
+  system_interrupt_leave_critical_section();
 }
 
 float sensor_linear_regression_model(int16_t adc_value)
@@ -113,7 +179,7 @@ float sensor_linear_regression_model(int16_t adc_value)
 
 static inline int sensor_idx_to_ain_idx(sensor_idx_t sensor_idx, uint8_t *ain_idx)
 {
-  switch(sensor_idx)
+  switch (sensor_idx)
   {
     case SENSOR_L0:
       *ain_idx = PHOTO1_AIN;
@@ -142,41 +208,41 @@ static inline int sensor_idx_to_ain_idx(sensor_idx_t sensor_idx, uint8_t *ain_id
     default:
       THROW_ERR("sensor_idx_to_ain_idx", EINVAL_AIN);
   }
-  
+
   return RETURN_SUCCESS;
 }
 
-static inline int ain_idx_to_sensor_idx(uint8_t ain_idx, sensor_idx_t *sensor_idx)
-{
-  switch(ain_idx)
-  {
-    case PHOTO1_AIN:
-      *sensor_idx = SENSOR_L0;
-      break;
-    case PHOTO2_AIN:
-      *sensor_idx = SENSOR_L1;
-      break;
-    case PHOTO3_AIN:
-      *sensor_idx = SENSOR_F0;
-      break;
-    case PHOTO4_AIN:
-      *sensor_idx = SENSOR_F1;
-      break;
-    case PHOTO5_AIN:
-      *sensor_idx = SENSOR_R0;
-      break;
-    case PHOTO6_AIN:
-      *sensor_idx = SENSOR_R1;
-      break;
-    case PHOTO7_AIN:
-      *sensor_idx = SENSOR_B0;
-      break;
-    case PHOTO8_AIN:
-      *sensor_idx = SENSOR_B1;
-      break;
-    default:
-      THROW_ERR("ain_idx_to_sensor_idx", EINVAL_SENSOR);
-  }
-  
-  return RETURN_SUCCESS;
-}
+// static inline int ain_idx_to_sensor_idx(uint8_t ain_idx, sensor_idx_t *sensor_idx)
+// {
+//   switch (ain_idx)
+//   {
+//     case PHOTO1_AIN:
+//       *sensor_idx = SENSOR_L0;
+//       break;
+//     case PHOTO2_AIN:
+//       *sensor_idx = SENSOR_L1;
+//       break;
+//     case PHOTO3_AIN:
+//       *sensor_idx = SENSOR_F0;
+//       break;
+//     case PHOTO4_AIN:
+//       *sensor_idx = SENSOR_F1;
+//       break;
+//     case PHOTO5_AIN:
+//       *sensor_idx = SENSOR_R0;
+//       break;
+//     case PHOTO6_AIN:
+//       *sensor_idx = SENSOR_R1;
+//       break;
+//     case PHOTO7_AIN:
+//       *sensor_idx = SENSOR_B0;
+//       break;
+//     case PHOTO8_AIN:
+//       *sensor_idx = SENSOR_B1;
+//       break;
+//     default:
+//       THROW_ERR("ain_idx_to_sensor_idx", EINVAL_SENSOR);
+//   }
+
+//   return RETURN_SUCCESS;
+// }

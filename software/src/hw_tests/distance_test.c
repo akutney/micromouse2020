@@ -18,13 +18,14 @@ int distance_test(void)
   printf("System Initialized\n");
 
   CHECK_ERR(init_distance_sensor_driver());
-  
+
   printf("Distance Sensor Initialized\n");
-  
+
   while (1)
-  { 
+  {
     distance_sensor_data_t data;
-    CHECK_ERR(get_distance_sensor_data(&data));
+    CHECK_ERR(start_get_distance_sensor_data(&data));
+    CHECK_ERR(get_distance_sensor_data());
 
     delay_usec(1000000);
   }
