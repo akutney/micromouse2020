@@ -63,31 +63,31 @@ TEST(queue2 compiles, src/util/queue.c, src/error.c) {
 	}
 }*/
 
-TEST(queue pointers, src/util/queue.c, src/error.c){
+TEST(queue pointersTest, src/util/queue.c, src/error.c){
     queue que;
     que.size = 5;
     que.head = 0;
     que.tail = 0;
-    
-    cell_location_t* one;
-    one-> x = 1;
-    one-> y = 1;
 
-    cell_location_t* two;
-    two->x=2;
-    two->y=2;
+    cell_location_t one;
+    one.x = 1;
+    one.y = 1;
 
-    cell_location_t* three;
-    three->x=3;
-    three->y=3;
+    cell_location_t two;
+    two.x=2;
+    two.y=2;
 
-    cell_location_t* four;
-    four->x=4;
-    four->x=4;
+    cell_location_t three;
+    three.x=3;
+    three.y=3;
 
-    cell_location_t* five;
-    five->x=5;
-    five->y=5;
+    cell_location_t four;
+    four.x=4;
+    four.x=4;
+
+    cell_location_t five;
+    five.x=5;
+    five.y=5;
 
     enqueue(&que, &one);
     enqueue(&que, &two);
@@ -96,6 +96,7 @@ TEST(queue pointers, src/util/queue.c, src/error.c){
     enqueue(&que, &five);
 
     cell_location_t* output = dequeue(&que);
+    printf("output: %d", output);
     if (output->x == 5 && output->y==5){
         return TEST_SUCCESS;
     }

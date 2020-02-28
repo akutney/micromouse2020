@@ -24,12 +24,22 @@ void enqueue(queue* s, cell_location_t* element)
 {
     s->count++;
     s->q[(s->tail)++] = element;
+	if (s->tail == 256){
+		s->tail = 0;
+	}
 }
 
 cell_location_t* dequeue(queue* s)
 {
     s->count--;
-    return s->q[(s->head)++];
+	if (s->head + 1 == 256) {
+		int lastPlace = (int)s->head;
+		s->head = 0;
+		return s->q[(lastPlace)];
+	} 
+	else{
+		return s->q[(s->head)++];
+	}
 }
 
 int full(queue* s)

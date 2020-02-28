@@ -1,7 +1,7 @@
 /*
  * guidance.c
  */ 
-
+/*
 #include <error.h>
 
 #include "guidance.h"
@@ -11,22 +11,27 @@
 #include <stdlib.h>
 #include "../util/queue.h"
 #include "../types/types.h"
+#include "../robot/settings.h"
 
 
 
 //unfinished conversion of strategy.cpp 
 
 
-//#define IS_CELL_OUT_OF_BOUNDS(cell) ((cell).x < 0 || (cell).x >= (MAZE_WIDTH) || (cell).y < 0 || (cell).y >= (MAZE_HEIGHT))
+//#define IS_CELL_OUT_OF_BOUNDS(cell) ((cell).x < 0 || (cell).x >= (MAX_MAZE_WIDTH) || (cell).y < 0 || (cell).y >= (MAX_MAZE_HEIGHT))
 
-/* The number of steps away from the goal based on the floodfill algorithm */
+cell_location_t goal_cell = {
+	GOAL_CELL_X,
+	GOAL_CELL_Y
+};
+
+// The number of steps away from the goal based on the floodfill algorithm 
 int values[MAX_MAZE_WIDTH][MAX_MAZE_HEIGHT];
 
-/* Keeps track of which cells have been discovered already */
+// Keeps track of which cells have been discovered already 
 int discovered[MAX_MAZE_WIDTH][MAX_MAZE_HEIGHT]; //0 is false, 1 is true
 
-/* initialize strategy
- * Initializes the maze solving algorithm */
+// Initializes the maze solving algorithm 
 void initializeStrategy(void) {
 
     resetValues();
@@ -56,13 +61,13 @@ int guidance(
         }
     }
   */
-
+/*
  prev_next_cell = next_cell;
 
  convertCellToLocation(&next_cell, next_state);
 }
 
-void floodfill(maze_state_t* maze_state, cell_t cell, int value){
+void floodfill(maze_state_t* maze_state, cell_location_t cell, int value){
   // Reset everything
     resetValues();
     setAllDiscoveredToFalse();
@@ -119,7 +124,7 @@ void floodfill(maze_state_t* maze_state, cell_t cell, int value){
 			}
 		}
 		
-		if (!iS_CELL_OUT_OF_BOUNDS(next)) {
+		if (!IS_CELL_OUT_OF_BOUNDS(next)) {
 			
 		}
 	}
@@ -151,3 +156,4 @@ void setAllDiscoveredToFalse(void){
         }
     }
 }
+*/
