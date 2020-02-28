@@ -5,7 +5,7 @@
 #ifndef __ENCODER_DRIVER_H__
 #define __ENCODER_DRIVER_H__
 
-#include "../types/types.h"
+#include <types.h>
 
 extern bool ENCODER_DRIVER_ENABLED;
 

@@ -15,7 +15,10 @@ int distance_test(void)
   system_init();
 
   /* Insert application code here, after the board has been initialized. */
+  printf("-------------------------------------------------\n");
   printf("System Initialized\n");
+  printf("Board: %s\n", BOARD_NAME);
+  printf("-------------------------------------------------\n");
 
   CHECK_ERR(init_distance_sensor_driver());
 

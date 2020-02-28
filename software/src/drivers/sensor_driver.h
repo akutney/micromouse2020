@@ -5,7 +5,7 @@
 #ifndef __SENSOR_DRIVER_H__
 #define __SENSOR_DRIVER_H__
 
-#include "../types/types.h"
+#include <types.h>
 
 int init_sensor_driver(void);
 

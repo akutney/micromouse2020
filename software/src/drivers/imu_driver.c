@@ -5,7 +5,7 @@
 #include <asf.h>
 #include <error.h>
 
-#include "../types/types.h"
+#include <types.h>
 #include "imu_driver.h"
 #include "devices/BNO055.h"
 

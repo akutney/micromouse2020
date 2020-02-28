@@ -5,7 +5,7 @@
 #ifndef __GUIDANCE_H__
 #define __GUIDANCE_H__
 
-#include "../types/types.h"
+#include <types.h>
 
 /* guidance
  * 

@@ -5,7 +5,7 @@
 #ifndef __SENSOR_DATA_H__
 #define __SENSOR_DATA_H__
 
-#include "types.h"
+#include <types.h>
 
 typedef struct
 {

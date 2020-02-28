@@ -5,7 +5,7 @@
 #ifndef __ROBOT_H__
 #define __ROBOT_H__
 
-#include "../types/types.h"
+#include <types.h>
 
 /* If continuous mode is enabled, then run_robot_loop will be called
  * immediately. Otherwise, it will be called every Systick, however

@@ -42,16 +42,26 @@ void system_board_init(void)
  * After this function, stdio library should work
  */
 void configure_stdio_serial(void)
-{
+{ 
   struct usart_config config_usart;
   usart_get_config_defaults(&config_usart);
   config_usart.baudrate = 9600;
   config_usart.mux_setting = USART_RX_1_TX_0_XCK_1;
-  config_usart.pinmux_pad0 = PINMUX_PA08C_SERCOM0_PAD0; // TX
-  config_usart.pinmux_pad1 = PINMUX_PA09C_SERCOM0_PAD1; // RX/XCK // TODO: Use correct pins
+
+#ifdef SPARKFUN_BOARD
+  config_usart.pinmux_pad0 = PINMUX_PA22C_SERCOM3_PAD0; // TX
+  config_usart.pinmux_pad1 = PINMUX_PA23C_SERCOM3_PAD1; // RX/XCK
   config_usart.pinmux_pad2 = PINMUX_UNUSED;
   config_usart.pinmux_pad3 = PINMUX_UNUSED;
-  stdio_serial_init(&usart_instance, SERCOM0, &config_usart);
+  stdio_serial_init(&usart_instance, SERCOM3, &config_usart);
+#endif
+#ifdef OCTOCAT_BOARD
+  config_usart.pinmux_pad0 = PINMUX_PA12C_SERCOM2_PAD0; // TX
+  config_usart.pinmux_pad1 = PINMUX_PA13C_SERCOM2_PAD1; // RX/XCK
+  config_usart.pinmux_pad2 = PINMUX_UNUSED;
+  config_usart.pinmux_pad3 = PINMUX_UNUSED;
+  stdio_serial_init(&usart_instance, SERCOM2, &config_usart);
+#endif
 
   usart_enable(&usart_instance);
   
@@ -115,15 +125,22 @@ void configure_i2c_master(void)
   struct i2c_master_config config_i2c_master;
   i2c_master_get_config_defaults(&config_i2c_master);
   config_i2c_master.buffer_timeout = 65535;
-  config_i2c_master.pinmux_pad0 = PINMUX_PA22C_SERCOM3_PAD0; // SDA
-  config_i2c_master.pinmux_pad1 = PINMUX_PA23C_SERCOM3_PAD1; // SCL
+
 #ifdef I2C_USE_FAST_MODE
   config_i2c_master.baud_rate = I2C_MASTER_BAUD_RATE_400KHZ;
 #endif
 
-  /* Initialize and enable device with config */
-  while (i2c_master_init(&i2c_master_instance, SERCOM3, &config_i2c_master) != STATUS_OK)
-    ;
-
+#ifdef SPARKFUN_BOARD
+  // config_i2c_master.pinmux_pad0 = PINMUX_PA22C_SERCOM3_PAD0; // SDA
+  // config_i2c_master.pinmux_pad1 = PINMUX_PA23C_SERCOM3_PAD1; // SCL
+  // while (i2c_master_init(&i2c_master_instance, SERCOM3, &config_i2c_master) != STATUS_OK);
   i2c_master_enable(&i2c_master_instance);
+#endif
+#ifdef OCTOCAT_BOARD
+  config_i2c_master.pinmux_pad0 = PINMUX_PA22C_SERCOM3_PAD0; // SDA
+  config_i2c_master.pinmux_pad1 = PINMUX_PA23C_SERCOM3_PAD1; // SCL
+  while (i2c_master_init(&i2c_master_instance, SERCOM3, &config_i2c_master) != STATUS_OK);
+  i2c_master_enable(&i2c_master_instance);
+#endif
+
 }

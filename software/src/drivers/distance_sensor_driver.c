@@ -15,10 +15,14 @@
 #include <string.h>
 #include <error.h>
 
-#include "../types/types.h"
+#include <types.h>
 #include "distance_sensor_driver.h"
 #include "adc_driver.h"
 #include "devices/PCAL6416A.h"
+
+#ifdef SPARKFUN_BOARD
+#include "gpio_driver.h"
+#endif
 
 bool DISTANCE_SENSOR_DRIVER_ENABLED = true;
 
@@ -33,12 +37,16 @@ void adc_driver_callback_0(uint16_t *buffer);
 void adc_driver_callback_1(uint16_t *buffer);
 float sensor_linear_regression_model(int16_t adc_value);
 static inline int sensor_idx_to_ain_idx(uint8_t sensor_idx, uint8_t *ain_idx);
-//static inline int ain_idx_to_sensor_idx(uint8_t ain_idx, uint8_t *sensor_idx);
 
 int init_distance_sensor_driver(void)
 {
   CHECK_ERR(init_adc_driver());
   CHECK_ERR(init_pcal6416a_driver());
+
+#ifdef SPARKFUN_BOARD
+  // pin_t pin = { .port = , .pinNum =  }
+  // configure_pin() // TODO
+#endif
 
   system_interrupt_enter_critical_section();
   started = false;
@@ -210,38 +218,3 @@ static inline int sensor_idx_to_ain_idx(sensor_idx_t sensor_idx, uint8_t *ain_id
 
   return RETURN_SUCCESS;
 }
-
-// static inline int ain_idx_to_sensor_idx(uint8_t ain_idx, sensor_idx_t *sensor_idx)
-// {
-//   switch (ain_idx)
-//   {
-//     case PHOTO1_AIN:
-//       *sensor_idx = SENSOR_L0;
-//       break;
-//     case PHOTO2_AIN:
-//       *sensor_idx = SENSOR_L1;
-//       break;
-//     case PHOTO3_AIN:
-//       *sensor_idx = SENSOR_F0;
-//       break;
-//     case PHOTO4_AIN:
-//       *sensor_idx = SENSOR_F1;
-//       break;
-//     case PHOTO5_AIN:
-//       *sensor_idx = SENSOR_R0;
-//       break;
-//     case PHOTO6_AIN:
-//       *sensor_idx = SENSOR_R1;
-//       break;
-//     case PHOTO7_AIN:
-//       *sensor_idx = SENSOR_B0;
-//       break;
-//     case PHOTO8_AIN:
-//       *sensor_idx = SENSOR_B1;
-//       break;
-//     default:
-//       THROW_ERR("ain_idx_to_sensor_idx", EINVAL_SENSOR);
-//   }
-
-//   return RETURN_SUCCESS;
-// }

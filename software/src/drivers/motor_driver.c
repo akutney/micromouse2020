@@ -6,7 +6,7 @@
 
 #include "motor_driver.h"
 #include "i2c_driver.h"
-#include "../types/types.h"
+#include <types.h>
 
 int init_motor_driver(void)
 {

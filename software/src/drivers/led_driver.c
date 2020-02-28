@@ -5,7 +5,7 @@
 #include <asf.h>
 #include <error.h>
 
-#include "../types/types.h"
+#include <types.h>
 #include "led_driver.h"
 
 bool LED_DRIVER_ENABLED = true;

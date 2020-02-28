@@ -8,7 +8,7 @@
 
 #include <asf.h>
 #include <error.h>
-#include "../types/types.h"
+#include <types.h>
 
 extern bool LED_DRIVER_ENABLED;
 

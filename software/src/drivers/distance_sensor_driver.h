@@ -7,7 +7,7 @@
 
 #include <stdbool.h>
 
-#include "../types/types.h"
+#include <types.h>
 
 extern bool DISTANCE_SENSOR_DRIVER_ENABLED;
 

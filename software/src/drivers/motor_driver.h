@@ -5,7 +5,7 @@
 #ifndef __MOTOR_DRIVER_H__
 #define __MOTOR_DRIVER_H__
 
-#include "../types/types.h"
+#include <types.h>
 
 int init_motor_driver(void);
 

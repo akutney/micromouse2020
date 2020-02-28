@@ -1,5 +1,7 @@
 /*
  * gpio_driver.h
+ * 
+ * Allows users to use pins defined in pins.h
  */
 
 #ifndef __GPIO_DRIVER_H__
@@ -7,31 +9,7 @@
 
 #include <asf.h>
 #include <stdint.h>
-
-typedef enum
-{
-  PIN_INPUT,
-  PIN_OUTPUT,
-  PIN_INPUT_PULLUP,
-} pin_config;
-
-typedef enum
-{
-  PIN_PORT_A = PORT_A,
-  PIN_PORT_B = PORT_B,
-} pin_port;
-
-typedef enum
-{
-  PIN_LOW,
-  PIN_HIGH,
-} pin_value;
-
-typedef struct
-{
-  pin_port port;
-  uint8_t pinNum;
-} pin_t;
+#include <types.h>
 
 int configure_pin(pin_t pin, pin_config type);
 

@@ -7,12 +7,11 @@
 #include <error.h>
 
 #include "robot.h"
-#include "../types/types.h"
+#include <types.h>
 #include "../algorithms/controller.h"
 #include "../algorithms/guidance.h"
 #include "../algorithms/navigation.h"
 
-//#define LOOP_FREQUENCY (1)
 
 /* This function is called with in a loop in main.c */
 int run_robot_loop(robot_t *robot)

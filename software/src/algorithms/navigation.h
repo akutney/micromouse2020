@@ -5,7 +5,7 @@
 #ifndef __NAVIGATION_H__
 #define __NAVIGATION_H__
 
-#include "../types/types.h"
+#include <types.h>
 
 /* navigation
  * 
