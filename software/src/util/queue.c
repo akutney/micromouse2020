@@ -44,11 +44,13 @@ cell_location_t* dequeue(queue* s)
 
 int full(queue* s)
 {
+	//0 when not full, 1 when full
     return s->tail == s->size;
 }
 
 int empty(queue* s)
 {
+	//0 when not empty, 1 when empty
     return (s->tail) == (s->head);
 }
  
