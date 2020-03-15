@@ -23,11 +23,11 @@ typedef enum
 typedef struct
 {
   /* State Vector that holds the following state information in this order:
-   * [0] x location        - in mm
-   * [1] y location        - in mm
+   * [0] x location        - in m
+   * [1] y location        - in m
    * [2] theta             - in radians, restricted between 0 and 2*pi
-   * [3] velocity in x     - in mm/sec
-   * [4] velocity in y     - in mm/sec
+   * [3] velocity in x     - in m/sec
+   * [4] velocity in y     - in m /sec
    * [5] velocity in theta - in radians/sec
    */
   float x_hat[NUM_STATE_VARIABLES];

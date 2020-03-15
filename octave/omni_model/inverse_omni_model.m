@@ -11,10 +11,10 @@ function [motion] = inverse_omni_model(old_pos, new_pos)
 %
 % Output:
 %   - motion (m): vector of the distances traveled by each motor, positive values are clockwise
-%       1: MOTOR_FL
-%       2: MOTOR_FR
-%       3: MOTOR_BR
-%       4: MOTOR_BL
+%       1: MOTOR_F
+%       2: MOTOR_L
+%       3: MOTOR_B
+%       4: MOTOR_R
 
 % Robot Parameters
 d = 0.05; % 5 cm
@@ -26,7 +26,7 @@ to_local = [ cos(theta),   sin(theta), 0;
              0,            0,          1 ];
 transform = to_local * (new_pos - old_pos);
 
-% Bound transform(3) to -pi and pi
+% Bound transform(3) to -pi and pi so that we don't rotate more than we need to.
 transform(3) = bound_radians_npi_to_pi(transform(3));
 
 % Back solve to calculate motion vector

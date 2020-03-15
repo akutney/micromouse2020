@@ -8,10 +8,10 @@ function [new_pos] = forward_omni_model(old_pos, motion)
 %       2:  y
 %       3:  theta
 %   - motion (m): vector of the distances traveled by each motor, positive values are clockwise
-%       1: MOTOR_FL
-%       2: MOTOR_FR
-%       3: MOTOR_BR
-%       4: MOTOR_BL
+%       1: MOTOR_F
+%       2: MOTOR_L
+%       3: MOTOR_B
+%       4: MOTOR_R
 %
 % Output:
 %   - new_pos: position vector of robot after transformation
