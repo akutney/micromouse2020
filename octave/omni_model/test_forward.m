@@ -10,7 +10,8 @@ inputs = [
 output_pos = [0,0,0];
 
 for i = 1:size(inputs)(1)
-  output_pos = [output_pos; omni_model(output_pos(i,:).', inputs(i,:)).' ];
+  output_pos = [  output_pos;
+                  forward_omni_model(output_pos(i,:)', inputs(i,:)')' ];
   plot(output_pos(:,1), output_pos(:,2));
   pause
 end
