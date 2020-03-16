@@ -188,29 +188,29 @@ static inline int sensor_idx_to_ain_idx(sensor_idx_t sensor_idx, uint8_t *ain_id
 {
   switch (sensor_idx)
   {
-    case SENSOR_L0:
-      *ain_idx = PHOTO1_AIN;
-      break;
-    case SENSOR_L1:
+    case SENSOR_FL0:
       *ain_idx = PHOTO2_AIN;
       break;
-    case SENSOR_F0:
-      *ain_idx = PHOTO3_AIN;
+    case SENSOR_FL1:
+      *ain_idx = PHOTO1_AIN;
       break;
-    case SENSOR_F1:
-      *ain_idx = PHOTO4_AIN;
+    case SENSOR_BL0:
+      *ain_idx = PHOTO8_AIN;
       break;
-    case SENSOR_R0:
-      *ain_idx = PHOTO5_AIN;
-      break;
-    case SENSOR_R1:
-      *ain_idx = PHOTO6_AIN;
-      break;
-    case SENSOR_B0:
+    case SENSOR_BL1:
       *ain_idx = PHOTO7_AIN;
       break;
-    case SENSOR_B1:
-      *ain_idx = PHOTO8_AIN;
+    case SENSOR_BR0:
+      *ain_idx = PHOTO6_AIN;
+      break;
+    case SENSOR_BR1:
+      *ain_idx = PHOTO5_AIN;
+      break;
+    case SENSOR_FR0:
+      *ain_idx = PHOTO4_AIN;
+      break;
+    case SENSOR_FR1:
+      *ain_idx = PHOTO3_AIN;
       break;
     default:
       THROW_ERR("sensor_idx_to_ain_idx", EINVAL_AIN);

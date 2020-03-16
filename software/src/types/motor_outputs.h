@@ -3,17 +3,19 @@
  *
  * Micromouse robot wheel definition:
  * 
- *         -------------
- *   FL  /               \  FR
- *     /                   \
- *   /          ^            \  
- *  |         / | \           |
- *  |           |             |
- *  |           |             |
- *   \                       /
- *     \                   /
- *   BL  \               /  BR
- *         -------------
+ *                F
+ *           -------------
+ *         /               \
+ *       /                   \
+ *     /          ^            \  
+ *    |         / | \           |
+ *  L |           |             | R
+ *    |           |             |
+ *     \                       /
+ *       \                   /
+ *         \               /
+ *           -------------
+ *                B
  */
 
 #ifndef __MOTOR_OUTPUTS_H__
@@ -23,10 +25,10 @@
 
 typedef enum
 {
-  MOTOR_FL = 0,
-  MOTOR_FR = 1,
-  MOTOR_BR = 2,
-  MOTOR_BL = 3,
+  MOTOR_F = 0,
+  MOTOR_L = 1,
+  MOTOR_B = 2,
+  MOTOR_R = 3,
 } motor_idx_t;
 
 typedef struct

@@ -1,21 +1,19 @@
 /* 
  * distance_sensor_data.h
  * 
- * Micromouse sensor definition:
+ * Sensor definition:
  *
- *               F0   F1
  *            -------------
- *          /               \
- *        /                   \
+ *     FL0  /               \  FR1
+ *   FL1  /                   \  FR0
  *      /           ^           \
- *  L1 |          / | \          | R0
+ *     |          / | \          |
  *     |            |            |
- *  L0 |            |            | R1
+ *     |            |            |
  *      \                       /
- *        \                   /
- *          \               /
+ *   BL0  \                   /  BR1
+ *     BL1  \               /  BR0
  *            -------------
- *               B1   B0
  */
 
 #ifndef __DISTANCE_SENSOR_DATA_H__
@@ -28,10 +26,10 @@
 
 typedef enum
 {
-  SENSOR_L0 = 0, SENSOR_L1 = 1,
-  SENSOR_F0 = 2, SENSOR_F1 = 3,
-  SENSOR_R0 = 4, SENSOR_R1 = 5,
-  SENSOR_B0 = 6, SENSOR_B1 = 7,
+  SENSOR_FL0 = 0, SENSOR_FL1 = 1,
+  SENSOR_BL0 = 2, SENSOR_BL1 = 3,
+  SENSOR_BR0 = 4, SENSOR_BR1 = 5,
+  SENSOR_FR0 = 6, SENSOR_FR1 = 7,
 } sensor_idx_t;
 
 /* Distance Data */
