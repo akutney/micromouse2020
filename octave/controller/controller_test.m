@@ -7,16 +7,16 @@ addpath("C:/Users/Dylan Staatz/Documents/code/github/robotics/micromouse2020/oct
 clear
 
 global MAX_MOTOR_SPEED;
-MAX_MOTOR_SPEED = 10*pi; % (rad/sec)
+MAX_MOTOR_SPEED = 4*pi; % (rad/sec)
 global Ei;
 Ei = zeros(4,1);
 global prev_x;
-prev_x = zeros(3,1);
 
 pos = [0,0,0];
+prev_x = pos';
 goal = [0.18,0.18,0]';
 dt = 0.001;
-steps = 5000;
+steps = 2000;
 
 motion = [0,0,0,0];
 
@@ -36,38 +36,40 @@ last = pos(steps,:)
 Ei
 
 figure(1);
+
+subplot(2,3,1);
 plot(pos(:,1));
 grid;
 
-figure(2);
-hold on;
+subplot(2,3,4);
 plot(diff(pos(:,1)), 'b');
+hold on;
 plot(movmean(diff(pos(:,1)),50), 'r');
 hold off;
 grid;
 
-figure(3);
+subplot(2,3,2);
 plot(pos(:,2));
 grid;
 
-figure(4);
-hold on;
+subplot(2,3,5);
 plot(diff(pos(:,2)), 'b');
+hold on;
 plot(movmean(diff(pos(:,2)),50), 'r');
 hold off;
 grid;
 
-figure(5);
+subplot(2,3,3);
 plot(pos(:,3));
 grid;
 
-figure(6);
-hold on;
+subplot(2,3,6);
 plot(diff(pos(:,3)), 'b');
+hold on;
 plot(movmean(diff(pos(:,3)),50), 'r');
 hold off;
 grid;
 
-figure(7);
+figure(2);
 plot(pos(:,1), pos(:,2));
 grid;

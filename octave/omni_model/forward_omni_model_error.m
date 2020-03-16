@@ -29,7 +29,7 @@ A = [ 0,    -0.5,  0,     0.5;
       k,    k,     k,     k   ];
 transform = A * motion;
 
-err = mapfun(rand(3,1), 0,1, -0.1 * dt, 0.1 * dt);
+err = mapfun(rand(3,1), 0,1, -1 * dt, 1 * dt);
 
 transform = transform + err;
 

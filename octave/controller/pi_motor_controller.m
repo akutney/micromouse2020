@@ -13,8 +13,8 @@ function [out] = pi_motor_controller(v, vn, idx)
 % Depends on global Ei = zeros(4,1) for first call
 
 % Parameters
-Kp = 0.01;
-Ki = 0;
+Kp = 0.04;
+Ki = 0.01;
 I_BOUND = 100000000;
 global Ei;
 
