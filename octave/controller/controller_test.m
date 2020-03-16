@@ -1,8 +1,6 @@
 
-addpath("C:/Users/Dylan Staatz/Documents/code/github/robotics/micromouse2020/octave")
-addpath("C:/Users/Dylan Staatz/Documents/code/github/robotics/micromouse2020/octave/controller")
-addpath("C:/Users/Dylan Staatz/Documents/code/github/robotics/micromouse2020/octave/omni_model")
-addpath("C:/Users/Dylan Staatz/Documents/code/github/robotics/micromouse2020/octave/utility")
+addpath("../omni_model")
+addpath("../utility")
 
 clear
 
