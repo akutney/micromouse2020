@@ -830,6 +830,9 @@
     <Compile Include="src\drivers\devices\BNO055.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\drivers\devices\MAX7315.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\drivers\devices\MAX7315.h">
       <SubType>compile</SubType>
     </Compile>
@@ -927,6 +930,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\maze_state.test.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\types\motor_outputs.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\types\motor_outputs.h">

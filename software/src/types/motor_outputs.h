@@ -21,6 +21,8 @@
 #ifndef __MOTOR_OUTPUTS_H__
 #define __MOTOR_OUTPUTS_H__
 
+#include <stdbool.h>
+
 #define NUM_OF_MOTORS 4
 
 typedef enum
@@ -35,10 +37,11 @@ typedef struct
 {
   /* Output motor data
    * Each array location corresponds to a motor by ID
-   * Each value represents the desired angular speed in rotations per seconds
-   * - A definition of the direction still needs to be made
+   * Each value is between -1.0 and 1.0, positive values represent clockwise rotation
    */
   float outputs[NUM_OF_MOTORS];
 } motor_outputs_t;
+
+extern bool inverted_outputs[NUM_OF_MOTORS];
 
 #endif //__MOTOR_OUTPUTS_H__

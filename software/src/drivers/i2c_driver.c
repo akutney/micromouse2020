@@ -17,7 +17,7 @@ uint8_t write_buffer[3];
 uint8_t read_buffer[2];
 
 // Function Prototypes
-int validate_address(int8_t address);
+static inline int validate_address(int8_t address);
 void lock(void);
 void unlock(void);
 
@@ -29,6 +29,8 @@ int init_i2c_driver(void)
 
 int write_reg8(int8_t address, uint8_t reg, uint8_t val)
 {
+  CHECK_ERR(validate_address(address));
+
   lock();
   
   // Construct write packet
@@ -48,6 +50,8 @@ int write_reg8(int8_t address, uint8_t reg, uint8_t val)
 
 int write_reg16(int8_t address, uint8_t reg, uint16_t val)
 {
+  CHECK_ERR(validate_address(address));
+
   lock();
 
   // Construct write packet
@@ -68,6 +72,8 @@ int write_reg16(int8_t address, uint8_t reg, uint16_t val)
 
 int read_reg8(int8_t address, uint8_t reg, uint8_t *val)
 {
+  CHECK_ERR(validate_address(address));
+
   lock();
 
   // Construct write packet
@@ -95,6 +101,8 @@ int read_reg8(int8_t address, uint8_t reg, uint8_t *val)
 
 int read_reg16(int8_t address, uint8_t reg, uint16_t *val)
 {
+  CHECK_ERR(validate_address(address));
+
   lock();
 
   // Construct write packet
@@ -120,8 +128,26 @@ int read_reg16(int8_t address, uint8_t reg, uint16_t *val)
   return RETURN_SUCCESS;
 }
 
+int write_bytes(int8_t address, uint8_t * bytes, uint8_t size)
+{
+  CHECK_ERR(validate_address(address));
+
+  lock();
+
+  // Construct write packet
+  write_packet.address     = address;
+  write_packet.data_length = size;
+  write_packet.data        = bytes;
+  
+  i2c_master_write_packet_wait(&i2c_master_instance, &write_packet);
+
+  unlock();
+  
+  return RETURN_SUCCESS;
+}
+
 // Private functions
-int validate_address(int8_t address)
+static inline int validate_address(int8_t address)
 {
   if (address < 0)
   {

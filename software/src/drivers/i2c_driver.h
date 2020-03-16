@@ -21,4 +21,6 @@ int read_reg8(int8_t address, uint8_t reg, uint8_t *val);
 
 int read_reg16(int8_t address, uint8_t reg, uint16_t *val);
 
+int write_bytes(int8_t address, uint8_t * bytes, uint8_t size);
+
 #endif /* __I2C_DRIVER_H__ */
