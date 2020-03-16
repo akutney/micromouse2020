@@ -8,6 +8,9 @@ function [motion] = inverse_omni_model(old_pos, new_pos)
 %       2:  y
 %       3:  theta
 %   - new_pos: position vector of robot after transformation
+%       1:  x
+%       2:  y
+%       3:  theta
 %
 % Output:
 %   - motion (m): vector of the distances traveled by each motor, positive values are clockwise

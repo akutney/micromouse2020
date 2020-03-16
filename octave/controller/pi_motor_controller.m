@@ -1,31 +1,33 @@
-function [out] = pi_motor_controller(v, vn)
+function [out] = pi_motor_controller(v, vn, idx)
 %
 % function [out] = pi_motor_controller(v, vn)
 % 
 % Inputs:
-%   - v: mesured velocity for motor in radians/sec, positive values are clockwise
-%   - vn: desired velocity for motor in radians/sec, positive values are clockwise
+%   - v: mesured velocity for motor in rad/sec, positive values are clockwise
+%   - vn: desired velocity for motor in rad/sec, positive values are clockwise
+%   - idx: motor index
 %
 % Output:
 %   - out: value from -1.0 to 1.0 for motor, positive values are clockwise
 %
-% Depends on Ei = 0 for first call
+% Depends on global Ei = zeros(4,1) for first call
 
 % Parameters
-Kp = 1.0;
-Ki = 0.1;
-I_BOUND = 1.0;
+Kp = 0.01;
+Ki = 0;
+I_BOUND = 10;
+global Ei;
 
 % Calculate error
 Ep = vn - v;
-Ei = Ei + Ep;
+Ei(idx) = Ei(idx) + Ep;
 
 % Bound integral error
-Ei = bound(Ei, -I_BOUND, I_BOUND)
+Ei(idx) = bound(Ei(idx), -I_BOUND, I_BOUND);
 
-out = (Kp * Ep) + (Ki * Ei);
+out = (Kp * Ep) + (Ki * Ei(idx));
 
 % Bound output
-out = bound(out, -1, 1)
+out = bound(out, -1, 1);
 
 end
