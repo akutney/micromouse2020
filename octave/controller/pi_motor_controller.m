@@ -15,7 +15,7 @@ function [out] = pi_motor_controller(v, vn, idx)
 % Parameters
 Kp = 0.01;
 Ki = 0;
-I_BOUND = 10;
+I_BOUND = 100000000;
 global Ei;
 
 % Calculate error
